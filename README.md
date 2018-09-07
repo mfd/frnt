@@ -1,2 +1,2 @@
 # frnt
-small front environment for small experiments
+small frontend environment for small frontend experiments
