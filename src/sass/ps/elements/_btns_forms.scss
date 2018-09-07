@@ -1,0 +1,329 @@
+// Core styles
+.btn {
+	//font-size: $button-size;
+	text-transform: uppercase;
+
+	&:active, &.active {
+		box-shadow: $z-height-0;
+		outline: 0;
+	}
+
+	&, &:active, &.active {
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	.pull-right,
+	.pull-left {
+		line-height: 1.5em;
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		border-color: transparent;
+		//color: @text-color;
+		opacity:.2;
+	}
+	&:not(.btn-icon-only) & i {
+		margin-right:5px;
+	}
+
+}
+
+
+// Btns with labels
+// --------------------------------------------------
+.btn-lbls {
+	position: relative;
+	color: $black;
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1;
+	text-align: left;
+	padding: 5px 5px 5px 65px;
+	text-transform: none;
+	background-color: transparent;
+	//margin: 0 1em .25em 0;
+	margin: .5em;
+	margin-top: 0;
+	//height: 65px;
+	border: 0;
+	@include transition(transform 500ms cubic-bezier(0.17, 0.67, 0.6, 1.3));
+
+	&.btn-lbls__fixed-width {
+		width:200px;
+		white-space: normal;
+		span {
+
+		}
+		i {
+			top:50%;
+			left:5px;
+			margin-top:-25px;
+		}
+	}
+	&.btn-lbls__hrz {
+		padding: 67px 5px 5px 5px;
+		width: 120px;
+		text-align:center;
+		white-space: normal;
+		height: inherit;
+		i {
+			left:50%;
+			top:5px;
+			margin:0 0 0 -25px;
+		}
+	}
+
+	i {
+		position: absolute;
+		left: 5px;
+		top: 50%;
+		margin:-25px 0 0 0;
+		border-radius: 999px !important;
+		padding: 0;
+		font-size: 30px!important;
+		text-align:center;
+		color: $btn-primary-color;
+		background: $btn-primary-bg;
+		display: block;
+		width: 50px;
+		height: 50px;
+		//@include box-shadow($z-height2-1);
+		@include box-shadow(0px 5px 0px 0px darken($btn-primary-bg, 15%));
+		@include transition(all .15s linear);
+
+		//transition: 500ms opacity cubic-bezier(0.17, 0.67, 0.6, 1.3);
+
+		}
+	.fa, .zmdi, .glyphicon, .gsnab {
+		line-height: (50px - 2);
+		font-size: 1.2em;
+	}
+	.zmdi {
+		font-size: 1.4em;
+	}
+	.gsnab.gsnab-ps {
+		font-size: 36px !important;
+	}
+
+
+		&:hover {
+				color:darken(rgb(red($brand-primary), green($brand-primary), blue($brand-primary) + 15), 25);
+				//background: fade(black, 2);
+				background: transparent;
+				border-radius: 2px;
+			i{
+				color: contrast(darken($btn-primary-bg, 4%), $btn-primary-color, $white, $color-threshold);
+				//background-color: darken($btn-primary-bg, 4%);
+				@include box-shadow($z-height2-0);
+				}
+			}
+		&.disabled i,
+		&[disabled] i{
+			//@include box-shadow($z-height-3);
+				//background-color: fade($black, 40%);
+				color: $white;
+				background-color: transparentize($black, .6);
+				border-color: transparent;
+				@include box-shadow($z-height2-2);
+			}
+		&:active {
+			transform: scale(.8);
+		}
+		&:active i{
+			//@include box-shadow($z-height-3);
+			//transform: scale(.8);
+		}
+} //.btn-lbls
+
+
+// Button group sizing
+.btn-group-xs > .btn.btn-lbls  {
+	width: 22px;
+	padding: 0;
+}
+.btn-group-sm > .btn.btn-lbls,
+.input-group-sm .btn.btn-lbls  {
+	width: 30px;
+	padding: 0;
+}
+.btn-group-lg > .btn.btn-lbls,
+.input-group-lg .btn.btn-floating-action {
+	width: 44px;
+	padding: 0;
+}
+
+
+
+// Checkboxes & Radiobuttons
+// --------------------------------------------------
+
+.checkbox-styled:not(ie8),
+.radio-styled:not(ie8) {
+	position: relative;
+	margin-top: 0;
+
+	input ~ span {
+		position: relative;
+		padding-left: 30px;
+		display: inline-block;
+		cursor: pointer;
+		vertical-align: text-top;
+	}
+
+	input ~ span:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		width: 20px;
+		height: 20px;
+		border: 2px solid $gray;
+	}
+
+	// In order to support the browser's form validation feedback, powered by the
+	// `required` attribute, we have to "hide" the inputs via `opacity`. We cannot
+	// use `display: none;` or `visibility: hidden;` as that also hides the popover.
+	// This way, we ensure a DOM element is visible to position the popover from.
+	input[type="radio"],
+	input[type="checkbox"] {
+		position: absolute;
+		z-index: -1;
+		@include opacity(0);
+	}
+
+	// Re-align label
+	label {
+		padding-left: 0;
+	}
+
+	// Re-align inline elements
+	&.radio-inline,
+	&.checkbox-inline {
+		padding-left: 0;
+	}
+
+	// Disabled style
+	&.disabled,
+	input[disabled],
+	input[readonly] {
+		~ span:before {
+			border-color: $gray-lighter;
+		}
+
+		&:checked ~ span:before {
+			border-color: $gray-lighter;
+		}
+		&:checked ~ span:after {
+			background-color: $gray-lighter;
+		}
+	}
+}
+
+// Checkbox specific styles
+.checkbox-styled:not(ie8) {
+	// Checkbox border
+	input ~ span:before {
+		@include transition(all 0.2s ease-in-out);
+	}
+
+	// Checkbox selected
+	input:checked ~ span:before {
+		@include rotate(-45deg);
+		height: 10px;
+		border-color: $brand-primary;
+		border-top-style: none;
+		border-right-style: none;
+	}
+}
+
+// Checkbox specific styles
+.radio-styled:not(ie8) {
+	// Radio border
+	input ~ span:before {
+		top: 0;
+		border-radius: 50%;
+		@include transition(all 0.15s ease-in-out);
+	}
+
+	// Radio border selected
+	input:checked ~ span:before {
+		border-color: $brand-primary;
+	}
+
+	// Radio inner circ
+	input ~ span:after {
+		content: "";
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		z-index: 1;
+		width: 0;
+		height: 0;
+		background-color: $brand-primary;
+		border-radius: 50%;
+		@include transition(all 0.15s ease-in-out);
+	}
+
+	// Radio inner circ selected
+	input:checked ~ span:after {
+		left: 5px;
+		top: 5px;
+		width: 10px;
+		height: 10px;
+	}
+}
+
+// Checkboxes & Radiobuttons inversed form
+// --------------------------------------------------
+
+.form-inverse {
+	.checkbox-styled:not(ie8), .radio-styled:not(ie8) {
+		input ~ span:before {
+			border-color: transparentize($white, .2);
+		}
+
+		input:checked ~ span:before {
+			border-color: $brand-primary;
+		}
+
+		// Disabled style
+		&.disabled,
+		input[disabled],
+		input[readonly] {
+			~ span:before, &:checked ~ span:before {
+				border-color: transparentize($white, .8);
+			}
+			&:checked ~ span:after {
+				background-color: transparentize($white, .8);
+			}
+		}
+	}
+}
+
+
+// Checkboxes & Radiobuttons variants
+// --------------------------------------------------
+
+// @include checkbox-radio-variant(default-bright,		$brand-default-bright);
+// @include checkbox-radio-variant(default-light,		$brand-default-light);
+// @include checkbox-radio-variant(default,			$brand-default);
+// @include checkbox-radio-variant(default-dark,		$brand-default-dark);
+
+// @include checkbox-radio-variant(primary-bright,		$brand-primary-bright);
+// @include checkbox-radio-variant(primary-light,		$brand-primary-light);
+// @include checkbox-radio-variant(primary,			$brand-primary);
+// @include checkbox-radio-variant(primary-dark,		$brand-primary-dark);
+
+// @include checkbox-radio-variant(accent-bright,		$brand-accent-bright);
+// @include checkbox-radio-variant(accent-light,		$brand-accent-light);
+// @include checkbox-radio-variant(accent,				$brand-accent);
+// @include checkbox-radio-variant(accent-dark,		$brand-accent-dark);
+
+// @include checkbox-radio-variant(success,	$brand-success);
+// @include checkbox-radio-variant(warning,	$brand-warning);
+// @include checkbox-radio-variant(danger,		$brand-danger);
+// @include checkbox-radio-variant(info,		$brand-info);

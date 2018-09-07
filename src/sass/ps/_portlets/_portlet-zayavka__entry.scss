@@ -1,0 +1,644 @@
+// ТЕЛО ЗАЯВКИ
+@import "portlet-zayavka__entry-KL-CHAT";
+
+// ЗАЯВКА -
+
+.b-zayaEntry {
+  // ШАПКА ЗАЯВКИ
+  &-head {
+  }
+  &__titleHeader,
+  h3 {
+    font-size: 180%;
+    margin-top: 0px;
+  }
+
+
+
+  &-desc,
+  &-st {
+    margin: 0;
+    padding: 0;
+
+    &__head {
+      list-style: none;
+      font-size: 60%;
+      color: #696969;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: .5em;
+      margin-bottom: 1em;
+    }
+    &__item {
+      list-style: none;
+      float: left;
+      position: relative;
+      min-height: 50px;
+
+      margin-bottom: 10px;
+      margin-right: 10px;
+      padding-right: 10px;
+
+      border-right: 1px solid #eee;
+
+      .b-zayaEntry--sell & {
+        float: none;
+        border: 0;
+        //margin-bottom: .5em;
+        min-height: initial;
+      } // .b-zayaEntry--sell .b-zayaEntry-desc__item
+
+      &:last-child {border:0}
+
+      &-date {
+        white-space: nowrap;
+      }
+
+      &-number {
+        white-space: nowrap;
+      }
+
+      &-number.is-editable,
+      &-date.is-editable {
+        border-bottom: 1px dotted #AAA;
+        cursor: pointer;
+      }
+
+      &-label {
+        font-size: 75%;
+        text-transform: uppercase;
+        padding: 5px;
+        margin-right: 1em;
+        background: #f5f5f5;
+        border: 1px solid #f5f5f5;
+        white-space: nowrap;
+        a {
+          text-decoration: none;
+        }
+      }
+      &-btn {
+        border: 0;
+        margin: 0 5px;
+        padding: 0;
+      }
+
+      small,
+      &-title {
+        display: block;
+        font-size: 90%;
+        margin-bottom: 3px;
+        //text-transform: uppercase;
+        color: #989d9e;
+        .b-zayaEntry--sell & {
+          display: inline-block;
+        }
+
+      }
+      &.badge--editable {
+        padding-right: 30px;
+
+      }
+    }
+    &__popup,
+    .popup-dialog {
+      position: absolute;
+      width: 250px;
+      padding: 10px;
+      z-index: 50;
+      background: #fff;
+      border: none;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+      display: none;
+
+      &-msgs {
+
+      }
+      &-form {
+
+      }
+      &-btns {
+
+      }
+    }
+
+    .b-zayaEntry--sell & {
+
+    }
+  } // /.b-zayaEntry-desc /.b-zayaEntry-st
+
+  &-st {
+    font-size: 90%;
+    margin-bottom: 1em;
+  }
+  &-desc {
+    display: block;
+
+    .b-zayaEntry--sell & {
+      width: 45%;
+      margin-bottom: 1em;
+
+      float: left;
+      position: relative;
+
+      border: 1px solid #eee;
+      border-width: 0 2px 0 0;
+
+      &:last-child {
+        padding-left: 4%;
+        border: 0;
+        @media (max-width: $screen-sm-max) {
+          padding: 0
+        }
+      }
+
+      @media (max-width: $screen-sm-max) {
+        width: 100%;
+        border-width: 0 0 2px 0;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -10%;
+        right: 15%;
+        border: solid #e4e4e4;
+        border-width: 10px 10px 0 0;
+        width: 70px;
+        height: 70px;
+        //transform: rotate(-45deg) skew(-10deg, -10deg);
+        transform: rotate(45deg) skew(10deg, 10deg);
+      }
+      &:after {
+        display: none;
+      }
+    } //.b-zayaEntry--sell .b-zayaEntry-desc
+
+  }
+
+
+  &__actions {
+    .btn {
+      font-size: 90%;
+      padding: 5px 10px;
+      margin-right: .5em;
+      margin-bottom: .5em;
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    // // Apply the mixin to the buttons
+    // .btn-default { @include btn-styles($btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+    // .btn-primary { @include btn-styles($btn-primary-bg); }
+    // .btn-success { @include btn-styles($btn-success-bg); }
+    // .btn-info    { @include btn-styles($btn-info-bg); }
+    // .btn-warning { @include btn-styles($btn-warning-bg); }
+    .btn-default {
+      &:hover, &:active {
+        color:#44A5AA;
+      }
+      &.btn-offer_accept {
+        @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+      }
+      &.btn-offer_reject {
+        @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+      }
+    }
+
+
+    &-burger {
+      &-btn.btn {
+        font-size: 220%;
+        margin: 0;
+        margin-top: -5px;
+        //margin-right: 150px;
+      }
+      .dropdown-menu {
+        .btn {
+          margin-bottom: 0;
+          border: 0;
+          font-size: 90%;
+        }
+      }
+    }
+  }
+
+  &-body {
+    margin: 0!important;
+
+    &__contractors--actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1em;
+
+      @media (max-width: $screen-sm-max) {
+        flex-wrap: wrap;
+      }
+      > * {
+        @media (max-width: $screen-sm-max) {
+          flex: 0 0 90%;
+          margin: 1em!important;
+        }
+      }
+
+      // > * {
+      //   flex: 0 0 90%;
+      //   margin: 1em;
+      //   @media (min-width: 48em){
+      //     flex: 0 0 50%;
+      //     margin: 1em 0;
+      //   }
+      // }
+    }
+
+  }
+
+  &--sell {
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zayavka_item,
+.b-zayaEntry {
+  //@import "../css/btns";
+  @import "../elements/tables";
+  .btn-lbls {
+  	font-size: 1.4em;
+    &:hover {
+      text-decoration: none;
+    }
+  	i {
+  		line-height: 48px;
+  		height: 48px;
+  	 &.fa {
+      font-size: 1.3em!important;
+     }
+    }
+  }
+
+    background: #fff;
+    padding: 2em 1em;
+    //font-size: 13px;
+
+  > .row {
+    margin:0!important;
+  }
+
+  .st {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    li {
+      display: inline-block;
+      margin: 0 1em .5em 0;
+      white-space: nowrap;
+    }
+  }
+
+  .zaya_action_btn {
+    .btn {
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  }
+
+  .kb-attachments {
+    //height: 400px;
+  }
+
+
+
+    .zaya-desc {
+      padding: 0;
+      position: relative;
+      font-size:1.1em;
+
+        $nav-tabs-active-link-hover-color: $brand-primary;
+        // ТАБЫ
+        .nav-tabs {
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:1200;
+          .tab-content {
+            padding:12px;
+            //padding:12px 0;
+          }
+          > li > a {
+
+            &:focus {
+              outline: none!important;
+            }
+            .badge {
+              padding: .4em;
+              font-size: 70%;
+            }
+            @media (max-width: $screen-sm-max) {
+              font-size: 90%;
+              padding: 10px 5px;
+            }
+          } // /.nav-tabs a
+        }
+
+        // ТАБЫ - СОДЕРЖИМОЕ
+        .tab-content {
+          padding-top: 60px;
+        }
+        .tab-pane {
+           //margin-top: 40px;
+           //margin-top: 54px;
+           //min-height: 560px;
+            @media (max-width: $screen-sm-max) {
+              //min-height:460px;
+            }
+          &.tab-datatable {
+            margin-top:0;
+          }
+        } // /.tab-pane // ТАБЫ - СОДЕРЖИМОЕ
+    } //.zaya-desc
+
+    .zaya_addItems {
+      border: 0;
+    }
+
+    .zaya_addItems fieldset{
+      .fieldset-legend {
+        display: none;
+      }
+      .lfr-form-row {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 100px;
+        margin-top: 0;
+        border: 0;
+        &:hover {
+          border: 0;
+          background: rgba(223, 252, 203, 0.7);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left:0;right:0;bottom:0;
+          height:1px;
+          background: $nav-tabs-border-color;
+        }
+        .lfr-form-row-inline .form-group{
+          margin-bottom: 0;
+          display: block;
+        }
+      }
+      .form-group-inline {
+
+      }
+      .form-group {
+        margin-right: 0;
+        margin-bottom: 10px;
+        height: 70px;
+        //display:block; // .lfr-form-row-inline
+      }
+      input{
+        //@extend .input-sm;
+        @include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
+      }
+      label, .control-label{
+        font-size: 90%;
+      }
+      .form-control, select.form-control {
+        font-size: 90%;
+        height: 30px;
+      }
+
+      .lfr-autorow-controls {
+        top: 50%;
+        margin-top: -16px;
+      }
+      .btn {
+        @extend .btn-xs;
+        outline: 0;
+        margin-right: .5em;
+        padding: .25em .5em;
+        line-height: normal;
+      }
+      .undomanager {
+        .alert {
+          font-size:80%;
+        }
+      }
+      .text-warning {
+
+      }
+      label .lexicon-icon,
+      .control-label .lexicon-icon {
+        height: 10px;
+      }
+      .has-error {
+        font-size: 80%;
+      }
+    } // /.zaya_addItems
+
+
+
+    // Описание
+    // -------------------------
+    .dl-horizontal {
+      font-size: 90%;
+      padding:2em 0 0 0;
+      dt {
+        //width:100px;
+      }
+        dd {
+      //margin-left:120px;
+        margin-bottom: .5em;
+      }
+
+    } // /.dl-horizontal
+
+
+
+
+
+
+
+
+    /* КЛ
+    =======
+    */
+    .zayavka.offer-list {
+      overflow: hidden;
+      overflow-x: scroll;
+
+      .fieldset-legend {
+        border: 0 !important;
+      }
+
+      .table-offers {
+        border: 0;
+        overflow: hidden;
+        margin-bottom: 3px !important;
+        > tbody,
+        > tfoot {
+          > tr {
+            > th,
+            > td {
+              //border: 0;
+
+            }
+          }
+        }
+        &.table > thead > tr > th,
+        &.table th {
+          font-size: 10px;
+          background: rgba(0, 0, 0, 0.1);
+          padding: 10px 8px;
+          line-height: 1;
+          height: 10px;
+          white-space: nowrap;
+          &.contractor {
+            white-space: normal;
+            width: 200px;
+            i {
+              margin-right: .5em;
+            }
+            .contractor__name {
+              display: inline-block;
+            }
+          } // /.contractor
+
+          &.contractor__hide {
+            background: transparent;
+            text-align: right;
+            .fa {
+              padding-right: .25em;
+            }
+            span {
+              width: 130px;
+              //font-size: 75%;
+              //margin: 0 -4px;
+              padding: 6px;
+              text-transform: uppercase;
+              color: #583d8d;
+              background: #efecf7;
+              cursor: pointer;
+            }
+          }
+        }
+        > tbody {
+          td {
+          	border-right: 1px solid #ddd;
+          }
+          .contractor_desc,
+          .contractor_etc {
+            td:nth-child(1) {
+              text-align: right;
+              font-size: 80%;
+            }
+          }
+          .contractor_desc.hide {
+            display: none;
+          }
+        }
+        > tbody > tr:nth-of-type(odd) {
+          //background-color: $table-bg-accent;
+          background: rgba(242, 242, 243, 0.35);
+        }
+        tbody td {
+          font-size: 12px;
+          position: relative;
+          tr.offer-item-row {
+
+          } //.offer-item-row
+        }
+        .offer {
+          //text-align: right;
+          &__bestprice {
+            background: rgba(255, 235, 59, 0.5);
+            padding: 2px 4px;
+            margin: -1px -2px;
+          }
+
+        }
+
+
+
+        tbody {
+          position: relative;
+          overflow: hidden;
+          tr:hover {
+            background-color: #DFFCCB;
+          }
+          /*td.offer:hover:after,
+          td.offer:focus:after{
+            content: '';
+            height: 10000px;
+            left: 0;
+            position: absolute;
+            top: -5000px;
+            width: 100%;
+            z-index: -1;
+          }*/
+
+          td:hover:after{
+            background-color: #DFFCCB;
+          }
+
+          td:focus:after{
+            background-color: lightblue;
+          }
+
+          /* Focus stuff for mobile */
+          /*td:focus:before,
+          	tbody th:focus:before {
+            background-color: lightblue;
+            content: '';
+            height: 100%;
+            top: 0;
+            left: -5000px;
+            position: absolute;
+            width: 10000px;
+            z-index: -1;
+          }*/
+        } // tbody
+      } //. table-offers
+
+      .table-offers-list__tbody1, .table-offers-list__tbody2 {
+          border-right: 1px solid #e0e0e0;
+      }
+
+      .table-offers__wrap {
+         display: table;
+      }
+
+      .offer-price {
+        background-color: rgb(253, 221, 118);
+        padding: 2px 4px;
+      }
+
+
+    } // /.offer-list
+
+
+
+
+} //

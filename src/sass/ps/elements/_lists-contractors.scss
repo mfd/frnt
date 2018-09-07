@@ -1,0 +1,46 @@
+$border-color: #f0f0f0;
+
+.list-contractors {
+  //@extend .list;
+  > div.contact {
+    //font-size: 80%!important;
+    h4 {
+      //font-size: 16px;
+    }
+    h5 {
+      //font-size: 14px;
+    }
+    .item-actions {
+      //@include opacity(1);
+      //top: 45%;
+      .btn {
+        color: $brand-danger;
+        font-size: 3em!important;
+        background: transparent;
+        border: 0;
+      }
+    } // /.item-actions
+
+  }
+
+  > .contact__added {
+    //background: rgba(0, 204, 255, 0.1);
+    background: $gray-lightest;
+      .info:after {
+        background: $gray-lightest;
+        box-shadow: 0 0 20px 10px $gray-lightest;
+      } // /.info 
+  }
+
+
+} /* //.list-contractors */
+
+.list-contractors__invite {
+  margin-bottom: 70px!important;
+  > div.contact {
+    .item-actions {
+      @include opacity(1);
+      top: 45%;
+    } // /.item-actions
+  }
+} //list-contractors__invite

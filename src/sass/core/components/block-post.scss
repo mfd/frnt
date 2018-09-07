@@ -1,0 +1,144 @@
+.block-post {
+	position: relative;
+	margin-bottom: 30px;
+
+	a {
+		display: block;
+		height: 265px;
+
+		@media screen and (max-width: $desktop) {
+			height: 300px;
+		}
+		@media screen and (max-width: $tablet-h) {
+			height: 230px;
+		}
+		@media screen and (max-width: $tablet-w) {
+			height: auto;
+		}
+		
+		.desktop &:hover {
+			.block-post__img img {
+				transform: translate(-50%, -50%) scale(1) perspective(1px);
+			}
+			.block-post__text:after {
+				@include autoAlpha(1);
+			}
+		}
+	}
+	
+	.category {
+		@media screen and (max-width: $desktop) {
+			margin-bottom: 15px;
+		}
+	}
+	.small-title {
+		hyphens: auto;
+		margin-bottom: 5px;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 1.8rem;
+		}
+	}
+	.excerpt {
+		hyphens: auto;
+		@media screen and (max-width: $tablet-h) {
+			display: none;
+		}
+		@media screen and (max-width: $tablet-w) {
+			display: block;
+		}
+	}
+
+	p {
+		@media screen and (max-width: $mobile) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__content,
+	&__text {
+		height: 100%;
+	}
+
+	&__content {
+		padding-right: calc(((100% + 30px)/6) / 2 - 15px);
+
+		@media screen and (max-width: $tablet) {
+			padding-right: 0;
+		}
+	}
+
+	&__text {
+		background-color: #fff;
+		padding: 35px 40px 5px 60px;
+		
+		@include boxShadowHover;
+
+		@media screen and (max-width: $xlarge - 1) {
+			padding-left: 40px;
+		}
+		@media screen and (max-width: $tablet-h) {
+			padding: 30px 35px 5px;
+		}
+		@media screen and (max-width: $tablet) {
+			padding: 35px 35px 10px;
+		}
+		@media screen and (max-width: $tablet-w) {
+			padding-left: $gutter;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 180px;
+		padding-top: 180px;
+		overflow: hidden;
+		-webkit-mask-image: -webkit-radial-gradient($grey, $grey); // fix overflow
+
+		@media screen and (max-width: $large) {
+			@include col('width', 4, $gutter/2);
+			@include col('padding-top', 4, $gutter/2);
+		}
+		@media screen and (max-width: $tablet) {
+			display: none;
+		}
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(1.05);
+			width: 100%;
+			
+			transition: transform 0.75s ease;
+
+			body:not(.desktop) & {
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		// Container for anims
+		&-container {
+			@include absoluteBox;
+		}
+	}
+
+	&--image {
+		.block-post__text {
+			padding-right: 180px;
+
+			@media screen and (max-width: $large) {
+				@include col('padding-right', 4);
+			}
+			@media screen and (max-width: $tablet) {
+				padding-right: 35px;
+			}
+			@media screen and (max-width: $tablet-w) {
+				padding-right: $gutter;
+			}
+		}
+	}
+}

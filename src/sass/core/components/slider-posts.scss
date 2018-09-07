@@ -1,0 +1,92 @@
+.slider-posts {
+	margin: 20px 0 45px;
+
+	@media screen and (max-width: $mobile) {
+		margin: 0;
+	}
+
+	&__row {
+		flex-wrap: nowrap;
+	}
+
+	&__nav-buttons {
+		margin-top: 45px;
+
+		@media screen and (max-width: $mobile) {
+			margin-top: 25px;
+		}
+	}
+
+	&__slide {
+		left: (100% - (2 * 41.66667%)) / 2;
+
+		@media screen and (max-width: $tablet-h) {
+			left: $gutter;
+			max-width: calc(50% - #{$gutter});
+		}
+		@media screen and (max-width: $tablet-w) {
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 75%;
+		}
+		@media screen and (max-width: $mobile) {
+			max-width: calc(100% - #{$gutter * 3});
+		}
+	}
+
+	&--enabled {
+		.slider-posts__slide {
+			transition: opacity 0.5s ease;
+
+			&:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-duplicate-active):not(.swiper-slide-duplicate-next) {
+				cursor: grab;
+				opacity: 0.5;
+
+				&:active{
+					cursor: grabbing;
+				}
+
+				a{
+					pointer-events: none;
+				}
+			}
+
+			@media screen and (max-width: $tablet-w) {
+				&.swiper-slide-next,
+				&.swiper-slide-duplicate-next {
+					pointer-events: none;
+					opacity: 0.5;
+				}
+				&.swiper-slide-active {
+					a:after {
+						@include autoAlpha(1);
+					}
+				}
+			}
+		}
+	}
+
+
+	&--sm {
+		margin: 0;
+
+		.slider-posts {
+			@media screen and (min-width: $tablet-w + 1) {
+				&__slide {
+					cursor: auto !important;
+					opacity: 1 !important;
+					left: 0;
+					max-width: 100% / 12 * 5;
+
+					a {
+						pointer-events: auto !important;
+					}
+				}
+
+				&__nav-buttons {
+					display: none;
+				}
+			}
+		}
+	}
+}

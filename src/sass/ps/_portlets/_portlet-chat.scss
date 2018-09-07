@@ -1,0 +1,220 @@
+$chatbar-width: 40px;
+.portlet-chat {
+    @import "../css/btns";
+    .chat-bar {
+      background:#fff;
+      border: 0px solid #e5e5e5;
+      color:#333333;
+      height: $chatbar-width;
+      right:0;
+      padding:0 3em;
+      @include box-shadow(0 -14px 19px 0 rgba(0, 0, 0, 0.05));
+    }
+
+    .chat-status .status-message {
+      line-height:$chatbar-width;
+      text-shadow:none;
+    }  
+    
+    .chat-bar .chat-tabs > li {
+       margin-right:1em;
+    }
+    .chat-bar div ul li .panel-trigger {
+      font: bold 11px/40px Arial, sans-serif;
+      //font-size: 1.4em;
+      //padding: .15em 1em;
+      line-height: $chatbar-width;
+      text-transform:uppercase;
+      border:0;
+      margin:0;
+      @include transition(all .15s linear);
+      @extend .opacity-50;    
+        &:hover{
+          background-color: whitesmoke;
+          @extend .opacity-100;
+        }
+        .trigger-name {
+          text-shadow:none;
+        }
+    }
+
+    .chat-bar div ul li.selected .panel-trigger {
+      height: $chatbar-width;
+      line-height: $chatbar-width;
+      border-radius: 0;
+      border:0px solid #fff;
+      background-color: whitesmoke;
+          @extend .opacity-100;
+    }
+
+    .chat-tabs li .chat-panel {
+      animation: slide-down 0.3s ease-out; 
+    }
+    .chat-tabs li.selected .chat-panel {
+      animation: slide-up 0.3s ease-out; 
+    }
+
+    .chat-bar .chat-panel {
+      background-color: #ffffff;
+      bottom:$chatbar-width;
+      #saveSettings {
+        //@extend .btn;
+      }
+    }
+
+    .panel-header {
+      position:relative;
+        img {
+          width:25px;
+          height:25px;
+          @include border-radius(50%);
+        }
+      .panel-title {
+        color:#fff;
+        background: #00344d;
+        font-size: 70%;
+        letter-spacing: .2em;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-indent: 15px;
+        line-height: 35px;
+        height: 35px;
+        margin: 0;
+        
+        .panel-button,
+        .panel-button.minimize {
+          top:10px!important;
+          right:10px!important;
+        }
+       } // /.panel-title
+      .panel-button.minimize,
+      .panel-button.close {
+        top: 10px;
+      }
+
+    } //.panel-header
+
+    .panel-window {
+      font-family: Arial, sans-serif;
+      font-style:normal;
+      color: #313534;
+      border-radius: 0;
+      border:0;
+      padding:10px 5px;
+        @include box-shadow(0 -1px 3px 0 rgba(0, 0, 0, 0.33));    
+        .panel-icon {
+          width:20px;
+          height: 20px;
+          line-height: 20px;
+        }
+        .panel-profile {
+          display:none;
+        }
+    } // /.panel-window
+      .chat-bar .chat-panel .chat-settings {
+        margin:0;
+      }
+      .chat-bar .chat-panel #saveSettings {
+        @extend .btn-xs, .btn-primary-bright;
+        font-size:80%;
+      }
+
+
+      .search-buddies-wrap {
+        
+      }
+
+      // КОНТАКТЫ
+      .buddy-list .panel-content {
+        .online-users li{
+          height:30px!important;
+          border:0;
+          &:hover {
+            
+          }
+        }
+      }
+      .chat-settings {
+        label {
+          font-weight: normal!important;
+          margin: 0 .5em;
+          font-size: 90%;
+          line-height: 1.3;
+          input {
+            margin-top:0!important;
+          }
+        }
+      } //chat-settings
+
+
+      //ПЕРЕПИСКА С ЮЗЕРОМ
+         li.user .panel-title {
+          text-indent:45px;
+          }
+
+        .typing-status {
+          top:12px;
+          }
+
+        .panel-output {
+          .name {
+              padding: .5em 1em;
+              font-size:90%;
+              font-weight:normal;
+          }
+          .date {
+            float: right;
+            margin-top: -17px;
+          }
+          .incoming {
+            .name {
+              background-color: rgba(0,0,0,0.2);
+            }
+          }
+          .outgoing {
+            .name {
+              background-color: rgba(0,0,0,0.2);
+            }
+          }
+
+        } // /.panel-output
+        .panel-controls {
+            background-color: #eee;
+            height: 26px;
+            position: absolute;
+            display: none;
+            width: 100%;
+            top: -80px;
+            padding: 10px 5px;
+        }
+        .panel-video-local {
+          position: absolute;
+          top: -100px;
+          width: 100%;
+          text-align: center;
+          left: 0;
+          border: 1px solid red;
+            video.panel-icon {
+            
+            }
+        }
+
+      .panel-cam-icon {
+        width:40px;
+        height:40px;
+        position: absolute;
+        right: 10px;
+        top: 45px;
+        z-index: 200;
+      }
+      .panel-cam-icon-call{
+          background: url(/videochat-portlet/images/custom/phone_call_26.png) no-repeat 50% 50%;
+      }
+      .panel-cam-icon-call:before {
+        content:'';
+        width:40px;
+        height:40px;
+        display: block;
+        background:rgba(255,255,255,0.5);
+      }
+}// .portlet-chat

@@ -1,0 +1,113 @@
+$screen-xs-max: "768px";
+
+//@import "liferay/imports";
+//@import "ps/psell.scss";
+//@import "ps_dev"
+
+
+//@import "_modules/zayaStatusUsers";
+//@import "_modules/dogovors";
+
+//@import "_modules/zayavkaItem";
+//@import "_modules/contrMap";
+
+//@import "_modules/listlist";
+
+
+
+//@import "_modules/dropdown";
+
+
+//@import "_modules/competitileList";
+@import "_modules/tableKL";
+@import "_modules/tableOffer";
+// ⌗
+
+
+// @media only screen and (max-width: 767px) {
+//     .pinned {
+//         position:absolute;
+//         left: 0;
+//         top: 0;
+//         width: 131px;
+//         overflow: hidden;
+//         overflow-x: scroll;
+//         border-right: 1px solid #fff
+//     }
+
+//     .pinned br {
+//         display: none
+//     }
+
+//     .pinned table {
+//         border-right: none;
+//         border-left: none;
+//         width: 100%
+//     }
+
+//     .pinned table td,.pinned table th {
+//         white-space: nowrap
+//     }
+
+//     .pinned td:last-child {
+//         border-bottom: 0
+//     }
+
+//     .table-wrapper {
+//         position: relative;
+//         overflow: hidden
+//     }
+
+//     .table-wrapper .scrollable {
+//         margin-left: 131px
+//     }
+
+//     .table-wrapper .scrollable {
+//         overflow: scroll;
+//         overflow-y: hidden;
+//         -webkit-overflow-scrolling: touch
+//     }
+
+//     .table-wrapper .scrollable table {
+//         position: relative
+//     }
+
+//     .table-wrapper .scrollable table::after {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: 100%;
+//         width: 25px;
+//         height: 25px
+//     }
+
+//     .pinned th,.scrollable th {
+//         width: auto!important
+//     }
+
+//     .responsive-table td,.responsive-table th {
+//         position: relative;
+//         white-space: nowrap;
+//         overflow: hidden
+//     }
+
+//     .scrollable td:first-child,
+//     .scrollable th:first-child,
+//     .responsive-table.pinned td {
+//         display: none
+//     }
+
+// }
+
+// .table-fixedHead {
+//     position: fixed;
+//     top: 55px;
+//     z-index: 10;
+//     overflow: hidden;
+//     transition: transform .4s;
+//     transform: translateY(-1000px);
+//     &.isActive {
+//         transform: none;
+//     }
+// }

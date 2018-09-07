@@ -1,0 +1,239 @@
+//@import "../../aui/lexicon/lexicon-base/_mixins.scss";
+
+// ->> css/ps/_portlets/_portlet-zayavka__contractors.scss
+h1.hide-accessible {
+  display: none!important;
+}
+
+.contacts-portlet {
+  @extend .card, .style-default-bright;
+  padding: 2em 1em;
+    @media (max-width: $screen-xs-max) {
+      margin: 1em 0 0 0;
+      padding: 0;
+    }
+
+  h1, h2, h3  {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  &__head {
+    position: relative;
+  }
+  &__head {
+    margin: 0 1em!important;
+
+    .btn__inviteContact {
+      margin-bottom: 1em;
+      padding: 6px 12px;
+      border: 2px solid rgba(106, 112, 139, 0.5);
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+      }
+    }
+  }
+}
+
+
+.contacts-tabs {
+  font-size: 120%;
+  padding: 0 1em;
+}
+.contacts-tabs {
+  &__link {
+    padding: 10px 20px!important;
+  }
+  &__content {
+    border: 1px solid #D8D8D8;
+    border-top: 0;
+    background: #fff;
+    padding-top: 1em;
+  }
+}
+
+.contacts-subTabs {
+  font-size: 85%;
+  text-transform: uppercase;
+  margin: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts-subTabs {
+  &__content {
+    padding-top: 1em;
+  }
+  &__content .tag-list.tag-items{
+  margin: 0;
+  }
+}
+
+
+
+
+.contacts__list {
+  //БЫСТРЫЙ ПОИСК
+  input {
+    margin: 1em 0 0 1em;
+    border: 1px solid #999;
+    .contacts-subTabs__content & {
+      //margin-top: 0;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin: 1em 0;
+    }
+  }
+
+}
+
+
+.contacts__tags,
+.contacts__list {
+  .portlet-content {
+    padding: 1em 0;
+  }
+}
+
+
+// ========================================================================================================================================
+// ЛЕВАЯ КОЛОНКА -- ТЕГИ
+// ========================================================================================================================================
+
+.contacts__tags {
+  .tag-items {
+    @extend  .nav, .nav-pills, .nav-icon;
+    display: block;
+    float: none;
+    margin: 2em 0 0 0;
+    padding: 0;
+    //font-size: 90%;
+    li {
+      white-space: nowrap;
+      position: relative;
+      display: block;
+      float: none;
+      margin: 0;
+    } // li
+  }
+
+  $zmdi_w: 32px;
+  a {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    padding-left: $zmdi_w;
+    line-height: $zmdi_w/2;
+    text-transform: capitalize;
+    > .bull.zmdi {
+      position: relative;
+      width: $zmdi_w;
+      height: $zmdi_w/2;
+      line-height: $zmdi_w/2;
+      text-align: center;
+      margin-left: -$zmdi_w;
+      float: left;
+      font-size: 1em;
+    }
+
+    .badge {
+      //font-size: 70%;
+      font-weight: normal;
+      border-radius: 0;
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      background: lighten($badge-bg, 20%);
+      box-shadow: 4px 0 15px 15px #fff;
+    }
+
+    .fa {
+      position: relative;
+      width: initial;
+      margin: 0;
+    }
+  }
+  a {
+    &:hover,
+    &:focus,
+    &.is-active {
+      text-decoration: none;
+      background-color: $nav-link-hover-bg;
+      .badge {
+        @include box-shadow(4px 0 15px 15px $nav-link-hover-bg);
+        }
+    } //:hover
+    &.is-active {
+      .badge {
+        @include box-shadow(4px 0 15px 15px $nav-link-hover-bg);
+        //background: transparent;
+        .fa {
+          margin: 0;
+          width: inherit;
+          font-size: 120%;
+          color: #6a708b;
+        }
+      }
+    } //:active
+    &.tag-asset-delete {
+      .badge {
+        font-size: 150%;
+      }
+    }
+
+  } // a
+
+} //.portlet-column-contact__tags
+
+.contacts__tags {
+  .taglib-asset-tags-summary .tag {
+    padding:10px 0;
+    padding-left: 32px;
+    padding-right: 40px;
+  }
+}
+
+
+
+// ========================================================================================================================================
+// ЛЕВАЯ КОЛОНКА -- ТЕГИ
+// ========================================================================================================================================
+
+.portlet-column-contact__list {
+  @media (max-width: $screen-xs-max) {
+    padding: 0 !important;
+   }
+  section.portlet {
+    .portlet-body > div{
+      &:nth-child(1) {
+        //background: #f5f5f5;
+        //text-align: right;
+        //padding: .75em 1em;
+        padding: .75em 0;
+        @media (max-width: $screen-xs-max) {
+          padding: 0;
+        }
+        input {
+          &:before {
+            position: absolute;
+            top:0; left: -50px;
+            z-index: 1;
+            content: "\f002";
+            font-family: 'fontawesome-alloy';
+          }
+        }
+      }
+    }
+  }
+//КОНТАКТЫ - СПИСОК СОТРУДНИКОВ
+
+// ==================
+// СПИСОК КАРТОЧЕК
+// ==================
+
+} //.portlet-column-contact__list
+
+

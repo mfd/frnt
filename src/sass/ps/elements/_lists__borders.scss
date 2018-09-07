@@ -1,0 +1,68 @@
+//BORDERS
+.list {
+  > div {
+    border: 1px solid $gray-lighter;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    &.col-lg-4 {
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3){
+        border-top-color: transparent;
+      }
+      &:nth-of-type(3n+1){
+        border-left-color: transparent;
+      }
+    }
+    &.col-lg-6{
+      &:nth-of-type(1),
+      &:nth-of-type(2){
+        border-top-color: transparent;
+      }
+      &:nth-of-type(2n+1){
+        border-left-color: transparent;
+      }
+    }
+    // Portrait tablet to landscape and desktop
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        &.col-md-6{
+          &:nth-of-type(1),
+          &:nth-of-type(2){
+            border-top-color: transparent;
+          }
+          &:nth-of-type(3), &:nth-of-type(4){
+            border-top-color: $gray-lighter;
+          }
+          &:nth-of-type(2n){
+            border-left-color: $gray-lighter;
+          }
+          &:nth-of-type(2n+1){
+            border-left-color: transparent;
+          }
+        }
+      }
+      /* Portrait tablets and small desktops */
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        & {
+          border: 1px solid $gray-lighter;
+          border-top-color: transparent;
+          border-left-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      /* Landscape phones and portrait tablets */
+      @media (max-width: $screen-xs-max) {
+        & {
+          border: 1px solid $gray-light2;
+          border-top-color: transparent;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          &:last-child {
+            border-color: transparent;
+          }
+        }
+      }
+
+  }
+}

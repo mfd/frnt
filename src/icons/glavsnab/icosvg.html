@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SVG Sprite Preview</title>
+  <style type="text/css" media="all">
+    body{
+      font-family: -apple-system,system-ui,BlinkMacSystemFont,Roboto,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      padding: 30px;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+    }
+
+    .icons-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      text-align: center;
+    }
+
+    .icon-box {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 200px;
+      min-height: 200px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .icon-container {
+      min-height: 170px;
+      text-align: center;
+      font-size: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #CCC;
+      border-radius: 5px;
+      box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    input:not([type=range]):not([type=color]) {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 12px;
+      border-radius: 5px;
+      height: 30px;
+      padding: 0;
+      text-align: center;
+      border: 1px solid #CCC;
+      box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+      -webkit-appearance: none;
+    }
+
+    .configure {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    .configure label:first-child input {
+      display: block;
+      width: 100%;
+    }
+
+    .configure label:last-child {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .icon-class-name {
+      width: 70%;
+    }
+
+    .icon-unicode {
+      width: 30%;
+    }
+
+    .gsnab-ico-22 {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_analytics {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_analytics2 {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_calendar {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_cards {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_chat {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_dashboard {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_focus {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_hands {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_hands_help {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_heart {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_ka4estvo {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_message {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_ps {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_psoutline {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_rouble {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_sadd {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_settings {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_sign {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_suppliers {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_user {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_users {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_winner {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zayavkas {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zmdi-check {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zmdi-clock {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zmdi-cloud {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zmdi-lock {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zmdi-module {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-ico_zmdi-phone {
+      width: 1em;
+      height: 1em;
+    }
+    .gsnab-plussell {
+      width: 2.2em;
+      height: 1em;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Icons: <span id="count"></span></h1>
+<pre><code>
+<svg><use xlink:href="#gsnab-ico_hands"/></svg>
+</code></pre>
+  <div class="configure">
+    <label>
+      <span>Size: <b><output for="size" id="size-value">100</output></b>px</span>
+      <input type="range" id="size" value="100" min="6" max="1000">
+    </label>
+
+    <label>
+      <span>Color:&nbsp;</span>
+      <input type="color" id="color">
+    </label>
+  </div>
+
+  <ul class="icons-list">
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico-22" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico-22">
+          <use xlink:href="sprite.svg#gsnab-ico-22"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_analytics" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_analytics">
+          <use xlink:href="sprite.svg#gsnab-ico_analytics"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_analytics2" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_analytics2">
+          <use xlink:href="sprite.svg#gsnab-ico_analytics2"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_calendar" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_calendar">
+          <use xlink:href="sprite.svg#gsnab-ico_calendar"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_cards" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_cards">
+          <use xlink:href="sprite.svg#gsnab-ico_cards"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_chat" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_chat">
+          <use xlink:href="sprite.svg#gsnab-ico_chat"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_dashboard" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_dashboard">
+          <use xlink:href="sprite.svg#gsnab-ico_dashboard"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_focus" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_focus">
+          <use xlink:href="sprite.svg#gsnab-ico_focus"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_hands" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_hands">
+          <use xlink:href="sprite.svg#gsnab-ico_hands"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_hands_help" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_hands_help">
+          <use xlink:href="sprite.svg#gsnab-ico_hands_help"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_heart" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_heart">
+          <use xlink:href="sprite.svg#gsnab-ico_heart"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_ka4estvo" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_ka4estvo">
+          <use xlink:href="sprite.svg#gsnab-ico_ka4estvo"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_message" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_message">
+          <use xlink:href="sprite.svg#gsnab-ico_message"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_ps" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_ps">
+          <use xlink:href="sprite.svg#gsnab-ico_ps"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_psoutline" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_psoutline">
+          <use xlink:href="sprite.svg#gsnab-ico_psoutline"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_rouble" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_rouble">
+          <use xlink:href="sprite.svg#gsnab-ico_rouble"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_sadd" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_sadd">
+          <use xlink:href="sprite.svg#gsnab-ico_sadd"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_settings" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_settings">
+          <use xlink:href="sprite.svg#gsnab-ico_settings"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_sign" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_sign">
+          <use xlink:href="sprite.svg#gsnab-ico_sign"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_suppliers" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_suppliers">
+          <use xlink:href="sprite.svg#gsnab-ico_suppliers"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_user" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_user">
+          <use xlink:href="sprite.svg#gsnab-ico_user"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_users" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_users">
+          <use xlink:href="sprite.svg#gsnab-ico_users"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_winner" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_winner">
+          <use xlink:href="sprite.svg#gsnab-ico_winner"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zayavkas" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zayavkas">
+          <use xlink:href="sprite.svg#gsnab-ico_zayavkas"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zmdi-check" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zmdi-check">
+          <use xlink:href="sprite.svg#gsnab-ico_zmdi-check"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zmdi-clock" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zmdi-clock">
+          <use xlink:href="sprite.svg#gsnab-ico_zmdi-clock"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zmdi-cloud" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zmdi-cloud">
+          <use xlink:href="sprite.svg#gsnab-ico_zmdi-cloud"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zmdi-lock" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zmdi-lock">
+          <use xlink:href="sprite.svg#gsnab-ico_zmdi-lock"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zmdi-module" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zmdi-module">
+          <use xlink:href="sprite.svg#gsnab-ico_zmdi-module"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-ico_zmdi-phone" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-ico_zmdi-phone">
+          <use xlink:href="sprite.svg#gsnab-ico_zmdi-phone"></use>
+        </svg>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".gsnab-plussell" readonly>
+      <div class="icon-container">
+        <svg class="icon gsnab-plussell">
+          <use xlink:href="sprite.svg#gsnab-plussell"></use>
+        </svg>
+      </div>
+    </li>
+    
+  </ul>
+
+  <script>
+    var change = document.getElementById('size');
+    var color = document.getElementById('color');
+    var changeVal = document.getElementById('size-value');
+    var count = document.getElementById('count');
+    var autoselect = document.getElementsByClassName('autoselect');
+    var icons = document.getElementsByClassName('icon');
+
+    Array.prototype.forEach.call(autoselect, function(el) {
+      el.onclick = function() {
+        this.focus();
+        this.select();
+      };
+    });
+
+    change.oninput = function() {
+      var val = this.value;
+      changeVal.value = val;
+      Array.prototype.forEach.call(icons, function(el) {
+        el.style.fontSize = val + 'px';
+      });
+    }
+
+    color.onchange = function() {
+      var val = this.value;
+      Array.prototype.forEach.call(icons, function(el) {
+        el.style.fill = val;
+      });
+    }
+
+    count.innerHTML = icons.length;
+  </script>
+</body>
+</html>

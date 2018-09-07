@@ -1,0 +1,10 @@
+.joindre .banner-header {
+
+	+ div[class^='section--']{
+		min-height: 650px;
+
+		@media (max-width: $tablet-w) {
+			min-height: auto;
+		}
+	}
+}

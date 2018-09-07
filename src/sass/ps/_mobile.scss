@@ -1,0 +1,134 @@
+@media (max-width: $screen-xs-max) {
+  #menubar {
+    transform: translateX(-100px);
+  }
+  .menubar-visible #menubar {
+    transform: translateX(0);
+  }
+  #wrapper #ps-wrapper {
+    padding-left: 0;
+  }
+  .menubar-visible #wrapper #ps-wrapper {
+    padding-left: 0;
+  }
+
+  .menubar-visible #ps-content {
+    padding-left: 0;
+  }
+  .portlet-topper {
+    display: none;
+  }
+
+}
+
+//
+//  HEADER MOBILE
+//
+
+
+
+
+//SEARCH
+
+#ps-header {
+  .navbar-search {
+    @media (max-width: $screen-xs-max) {
+      //display:none;
+      width: 100%;
+      & input {
+        font-size: 1em;
+      }
+    }
+    @media (min-width: $screen-sm-min) { // >= 768px (small tablet)
+      width: 250px;
+      & input {
+        font-size: .9em;
+      }
+      & .btn-icon-toggle {
+        width: 40px;
+        font-size: 90%;
+      }
+    }
+    @media (min-width: $screen-md-min) { // >= 992px (medium laptop)
+      width: 350px;
+      & input {
+        font-size:1.1em;
+      }
+      .form-group {
+        //width: 1220px;
+      }
+    }
+    @media (min-width: $screen-lg-min) { // >= 1200px (large desktop)
+      width: 510px;
+    }
+
+    @media (min-width: 1600px) { // >= 1200px (large desktop)
+      width: 800px;
+      & input {
+        //font-size:1.3em;
+      }
+    }
+  } //.navbar-search  responsive
+}
+
+
+
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+
+@media screen and (max-width: $screen-xs-max) {
+  .toggle-offcanvas .btn-toggle-offcanvas {
+    color: #6A708B;
+    //background: #f9fafb;
+    background: transparent;
+    font-size: 80%!important;
+    border: 0;
+    margin: .5em 0;
+    padding: 2px 4px;
+    &:focus {outline: none;}
+    i {
+      margin-right: 5px;
+    }
+  .zaya_layout & {
+    margin: 1em 0;
+  }
+  .contacts_layout & {
+    margin: 1.5em 0 0 0;
+  }
+
+  }
+  .row-offcanvas {
+    position: relative;
+    transition: all .25s ease-out;
+  }
+  .row-offcanvas-right {
+    right: 0;
+    &.active {
+      right: 50%; /* 6 columns */
+    }
+    .sidebar-offcanvas {
+      right: -50%; /* 6 columns */
+    }
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+    &.active {
+      left: 50%; /* 6 columns */
+    }
+    .sidebar-offcanvas {
+      left: -50%; /* 6 columns */
+    }
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+/* //Off Canvas */
+

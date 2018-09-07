@@ -1,0 +1,98 @@
+div[class^="col"] > .pastille{ 
+	width: 100%; 
+	height: auto;
+	max-width: 100%; 
+	margin: 0 0 50px;
+
+	@media (max-width: $tablet-w){
+		margin-bottom: 5px;
+	}
+}
+
+.pastille{
+	width: 290px;
+	height: 290px;
+	display: inline-block;
+	margin: 0 5px;
+	position: relative;
+
+	svg{
+		display: block;
+		width: 100%;
+		/*height: 100%;*/
+		position: relative;
+		transition: filter .5s, opacity .5s;
+
+		&:first-child{
+			z-index: 9;
+			opacity: 0.7;
+		}
+
+		&.screen{
+			width: 100%;
+			height: 100%;
+			top: 0; left: 0;
+			opacity: 1;
+
+			.circle_bg{
+				transition: fill .5s;
+			}
+		}
+
+		+ .screen{
+			position: absolute;
+		}
+
+		.ie & {
+			height: 256px;
+		}
+	}
+
+	.small-title{ 
+		width: 75%;
+	    position: absolute;
+	    text-align: center;
+	    left: 0; right: 0;
+	    margin: 0 auto;
+	    z-index: 10;
+	    color: #fff;
+	    transition: color .5s;
+
+	    .ie & {
+	    	width: 190px;
+	    }
+	}
+
+	.desktop &.pastille--image:hover{
+		svg:first-child{ opacity: 0; }
+		svg.screen{
+			filter: drop-shadow(0px 0px 18px #aaa);
+
+			.circle_bg{ fill: $purple; }
+		}
+	}
+
+	.desktop &.pastille--purple:hover{
+		svg.screen{
+			filter: drop-shadow(0px 0px 18px #3a3a3a);
+
+			.circle_bg{ fill: #fff; }
+		}
+
+		.small-title{ color: $purple-light; }
+	}
+
+	&.pastille--white{
+		.small-title{ color: $purple; }
+
+		.desktop &:hover{
+			svg.screen .circle_bg{ fill: $purple; }
+
+			.small-title{ color: #fff; }
+		}
+	}
+
+	&.pastille--selected{
+		.small-title{ color: $purple; }
+	}
+}

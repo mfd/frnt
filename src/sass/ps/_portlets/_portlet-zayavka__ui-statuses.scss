@@ -1,0 +1,222 @@
+// СТАТУСЫ
+//
+
+// === /modules/plussell/request/plussell-api/src/main/java/org/plussell/constants/WorkflowConstants.java
+
+// // статусы заявки -- покупаю
+//  public static final int REQUEST_STATUS_FORMATION = 9; // формирование заявки
+//  public static final int REQUEST_STATUS_WORKING = 10; // заявка в работе
+//  public static final int REQUEST_STATUS_APPROVAL = 11; // заявка на согласовании
+//  public static final int REQUEST_STATUS_CANCELED = 12; // заявка отменена
+//  public static final int REQUEST_STATUS_COMPLETE = 13; // заявка успешно завершена
+//  public static final int REQUEST_STATUS_APPROVED = 14; // заявка согласована
+//  public static final int REQUEST_STATUS_REJECTED = 15; // заявка не согласована
+
+//  public static final int ACCEPT_MODE_ACCEPT = 1;
+//  public static final int ACCEPT_MODE_STOPPED = 2;
+//  public static final int ACCEPT_MODE_EXPIRED = 3;
+
+//  // статусы предложения -- продаю
+//  public static final int OFFER_STATUS_NEW = 0; // новое предложение
+//  public static final int OFFER_STATUS_FORMATION = 1; // формирование предложения
+//  public static final int OFFER_STATUS_NEGOTIATION = 2; // предложение на согласовании
+//  public static final int OFFER_STATUS_APPROVED = 3; // предложение одобрено
+//  public static final int OFFER_STATUS_REJECTED = 4; // предложение не одобрено
+//  public static final int OFFER_STATUS_SUBMISSION_OF_PROPOSALS = 5; // предложение подано заказчику
+//  public static final int OFFER_STATUS_DECLINED = 6; // отклонено
+//  public static final int OFFER_STATUS_REQUEST_WITHDRAWN =7; // заявка отозвана
+
+// public static final int STATUS_NEW = 1; // новый
+// public static final int REPEATED = 2; // повторный
+// public static final int APPROVED = 3; // согласован
+// public static final int REJECTED = 4; // не согласован
+
+
+$color-green:  #48b04b;
+$color-orange: #ff9900;
+$color-blue:   #00ccff;
+$color-purple: #6e4db0;
+$color-green2: #3ABB9E;
+$color-blue2:  #1765C0;
+$color-red:    #FF7171;
+$color-gray:   #60738C;
+
+
+$st_colors:  $color-orange $color-green $color-blue $color-purple $color-gray $color-gray $color-gray $color-gray;
+
+$st_colors2: $color-orange $color-green $color-blue $color-purple $color-green2 $color-blue2 $color-red $color-gray;
+
+$mode_color: $color-green $color-orange $color-red;
+
+
+// ЗАКАЗЧИК
+// .flabel__customer_formir
+// .label__customer_formir
+// .badge__customer_formir
+
+//$st_customer: 'formir' 'inwork' 'agree' 'lp' 'arch' 'any' 'all';
+$st_customer_num: '9' '10' '11' '12' '13' '14' '15';
+$st_customer_archived: 'true' 'false';
+
+// ПОСТАВЩИК
+// .flabel__supplier_formir
+// .label__supplier_formir
+// .badge__supplier_formir
+//$st_supplier: 'newest' 'podacha' 'agree' 'unused' 'lp' 'arch' 'all';
+$st_supplier_num: '0' '1' '2' '3' '4' '5' '6' '7';
+
+// СОГЛАСУЮЩИЙ
+// .flabel__agr_formir
+// .label__agr_formir
+// .badge__agr_formir
+//$st_agr: 'newest' 'modif' 'agreenot' 'agreeyes' 'arch' 'all';
+$st_agr_num:  '0' '1' '2' '3' '4';
+
+$mode_num: '1' '2' '3';
+
+// ФИЛЬТР СТАТУСОВ
+// @mixin flabel($role, $status, $color) {
+//   .flabel__#{$role}_#{$status} {
+//     color: $color;
+//     a:hover & {
+//       color: darken($color, 10%);
+//     }
+//   }
+// }
+
+// @mixin label_num($role, $status, $color) {
+//   .label__#{$role}_#{$status} {
+//     color: $color;
+//     a:hover {
+//       color: darken($color, 10%);
+//     }
+//   }
+// }
+
+//ЛЕЙБЛЫ
+@mixin label($role, $status, $color) {
+  .label__#{$role}_#{$status} {
+    //content: $status;
+    color: darken($color, 10%);
+    background: lighten($color, 45%);
+    // &:hover{
+    //   color: darken($color, 10%);
+    // }
+  }
+}
+// ЛЕЙБЛ В КАРТОЧКЕ ЗАЯВКИ
+// @mixin badge($role, $status, $color) {
+//   .badge__#{$role}_#{$status},
+//   .zayaList__#{$role}_#{$status} {
+//     background-color: $color;
+//     border-color: $color;
+//     color:#ffffff;
+//     //color: contrast($color, $text-color, $white, $color-threshold);
+//   }
+// }
+
+// @mixin make_statuses($role, $role_statuses) {
+//   @each $status in $role_statuses {
+//     $i: index($role_statuses, $status);
+//     $color: nth($st_colors, $i);
+//     //@include flabel($role, $status, $color);
+//     @include label($role, $status, $color);
+//     @include badge($role, $status, $color);
+//   }
+
+// }
+
+
+
+// NEW ERA
+
+@mixin statuses_decorate($role, $status, $color) {
+  // .#{$role}.flabel__#{$status},
+  .b-zayaStatus__item__#{$role}-#{$status},
+  .b-zayaStatus__item-icon.b-zayaStatus__item__#{$role}-#{$status} {
+    color: $color;
+    a:hover {
+      color: darken($color, 10%);
+    }
+  }
+  .b-zayalist__item__label.label__#{$role}_#{$status},
+  .b-zayaEntry-desc__item-label.label__#{$role}_#{$status} {
+    color: darken($color, 10);
+    //color: $color;
+    background: transparentize($color, .9);
+    border: 1px solid transparentize($color, .9);
+    //background: lighten($color, 45);
+    //border: 1px solid lighten($color, 45);
+    // &:hover{
+    //   color: darken($color, 10%);
+    // }
+  }
+
+}
+
+@mixin make_statuses_num($role, $role_statuses) {
+  @each $status in $role_statuses {
+    $i: index($role_statuses, $status);
+    $color: nth($st_colors2, $i);
+    @include statuses_decorate($role, $status, $color);
+    //@include badge($role, $status, $color);
+  }
+}
+
+@mixin make_statuses_l($role, $role_statuses) {
+  @each $status in $role_statuses {
+    $i: index($role_statuses, $status);
+    $color: nth($st_colors, $i);
+    @include label($role, $status, $color);
+  }
+}
+
+
+
+
+// START -> MAKE STATUSES
+// @include make_statuses('customer', $st_customer);
+// @include make_statuses('supplier', $st_supplier);
+// @include make_statuses('agr', $st_agr);
+
+
+@include make_statuses_num('customer', $st_customer_num);
+@include make_statuses_num('supplier', $st_supplier_num);
+@include make_statuses_num('agr', $st_agr_num);
+
+@include make_statuses_l('customer', $st_customer_archived);
+
+// Режим заявки - активна, остановлена, срок истек
+@mixin make_mode() {
+  @each $mode in $mode_num {
+    $i: index($mode_num, $mode);
+    $color: nth($mode_color, $i);
+
+    .b-zayalist__item__label.label__mode-#{$mode},
+    .b-zayaEntry-st__item-label.label__mode-#{$mode},
+    .b-zayaEntry-desc__item-label.label__mode-#{$mode}
+     {
+      color: darken($color, 10);
+      //background: lighten($color, 55);
+      //border: 1px solid lighten($color, 55);
+      border: 1px solid transparentize($color, .85);
+      background: transparentize($color, .95);
+
+      font-size: 70%;
+      padding: .25em;
+    }
+  }
+}
+@include make_mode()
+
+
+// Открытая заявка
+.b-zayalist__item__label.label__openz,
+.b-zayaEntry-desc__item-label.label__openz,
+.b-zayaEntry-st__item-label.label__openz {
+  $cc: #FF9800;
+  color: $cc;
+  background: lighten($cc, 49);
+  border: 1px solid lighten($cc, 20);
+}
+

@@ -1,0 +1,91 @@
+.nav-sections {
+	position: absolute;
+	right: 0;
+	top: 30px;
+
+	transform-origin: 100% 0;
+	transform: rotate(-90deg) translateY(calc(-100% + 10px));
+
+	z-index: 2;
+
+	@media screen and (max-width: $tablet-w) {
+		display: none;
+	}
+
+	ul {
+		margin: 0;
+		@include flex(flex-start, flex-start, row-reverse);
+	}
+
+	li {
+		cursor: pointer;
+		width: 175px;
+		padding: 0;
+		text-align: center;
+		background-color: #fff;
+		transition: background 0.5s ease, transform 0.5s ease;
+
+		// removes hover glitch
+		transform-style: preserve-3d;
+
+		&:not(.current) {
+			@include boxShadowHover();
+		}
+
+		&:not(:first-child) {
+			margin-right: 10px;
+		}
+
+		&.current {
+			background-color: $purple-light;
+
+			&:before {
+				background-color: #fff;
+			}
+			&:after {
+				box-shadow: $box-shadow-dark;
+			}
+
+			span {
+				color: #fff;
+			}
+		}
+
+		.desktop &:not(.current):hover {
+			transform: translateY(-10px);
+
+			span {
+				transform: translateY(10px);
+			}
+		}
+	}
+
+	span {
+		font-weight: 700;
+		font-size: 1.2rem;
+		color: $purple;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		
+		display: block;
+		padding: 16px 10px 25px;
+		pointer-events: none;
+		
+		transition: transform 0.5s ease, color 0.5s ease;
+	}
+
+
+	&.sticky {
+		position: fixed;
+		top: 80px + 30px; // header height + offset
+
+		@media screen and (max-width: $tablet) {
+			top: 30px;
+		}
+	}
+
+
+	.ie & {
+		transform: rotate(-90deg) translateY(-49px);
+	}
+}

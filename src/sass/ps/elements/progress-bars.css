@@ -1,0 +1,205 @@
+/* line 9, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-hairline {
+  margin-top: 8px;
+  height: 2px;
+}
+/* line 18, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-default-dark {
+  background-color: #00344d;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-default-dark {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 19, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-default {
+  background-color: #e5e6e6;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-default {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 20, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-default-light {
+  background-color: #f2f2f3;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-default-light {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 21, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-default-bright {
+  background-color: #FFFFFF;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-default-bright {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 23, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-primary-dark {
+  background-color: #00ccff;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-primary-dark {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 24, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-primary {
+  background-color: #94eaff;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-primary {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 25, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-primary-light {
+  background-color: #0092c2;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-primary-light {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 26, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-primary-bright {
+  background-color: #d6f7ff;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-primary-bright {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 28, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-accent-dark {
+  background-color: #ae359f;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-accent-dark {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 29, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-accent {
+  background-color: #ce78c3;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-accent {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 30, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-accent-light {
+  background-color: #732373;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-accent-light {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 31, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-accent-bright {
+  background-color: #ecc7e8;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-accent-bright {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 33, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-success {
+  background-color: #4CAF50;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-success {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 34, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-warning {
+  background-color: #FB8C00;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-warning {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 35, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-danger {
+  background-color: #F44336;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-danger {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 36, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-info {
+  background-color: #2196F3;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-info {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 41, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-z_formir {
+  background-color: #ff9900;
+  width: 5%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-z_formir {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 45, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-z_inwork {
+  background-color: #48b04b;
+  width: 50%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-z_inwork {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 49, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-z_agree {
+  background-color: #00ccff;
+  width: 75%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-z_agree {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 53, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-z_lp {
+  background-color: #9999ff;
+  width: 85%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-z_lp {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 57, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-z_arch {
+  background-color: #5f7d8c;
+  width: 100%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-z_arch {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 63, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-p_newest {
+  background-color: #ff9900;
+  width: 5%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-p_newest {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 67, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-p_podacha {
+  background-color: #48b04b;
+  width: 50%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-p_podacha {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+/* line 71, /Users/kkashaev/work/plussell/src/css/less/gsnab_theme/progress-bars.less */
+.progress-bar-p_inwork {
+  background-color: #00ccff;
+  width: 50%;
+}
+/* line 7, /Users/kkashaev/work/plussell/src/css/less/bootstrap/mixins/progress-bar.less */
+.progress-striped .progress-bar-p_inwork {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}

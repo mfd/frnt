@@ -1,0 +1,59 @@
+// Equal button
+// --------------------------------------------------
+.btn-icon-toggle {
+  padding: 0;
+  width: 50px;
+  border: 0;
+  background: none;
+  color: $white;
+  .fa,
+  .zmdi,
+  .glyphicon,
+  .gsnab {
+    margin: 0;
+    line-height: 49px;
+  }
+  .fa,
+  .zmdi,
+  .glyphicon {
+    font-size: 160%;
+  }
+  .gsnab {
+    font-size: 240%;
+  }
+  &.btn-lg {
+    width: 46px;
+    .fa,
+    .zmdi,
+    .glyphicon {
+      line-height: 44px;
+    }
+  }
+  &.btn-sm {
+    width: 32px;
+    .fa,
+    .zmdi,
+    .glyphicon {
+      line-height: 30px;
+    }
+  }
+  &.btn-xs {
+    width: 24px;
+    .fa,
+    .zmdi,
+    .glyphicon {
+      line-height: 22px;
+    }
+  }
+}
+
+#header .header-nav [class*=" fa-"],
+[class^=fa-] {
+  font-size: 1.6em;
+}
+
+#header .header-nav [class*=" gsnab"],
+[class^=gsnab-] {
+  font-size: 2.6em;
+  line-height: 49px;
+}

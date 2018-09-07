@@ -1,0 +1,55 @@
+
+@media screen and (max-width: $screen-xs-max) {
+//@include xs {
+  .offcanvas__toggle {
+    //margin: 1em;
+    //margin-bottom: 1em;
+    .company-portlet & {
+      margin: 1em;
+    }
+    &-btn,
+    .btn {
+      color: #6A708B;
+      background: lighten(#6A708B,50%);
+      font-size: 75%;
+    }
+  }
+  .offcanvas__row {
+    position: relative;
+    transition: all .25s ease-out;
+    /*
+    &--right,
+    &-right {
+      right: 0;
+      &.active {
+        right: 75%; // 6 columns
+      }
+      .sidebar-offcanvas {
+        right: -75%; // 6 columns
+      }
+    } //-right
+    */
+    &-left {
+      left: 0;
+      &.active {
+        left: 75%; /* 6 columns */
+      }
+      .offcanvas__sidebar {
+        left: -75%; /* 6 columns */
+      }
+    } //-left
+
+    &-left {
+      &.active {
+         .offcanvas__toggle {
+            left: -75%;
+         }
+      }
+    } // -left
+    .offcanvas__sidebar {
+      position: absolute;
+      top: 0;
+      width: 75%; /* 6 columns */
+    }
+  } // .row-offcanvas
+} // media

@@ -1,0 +1,138 @@
+$screen-xs-max: "768px";
+.listlist {
+    position: relative;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  .list-item {
+    width: 100%;
+    border: 1px solid #e5e6e6;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    padding: 10px 0;
+    &:first-child {
+      border-top-color: transparent;
+    }
+  }
+  // a.list-item {
+  //   display: flex;
+  //   &:hover, &:active, &:focus {
+  //     text-decoration: none;
+  //     color: #333;
+  //   }
+  // }
+}
+.listlist .list-item {
+  width: calc(100% * (1/2) - 20px - 1px);
+  margin-right: 20px;
+  @media (min-width: $screen-xs-max) {
+    &:nth-child(2) {
+      border-top: 0;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    width: calc(100% * (1) - 10px - 1px);
+    margin-right: 10px;
+    &:nth-child(2) {
+      border-top: 0;
+    }
+  }
+
+  .list-item-row {
+    display: flex;
+    flex-direction: row;
+  }
+  $itemPhoto: 60px;
+  .list-item__photo {
+    width: $itemPhoto + 50;
+    flex-grow: 1;
+    //margin-right: 10px;
+    .user-icon {
+      width: $itemPhoto;
+      height: $itemPhoto;
+      margin: 0 auto;
+      //border-radius: 0;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    .list-item__photo {
+      width: $itemPhoto/1.4+40;
+      //height: $itemPhoto;
+      .user-icon {
+        width: $itemPhoto/1.4;
+        height: $itemPhoto/1.4;
+      }
+    }
+  }
+  .list-item__content {
+    width: 100%;
+    .list-item__title {
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: .5em;
+    }
+    .list-item__text {
+      font-size: 12px;
+      line-height: 14px;
+      margin: 0;
+    }
+    .list-item__subText {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .list-item_org {
+      ul.org__props {
+        margin: 0;
+        padding: 0;
+        li.org__props-item {
+          list-style: none;
+          padding: 0;
+          span {
+            margin-right: 5px;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  .list-item__action {
+    //display: none;
+    width: 50px;
+    z-index: 100;
+    a {
+      font-size: 150%;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+.listlist .list-item {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 10;
+    background: rgba(0, 204, 255, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 320ms ease-out
+  }
+  &:hover {
+    cursor: pointer;
+    &:after {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

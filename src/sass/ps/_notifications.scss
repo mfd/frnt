@@ -1,0 +1,359 @@
+//@import "compass/css3";
+
+.plussellNotfifcation__countUnreadMessage-wrap {
+    position: relative;
+}
+
+.plussellNotfifcation__countUnreadMessage {
+    position: absolute;
+    display: block;
+    color: #fff;
+    font-size: 10px;
+    display: block;
+    border-radius: 50px;
+    background: #2196f3;
+    padding: 0px 2px;
+    width: 20px;
+    line-height: 20px;
+}
+
+.plussellNotfifcation__countUnreadMessage_notification {
+   right: 1px;
+   bottom: 2px;
+}
+
+.plussellNotfifcation__countUnreadMessage_chat {
+  right: 1px;
+  bottom: 2px;
+}
+
+.plussellNotfifcation__chat__label-date {
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
+
+.plussellNotfifcation__chat__label-count-messages {
+    top: 41px;
+    color: rgb(75, 75, 123);
+    font-weight: 700;
+    position: absolute;
+    right: 0px;
+}
+
+.plussellNotfifcation__popupContent {
+    position: absolute;
+    right: 0px;
+    background: white;
+    /*max-height: 343px;*/
+    border-radius: 6px;
+}
+
+#notifications, #notifications_chat {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: -1px 2px 4px 1px #a5a1a1;
+  padding: 7px 0px 0px 0px;
+}
+
+.plussellNotfifcation {
+    display: none;
+}
+
+.plussellNotfifcation__list-messages {
+    border-bottom: 1px solid #dedede;
+    max-height: 320px;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.plussellNotfifcation__label-element {
+   position: relative;
+}
+
+.plussellNotfifcation__basket-element {
+    cursor: pointer;
+}
+
+.plussellNotfifcation__ul-advanced {
+    width: 270px;
+    padding: 10px 0px 10px 44px;
+}
+
+.plussellNotfifcation__status {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 140%;
+}
+
+.plussellNotfifcation__status-unread {
+    color: #4fac54;
+    font-size: 140%;
+    color: #4fac54;
+}
+
+.plussellNotfifcation__status-read {
+    color: #c2c4c5;
+}
+
+.plussellNotfifcation__overlay {
+    position: fixed;
+    /*background: rgba(12,12,12,0.2);*/
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1010;
+}
+
+.plussellNotfifcation__emptyCaption {
+  color: black;
+  padding: 10px 35px;
+  font-size: 19px;
+}
+
+
+#notifications{
+  //padding-top: 20px;
+  .caption {
+    font-size: 16px;
+  }
+  .list-material {
+    padding: 0 20px;
+  }
+}
+
+.list-noti {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+	> li {
+		position: relative;
+		list-style-type: none;
+		overflow: hidden;
+
+		a.visible {
+			text-decoration: none;
+			color: $text-color;
+			display: block;
+			padding: 0 0 0 16px;
+			transition: .3s transform cubic-bezier(.17,.67,.6,1.3);
+			background: #fff;
+    }
+
+		a.hidden {
+			display: block !important;
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			background: $border-color;
+			box-shadow: inset 2px 0px 5px rgba(0,0,0,.1);
+			width: 60px;
+			height: 100%;
+			color: $text-color;
+			transition: .3s all cubic-bezier(.17,.67,.6,1.3);
+
+			i {
+				position: absolute;
+				top: 50%;
+				left: 0;
+
+				display: block;
+				width: 100%;
+
+				text-align: center;
+				font-size: 22px;
+				transform: translateY(-50%);
+			}
+		}
+
+		.list-content {
+			position: relative;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 16px 16px 16px 0;
+			height: 65px;
+  		line-height: 24px;
+  		padding-top: 10px;
+			border-bottom: 1px solid $border-color;
+
+			.title{
+				font-size: 20px;
+				font-weight: 400;
+			}
+			.caption {
+				font-size: 14px;
+				color: transparentize($text-color, .20);  //fade(text-color, 80%);
+			}
+
+			.title,
+			.caption {
+				display: block;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+		}
+
+		.list-action-left {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			padding: 0 16px;
+			width: 72px;
+			border-radius: 50%;
+			transform: translateY(-50%);
+			img {
+				width: 35px;
+				height: 35px;
+			}
+			.icon {
+				position: relative;
+				left: 0;
+				top: 8px;
+				width: 1em;
+				font-size: 22px;
+				line-height: 1;
+				width: auto;
+				height: auto;
+				display: block;
+				margin: 0;
+				background-size: initial;
+				text-align: center;
+			}
+			.icon-circle {
+				display: block;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				text-align: center;
+				background: $border-color;
+				padding: 5px;
+				font-size: 20px;
+			}
+
+		}
+		.list-action-right {
+			position: absolute;
+			top: 0%;
+			right: 16px;
+			padding: 0;
+			width: 100px;
+			height: 100%;
+			text-align: right;
+			font-size: 12px;
+			color: rgba(0,0,0,.3);
+			i {
+				font-size: 20px;
+			}
+			.top {
+				position: absolute;
+				top: 0px;
+				right: 0;
+			}
+			.center {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			.bottom {
+				position: absolute;
+				right: 0;
+				bottom: 10px;
+			}
+		}
+
+		&:last-child{
+			.list-content{
+				border-bottom-color: transparent;
+			}
+		}
+
+		&.has-action-left {
+			.list-content {
+				margin-left: 55px;
+			}
+		}
+
+		&.has-action-right {
+			.list-content {
+				padding-right: 110px;
+			}
+		}
+
+		&.has-long-story {
+			.list-action-left {
+				top: 15px;
+				transform: translateY(0);
+			}
+			.caption {
+				white-space: inherit;
+			}
+		}
+
+		&.divider {
+			font-size: 14px;
+			padding: 10px 16px 10px 16px;
+			margin-top: 10px;
+			&.subheader {
+				padding-left: 72px;
+			}
+			&.with-border {
+				border-top: 1px solid $border-color;
+			}
+		}
+
+	}
+
+	&.has-hidden{
+		>li:hover{
+			.hidden{
+				visibility: visible !important;
+			}
+			a.visible{
+				transform: translate3d(-60px,0,0);
+			}
+		}
+	}
+
+	&.borderless{
+		.list-content{
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+
+/* for page of listnotificagtions */
+
+.plussellPageNotfifcation__settingsListPage-makeRead {
+    float: right;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.plussellPageNotfifcation__wrap {
+    float: none;
+    margin-top: 15px;
+}
+
+.plussellPageNotfifcation__list-messages {
+    border-radius: 0px;
+}
+
+.plussellPageNotfifcation__settingsListPage {
+    margin-bottom: 8px;
+    overflow: hidden;
+    background: white;
+    padding: 7px 22px;
+    box-shadow: 0 0 9px -2px #e7dada;
+}
+
+.plussellPageNotfifcation__settingsListPage-getOnlyUnRead {
+    cursor: pointer;
+    float: left;
+}

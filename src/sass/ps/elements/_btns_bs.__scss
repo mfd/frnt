@@ -1,0 +1,67 @@
+// .btn-accent-bright {
+//   color: #732373;
+//   background-color: #ecc7e8;
+//   border-color: #ecc7e8;
+// }
+// .btn-primary-bright {
+//   color: #0092c2;
+//   background-color: #d6f7ff;
+//   border-color: #d6f7ff;
+// }
+
+
+
+
+.btn-default-bright {   @include button-variant($brand-default-dark, $brand-default-bright, $gray-lighter) }
+.btn-default-light {    @include button-variant($brand-default-dark, $brand-default-light, $brand-default-light) }
+.btn-default-dark {     @include button-variant($brand-default-light, $brand-default, $brand-default) }
+.btn-default-dark {     @include button-variant($gray-lighter, $brand-default-dark, $brand-default-dark) }
+
+.btn-primary-bright {   @include button-variant($brand-primary-dark, $brand-primary-bright, $brand-primary-bright) }
+.btn-primary-light {    @include button-variant($brand-primary-dark, $brand-primary-light, $brand-primary-light) }
+.btn-primary {      @include button-variant($btn-primary-color, $brand-primary, $brand-primary) }
+.btn-primary-dark {     @include button-variant($btn-primary-color, $brand-primary-dark, $brand-primary-dark) }
+
+.btn-accent-bright {    @include button-variant($brand-accent-dark, $brand-accent-bright, $brand-accent-bright) }
+.btn-accent-light {     @include button-variant($brand-accent-dark, $brand-accent-light, $brand-accent-light) }
+.btn-accent {       @include button-variant($brand-accent-light, $brand-accent, $brand-accent) }
+.btn-accent-dark {      @include button-variant($brand-accent-bright, $brand-accent-dark, $brand-accent-dark) }
+
+
+
+
+// .btn-default-bright {
+//     color: #00344d;
+//     background-color: #FFF;
+//     border-color: #e5e6e6
+// }
+
+// .btn-default-bright.active,.btn-default-bright.focus,.btn-default-bright:active,.btn-default-bright:focus,.btn-default-bright:hover,.open>.dropdown-toggle.btn-default-bright {
+//     color: #00344d;
+//     background-color: #e6e6e6;
+//     border-color: #c5c8c9
+// }
+
+// .btn-default-bright.disabled,.btn-default-bright.disabled.active,.btn-default-bright.disabled.focus,.btn-default-bright.disabled:active,.btn-default-bright.disabled:focus,.btn-default-bright.disabled:hover,.btn-default-bright[disabled],.btn-default-bright[disabled].active,.btn-default-bright[disabled].focus,.btn-default-bright[disabled]:active,.btn-default-bright[disabled]:focus,.btn-default-bright[disabled]:hover,fieldset[disabled] .btn-default-bright,fieldset[disabled] .btn-default-bright.active,fieldset[disabled] .btn-default-bright.focus,fieldset[disabled] .btn-default-bright:active,fieldset[disabled] .btn-default-bright:focus,fieldset[disabled] .btn-default-bright:hover {
+//     background-color: #FFF;
+//     border-color: #e5e6e6
+// }
+
+// .btn-default-bright .badge {
+//     color: #FFF;
+//     background-color: #00344d
+// }
+
+// .btn-default-bright:focus,.btn-default-bright:hover,.open .dropdown-toggle.btn-default-bright {
+//     background-color: #ededed;
+//     border-color: #ededed
+// }
+
+// .btn-default-bright.active,.btn-default-bright:active {
+//     background-color: #e6e6e6;
+//     border-color: #e6e6e6
+// }
+
+// .btn-default-bright.btn-flat,.btn-default-bright.btn-icon-toggle,.open .dropdown-toggle.btn-default-bright.btn-flat,.open .dropdown-toggle.btn-default-bright.btn-icon-toggle {
+//     color: #FFF
+// }

@@ -1,0 +1,7 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    "transform-function-bind",
+    "transform-object-rest-spread"
+  ]
+}

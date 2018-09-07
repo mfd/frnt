@@ -1,0 +1,99 @@
+
+.portlet {
+  > .portlet-topper,
+  > .portlet-topper1 {
+    display: none !important;
+  }
+  > .portlet-content-editable {
+    border: 0 !important;
+  }
+  &:hover, &.focus {
+    > .portlet-topper,
+    > .portlet-topper1 {
+      display: none !important;
+    }
+    > .portlet-content-editable {
+      border: 0 !important;
+    }
+  }
+}
+
+body.liferayAdmin {
+  .portlet {
+    border: 10px solid #f2f5fa;
+    > .portlet-topper,
+    > .portlet-topper1 {
+      display: block !important;
+    }
+    &:hover, &.focus {
+      > .portlet-topper,
+      > .portlet-topper1 {
+        display: block !important;
+      }
+    }
+  }
+}
+
+#ps-content {
+  .portlet-title-text {
+    display: none;
+  }
+  .portlet-content-container {
+    //font-size:120%;
+  }
+
+
+  .btn-bottom-right {
+    // position: absolute;
+    // bottom: 30px;
+    // right: 40px;
+    // @media (max-width: $screen-xs-max) { 
+      position: fixed;
+      bottom: 60px;
+      right: 20px;
+    // }
+  }
+
+  // DROPDOWN MENU
+  .lfr-icon-menu-open,
+    .management-bar-nav{
+      .dropdown-menu {
+      @extend .animation-dock;
+      font-size:110%;
+      a, a:focus {
+        outline: none;
+      }
+    }
+  }
+}//.#ps-content
+
+
+
+.dropdown-menu {
+  font-size: 14px;
+  > li > a {
+    outline: 0;
+  } 
+}
+
+.tooltip {
+  .tooltip-inner {
+    box-shadow: none;
+    }
+}
+
+
+
+.portlet-decorate .portlet-content {
+  @media (max-width: $screen-xs-max) { 
+    padding: 0; 
+  }
+}
+
+
+h1, h2, h3 {
+  .lfr-ddm-field-group {
+    margin-bottom: 20px;
+    display: inline;
+  }
+}

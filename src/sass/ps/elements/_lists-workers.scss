@@ -1,0 +1,118 @@
+.list-workers {
+  > div,
+  .list-item {
+    min-height: 130px;
+    .photo {
+      @extend .v-top;
+      //width: 60px; //80px
+    } // /.photo
+    .item-actions {
+      top: 20%;
+      right: 0;
+      a .icon-monospaced, .icon-monospaced, .icon-monospaced .lexicon-icon {
+        width: 15px;
+        height: 20px;
+        line-height: 20px;
+      }
+      .icon-monospaced .lexicon-icon {
+        padding: 0px;
+      }
+      .fa, .glyphicon, .zmdi, .gsnab{
+        margin: 0 5px 0 0;
+        font-size: 20px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        line-height: 20px
+      }
+    }
+    &.disabled {
+      &::before{
+        @include opacity(0);
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0; top: 0;
+        display: block;
+        z-index: 5;
+
+        background: rgba(255, 241, 240, 0.9);;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0iI0VDNUQ1NyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik00OS4yMzEsNThjLTE2LDAtMjguOTIzLTEyLjkyMy0yOC45MjMtMjguOTIzUzMzLjIzMSwwLDQ5LjIzMSwwczI4LjkyMywxMi45MjMsMjguOTIzLDI4LjkyM1M2NS4yMzEsNTgsNDkuMjMxLDU4eiAgIE00OS4yMzEsMy4wNzdjLTE0LjMwOCwwLTI1Ljg0NiwxMS42OTItMjUuODQ2LDI1Ljg0NnMxMS41MzgsMjYsMjUuODQ2LDI2czI1Ljg0Ni0xMS42OTIsMjUuODQ2LTI1Ljg0NlM2My41MzgsMy4wNzcsNDkuMjMxLDMuMDc3eiAgIi8+PHBhdGggZD0iTTcuMjMxLDEwMEg0LjE1NGMwLTI0LjkyMywyMC4zMDgtNDUuMDc3LDQ1LjA3Ny00NS4wNzdWNThDMjYuMTU0LDU4LDcuMjMxLDc2Ljc2OSw3LjIzMSwxMDB6Ii8+PHBhdGggZD0iTTY5LjM4NSw4OS41MzhjLTAuNDYyLDAtMC43NjktMC4xNTQtMS4wNzctMC40NjJjLTAuNjE1LTAuNjE1LTAuNjE1LTEuNTM4LDAtMi4xNTRMOTMuMjMxLDYyICBjMC42MTUtMC42MTUsMS41MzgtMC42MTUsMi4xNTQsMGMwLjYxNSwwLjYxNSwwLjYxNSwxLjUzOCwwLDIuMTU0TDcwLjQ2Miw4OS4wNzdDNzAuMTU0LDg5LjM4NSw2OS42OTIsODkuNTM4LDY5LjM4NSw4OS41Mzh6Ii8+PHBhdGggZD0iTTk0LjE1NCw4OS41MzhjLTAuNDYyLDAtMC43NjktMC4xNTQtMS4wNzctMC40NjJMNjguMzA4LDY0LjMwOGMtMC42MTUtMC42MTUtMC42MTUtMS41MzgsMC0yLjE1NHMxLjUzOC0wLjYxNSwyLjE1NCwwICBsMjQuOTIzLDI0LjkyM2MwLjYxNSwwLjYxNSwwLjYxNSwxLjUzOCwwLDIuMTU0Qzk0LjkyMyw4OS4zODUsOTQuNjE1LDg5LjUzOCw5NC4xNTQsODkuNTM4eiIvPjwvc3ZnPg==");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 25%;
+        //@include opacity(1);
+        //@include transform(scale(0.9));
+        @include transition(all 320ms ease-out);
+
+        //@include transition(opacity .3s linear);
+      }
+    }
+  } // /.contact
+} //.list-workers
+
+
+
+
+//КОНТАКТЫ - СПИСОК СОТРУДНИКОВ
+// .company-users {
+//   @extend .list-results;
+//   @media (max-width: $screen-md-max) {
+//     //@extend (.btn-xs);
+//   }
+//   .contact {
+//     //position:relative;
+//     .photo {
+//       width: 60px; //80px
+//       img {
+//         //@extend .no-gutters;
+//         @extend .img-circle,
+//         .img-responsive,
+//         .pull-left;
+//       }
+//       @media (max-width: $screen-md-max) {
+//         width: 80px;
+//       }
+//     } // /.photo
+//     .info {
+//       @extend .v-top;
+//       .clearfix>[class^="col-"] {
+//         white-space: nowrap;
+//         margin-bottom: .5em;
+//       }
+//       span {
+//         @extend .text-sm;
+//       }
+//       .btn {
+//         //@extend .btn-xs, .btn-primary-bright;
+//         @extend .btn-xs;
+//         &:nth-child(2) {
+//           @extend .btn-accent-bright;
+//         }
+//         margin:.5em;
+//         margin-left:0;
+//         @include transition(all .15s linear);
+//       } // /.btn
+//     } // /.info
+//   } // /.contact
+//   .status {
+//     @extend .stick-top-right,
+//     .force-padding,
+//     .text-success;
+//     background: $white;
+//     @include box-shadow(-13px 17px 25px 2px $white);
+//     &.online {
+//       @extend .text-success;
+//     }
+//     &.offline {
+//       @extend .text-danger;
+//     }
+//   } // /.status
+//   .contact:hover .status {
+//     background: rgba( $gray-lightest, .5);
+//     @include box-shadow(-13px 17px 25px 2px rgba( $gray-lightest, .5));
+//   }
+// } // /.company-users

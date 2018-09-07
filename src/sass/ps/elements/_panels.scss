@@ -1,0 +1,103 @@
+$panel-heading-padding: 10px 15px;
+$panel-border-radius: 2px; 
+$panel-default-heading-bg: #F5F8FA !default;
+//$panel-default-border: 
+//$panel-default-text:
+//$panel-default-heading-bg:
+//$panel-default-border:
+//
+////== Panels
+//
+//##
+
+$panel-bg:                    #fff;
+$panel-body-padding:          10px;
+//$panel-heading-padding:       5px 10px;
+$panel-footer-padding:        $panel-heading-padding;
+$panel-border-radius:         $border-radius-base;
+
+//** Border color for elements within panels
+$panel-inner-border:          #ddd;
+$panel-footer-bg:             $panel-default-heading-bg;
+
+$panel-default-text:          $gray-dark;
+$panel-default-border:        #ddd;
+$panel-default-heading-bg:    $panel-default-heading-bg;
+
+
+.panel {
+	border-radius: $panel-border-radius;
+	box-shadow: none;
+}
+// Optional heading
+.panel-heading {
+  padding: $panel-heading-padding;
+  border-bottom: 1px solid transparent;
+  @include border-top-radius(($panel-border-radius - 1));
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+ .panel {
+ 	> .panel-heading {
+ 	  color: #313435;
+    background-color: $splitter-bg;
+    border-color: #ddd;
+    border-bottom:0;
+ 	}
+ }
+
+
+	// Within heading, strip any `h*` tag of its default margins for spacing.
+	.panel-title {
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  font-size: ceil(($font-size-base * 1.125));
+	  color: inherit;
+
+	  > a,
+	  > small,
+	  > .small,
+	  > small > a,
+	  > .small > a {
+	    color: inherit;
+	  }
+	}
+
+	.panel-group {
+	  margin-bottom: $line-height-computed;
+
+	  // Tighten up margin so it's only between panels
+	  .panel {
+	    margin-bottom: 0;
+	    border-radius: $panel-border-radius;
+
+	    + .panel {
+	      margin-top: 5px;
+	    }
+	  }
+
+	  .panel-heading {
+	    border-bottom: 0;
+
+	    + .panel-collapse > .panel-body,
+	    + .panel-collapse > .list-group {
+	      border-top: 1px solid $panel-inner-border;
+	    }
+	  }
+
+	  .panel-footer {
+	    border-top: 0;
+	    + .panel-collapse .panel-body {
+	      border-bottom: 1px solid $panel-inner-border;
+	    }
+	  }
+	}
+
+
+// Contextual variations
+.panel-default {
+  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+}
