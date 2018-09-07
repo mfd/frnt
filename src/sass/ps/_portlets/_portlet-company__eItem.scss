@@ -1,0 +1,214 @@
+.eItem_popup_body {
+  padding: 1.5em 1em; //font-size: 140%;
+  //overflow: hidden;
+    @media (max-width: $screen-xs-max) {
+      //padding: 0;
+    }
+}
+
+
+.company-portlet  {
+  .portlet-icon-back {
+    position: absolute;
+    top: 226px;
+    font-size: 160%;
+    color: #333;
+    z-index: 999;
+    left: 325px;
+    @media (max-width: $screen-lg-min) {
+      left: 26.5%;
+    }
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+    &:after{
+      //content:' Вернуться к каталог';
+      //position:absolute;
+      //top:0px;left:0;z-index:0;
+    }
+  }
+}
+
+.item_id {
+  font-size: 60%;
+  text-transform: uppercase;
+  color: #000000;
+  background: #eee;
+  padding: 4px 8px;
+}
+// КАРТОЧКА ТОВАРА
+.ecommerceItem {
+  .photos {}
+  .fotorama_wrap {
+    height: 300px;
+    padding: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+  }
+
+
+  .fotorama {
+    .fotorama__nav--thumbs .fotorama__nav__frame {
+      padding: 2px;
+      height: 64px;
+    }
+    .fotorama__thumb-border {
+      height: 60px;
+      border-width: 2px;
+      margin-top: 2px;
+    }
+  }
+
+  .fotorama__nav--thumbs .fotorama__nav__frame {
+    //padding: 0 !important;
+  }
+
+
+
+  .fotorama__arr {
+    &--prev:hover, 
+    &--next:hover {
+      opacity: 1;
+    }
+    &--prev:before {
+      content: "\f104";
+    }
+    &--next:before {
+      content: "\f105";
+    }
+    &--prev, 
+    &--next {
+      background: none;
+      @include border-radius(3px);
+      color: #fff;
+      font: normal normal normal 3em/1 FontAwesome;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      padding: 0px;
+      //opacity: .33;;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+  .fotorama__fullscreen-icon {
+    background: none;
+    &:before {
+      content: "\f002";
+      font: normal normal normal 20px/1 FontAwesome;
+      text-shadow: 0px 0px 5px rgba(255, 255, 255, .3);
+    }
+  }
+  .fotorama__stage__frame {
+    // &:before {
+    //   content: ' ';
+    //   position: absolute;
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 10;
+    //   @include box-shadow(inset 0 0 50px rgba(0, 0, 0, 0.1));
+    // }
+  }
+
+
+  .head h3 {
+    margin-top: 0;
+    margin-bottom: .25em;
+    max-height: 175px;
+    font-size: 200%;
+    font-weight: 300;
+    overflow: hidden;
+  }
+  .price {
+    font-size: 250%;
+    letter-spacing: -.05em;
+    font-weight: 800;
+    margin-top: .25em;
+    margin-bottom: 0;
+    line-height: 1.2;
+    span {
+      font-size: 60%;
+      padding: 0 .25em;
+    }
+    sub {
+      font-size: 50%;
+      bottom: 0;
+      font-weight: 300;
+      letter-spacing: 0;
+    }
+  }
+  .avail,
+  .sku {
+    //@extend .opacity-50;
+    //@extend .style-gray-light;
+    font-weight: normal;
+    font-size: 80%; //display:block;
+  }
+  .sku,
+  .supplier {
+    color: $black;
+    background: #eee;
+    &:hover,
+    &:active {
+      color: $black;
+    }
+
+  }
+  p.suppl {
+    margin-bottom: 1.5em;
+    .logo {
+      display: none;
+      position: absolute;
+      left: -10px;
+      top: 0;
+    }
+  }
+
+  .buy-btns {
+    text-align: left;
+    >[class^="col-"] {
+      padding: 0;
+    }
+    .btn-lbls {
+      font-size: 1.1em; //padding:15px 0px 15px 65px;
+      font-weight: 300;
+      margin: 0 0 1em 0;
+    }
+  }
+  .subbuy-btns {
+    display: none;
+    .btn {
+      margin: 0 1em 1em 0;
+    }
+  }
+  .buy-btns {
+    //display: none;
+    margin: 1em 0!important;
+    .btn {
+      margin: 0 1em 1em 0;
+    }
+  }
+
+	.item-desc {
+    //font-size: 120%;
+    padding-bottom: 45px;
+    margin: .5em 1em;
+    word-wrap: break-word;
+    .card {
+      @include box-shadow(none);
+    }
+    .tab-pane {
+      padding: 1em
+    }
+  }
+
+  .btn {
+    margin-bottom: .5em;
+    margin-right:  .5em;
+  }
+
+
+} // /.ecommerceItem

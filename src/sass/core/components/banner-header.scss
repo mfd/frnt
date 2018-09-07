@@ -1,0 +1,227 @@
+.banner-header {
+	background-color: $purple;
+	height: 470px;
+
+	&--404{
+		height: 670px;
+
+		.title{ margin-bottom: 8px; }
+		p{ margin-bottom: 38px; }
+	}
+
+	@media screen and (max-width: $mobile) {
+		padding: 90px 0;
+	}
+
+	.container {
+		position: relative;
+		top: calc(50% + 30px);
+		transform: translateY(-50%);
+
+		@media screen and (max-width: $mobile) {
+			top: 50%;
+		}
+	}
+
+	/* Seems to fix Edge align center bug */
+	.row.align-items-center{
+		flex-wrap: nowrap;
+	}
+
+	h1,
+	p {
+		color: #fff;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+	span {
+		display: block;
+	}
+
+	.category {
+		+ h1 {
+			margin-top: 25px;	
+		}
+	}
+
+	&__content {
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.expert.expert--purple{
+		top: 156px;
+
+		@media (max-width: $tablet-w){
+			top: auto;
+		}
+
+		.expert__infos{
+			transform-origin: center top;
+			transform: scaleY(0);
+			transition: transform .9s $Power2EaseOut;
+
+			&.reveal{
+				transform: scaleY(1);
+			}
+		}
+	}
+
+	&--large{
+		position: relative;
+		overflow: hidden;
+		height: 515px;
+
+		@media (max-width: $tablet-h){
+			height: 415px;
+		}
+		@media (max-width: $tablet-w){
+			height: 300px;
+		}
+		@media (max-width: $mobile){
+			height: 210px;
+		}
+		
+		img {
+			max-width: none;
+			min-width: 100%;
+			min-height: 750px;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			@media (max-width: $mobile){
+				min-height: 0;
+				max-height: 420px;
+			}
+		}
+	}
+
+	&--parallax {
+		.banner-header__content {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&--full {
+		width: 100vw;
+		margin-left: calc((100vw - 100%) / -2);
+
+		img{
+			max-width: none;
+			min-width: 100%;
+		}
+	}
+
+	&--office{
+		overflow: hidden;
+		@include filterImg($gradient-purple-map);
+
+		&:before{ 
+			z-index: 2; 
+			pointer-events: none; 
+
+			@media (max-width: $tablet-w){
+				display: none;
+			}
+		}
+
+		.container{ z-index: 3; pointer-events: none; }
+		.title{ margin-bottom: 8px; }
+
+		.button{ 
+			margin-top: 25px; 
+			pointer-events: all; 
+
+			@media (max-width: $tablet-w){
+				color: $purple !important;
+				font-size: 2rem;
+				padding: 17px 28px;
+			}
+
+			&:hover{
+				background: $purple !important;
+				color: #fff !important;
+			}
+
+			.mobile &:hover,
+			.tablet &:hover {
+				background: #fff !important;
+			}
+		}
+
+		p{ 
+			font-weight: 600; 
+			line-height: 1.8;
+			margin-bottom: 7px;
+
+			@media (max-width: $tablet-w){
+				font-size: 2rem;
+				line-height: 1.4;
+				margin: 25px 0;
+			}
+		}
+
+		.banner-header__content{
+			@media (max-width: $tablet-w){
+				text-align: center;
+			}
+		}
+	}
+
+	&__contact-info{
+		color: #fff;
+		pointer-events: none;
+
+		> *{ opacity: 0.5; }
+		a { color: #fff; }
+
+		i{ 
+			font-size: 2rem; 
+			margin-right: 4px;
+
+			&.icon-fax{
+				font-size: 1.95rem;
+			}
+		}
+
+		> .in-block{
+			margin-right: 25px;
+			pointer-events: all;
+
+			@media (max-width: $tablet-w){
+				display: block;
+				margin: 5px 0;
+			}
+
+			&:last-child{ margin-right: 0; }
+		}
+	}
+	&__contact-tel{
+		transition: opacity 0.35s ease;
+
+		.desktop &:hover {
+			opacity: 1;
+		}
+	}
+
+	&__map{
+		position: absolute;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		height: calc(100% + 20px);
+		background-color: $purple-light;
+
+		@media (max-width: $tablet-w){
+			visibility: hidden;
+		}
+
+		> div{ background-color: $purple-light !important; }
+	}
+}

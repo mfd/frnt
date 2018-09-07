@@ -1,0 +1,163 @@
+.text-z_formir {
+    color: #f90
+}
+
+a.text-z_formir:hover {
+    color: #cc7a00
+}
+
+.text-z_inwork {
+    color: #48b04b
+}
+
+a.text-z_inwork:hover {
+    color: #398c3c
+}
+
+.text-z_agree {
+    color: #0cf
+}
+
+a.text-z_agree:hover {
+    color: #00a3cc
+}
+
+.text-z_lp {
+    color: #99f
+}
+
+a.text-z_lp:hover {
+    color: #66f
+}
+
+.text-z_arch {
+    color: #5f7d8c
+}
+
+a.text-z_arch:hover {
+    color: #4a626e
+}
+
+.text-p_newest {
+    color: #f90
+}
+
+a.text-p_newest:hover {
+    color: #cc7a00
+}
+
+.text-p_podacha {
+    color: #48b04b
+}
+
+a.text-p_podacha:hover {
+    color: #398c3c
+}
+
+.text-p_inwork {
+    color: #0cf
+}
+
+a.text-p_inwork:hover {
+    color: #00a3cc
+}
+
+.text-p_agree {
+    color: #0cf
+}
+
+a.text-p_agree:hover {
+    color: #00a3cc
+}
+
+.text-p_lp {
+    color: #99f
+}
+
+a.text-p_lp:hover {
+    color: #66f
+}
+
+.text-p_arch {
+    color: #5f7d8c
+}
+
+a.text-p_arch:hover {
+    color: #4a626e
+}
+
+
+//
+// Progress bars
+// --------------------------------------------------
+
+// Bar hairline
+// -------------------------
+
+// Outer container
+.progress-hairline {
+  margin-top: 8px;
+  height: 2px;
+}
+
+
+// Variations
+// -------------------------
+
+.progress-bar-default-dark {  @include progress-bar-variant($brand-default-dark); }
+.progress-bar-default {     @include progress-bar-variant($brand-default); }
+.progress-bar-default-light{  @include progress-bar-variant($brand-default-light); }
+.progress-bar-default-bright{ @include progress-bar-variant($brand-default-bright); }
+
+.progress-bar-primary-dark {  @include progress-bar-variant($brand-primary); }
+.progress-bar-primary {     @include progress-bar-variant($brand-primary-light); }
+.progress-bar-primary-light { @include progress-bar-variant($brand-primary-dark); }
+.progress-bar-primary-bright {  @include progress-bar-variant($brand-primary-bright); }
+
+.progress-bar-accent-dark {   @include progress-bar-variant($brand-accent); }
+.progress-bar-accent { @include progress-bar-variant($brand-accent-light); }
+.progress-bar-accent-light {  @include progress-bar-variant($brand-accent-dark); }
+.progress-bar-accent-bright { @include progress-bar-variant($brand-accent-bright); }
+
+.progress-bar-success {     @include progress-bar-variant($brand-success); }
+.progress-bar-warning {     @include progress-bar-variant($brand-warning); }
+.progress-bar-danger {      @include progress-bar-variant($brand-danger); }
+.progress-bar-info {      @include progress-bar-variant($brand-info); }
+
+
+
+
+.progress-bar-z_formir {
+    @include progress-bar-variant($bge-formir); 
+    width: 5%;
+    }
+.progress-bar-z_inwork {
+    @include progress-bar-variant($bge-inwork); 
+    width: 50%;
+    }
+.progress-bar-z_agree {
+    @include progress-bar-variant($bge-agree); 
+    width: 75%;
+    }
+.progress-bar-z_lp {
+    @include progress-bar-variant($bge-lp); 
+    width: 85%;
+    }
+.progress-bar-z_arch {  
+    @include progress-bar-variant($bge-arch); 
+    width: 100%;
+    }
+
+
+.progress-bar-p_newest{
+    @include progress-bar-variant($bge-formir); 
+    width: 5%;
+    }
+.progress-bar-p_podacha {
+    @include progress-bar-variant($bge-inwork); 
+    width: 50%;
+    }
+.progress-bar-p_inwork {
+    @include progress-bar-variant($bge-agree); 
+    width: 50%;
+    }

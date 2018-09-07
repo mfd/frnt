@@ -1,0 +1,163 @@
+/** for offer table **/
+
+.offerTable {
+	table-layout: fixed;
+	width: 100%;
+	min-width: 829px;
+	input {
+	}
+	tbody {
+		tr:hover {
+		    background-color: #DFFCCB !important;
+		}
+		td {
+			border-bottom: 1px solid #d9dcdd;
+		}
+	}
+}
+
+.offerTable__leftgroup col {
+	&:nth-child(1) {
+		width: 36px;
+	}
+	&:nth-child(2) {
+		width: 29%;
+	}
+	&:nth-child(3) {
+		width: 21%;
+	}
+	&:nth-child(4) {
+		width: 75px;
+	}
+	&:nth-child(5) {
+		width: 55px;
+	}
+}
+
+.offerTable__rightgroup col {
+	&:nth-child(1) {
+		width: 60px;
+	}
+	&:nth-child(2) {
+		width: 54px;
+	}
+	&:nth-child(3) {
+		width: 70px;
+	}
+	&:nth-child(4) {
+		width: 75px;
+	}
+}
+
+.offerTable__leftgroupBorder {
+	border-left: 2px solid #d9dcdd;
+}
+
+.offerTable tfoot td {
+	border-top: 2px solid #d9dcdd;
+	&:nth-child(1) {
+		text-align: right;
+	}
+}
+
+.offerTable__delimeter-col {
+	height: 3px;
+}
+
+.offerTable__header-td {
+	border-bottom: 1px solid #d9dcdd;
+}
+
+.offerTable td {
+	padding: 8px;
+}
+
+.offerTable__leftgroup {
+	/*background: #e7f6f8;*/
+	border-right: 4px solid #d9dcdd;
+}
+
+.offerTable__rightgroup {
+	/*background: #eaf8e7;*/
+	border-left: 4px solid #d9dcdd;
+}
+
+.offerTable .form-group {
+	margin-bottom: 0px !important;
+	input {
+		background: transparent;
+	}
+}
+
+.offerTable__inputTd {
+	//padding: 0px !important;
+}
+
+/*** for offers chat ***/
+
+.offerChat__iframe {
+	width: 100%;
+	height: 550px;
+}
+
+.zayaOffer {
+	font-size: 12px;
+}
+
+.zayaOffer {
+	thead {
+		background-color: #e5e5e5;
+		min-width: 90px;
+		max-width: 90px;
+		border: 1px solid #ddd;
+	}
+	thead {
+		tr {
+			&:nth-child(1) th { 
+			    text-align: center;
+			    text-transform: uppercase;
+			    letter-spacing: 0.25em;
+			    font-weight: bold;
+			    font-size: 11px;
+			    color: #6a708b;
+			    background: whitesmoke;
+			}
+			&:nth-child(2) th {
+				font-size: 12px;
+			}
+		}
+		th {
+			white-space: nowrap;
+			&:nth-child(8),
+			&:nth-child(9) {
+				white-space: normal;
+				width: 200px;
+			}
+		}
+	}
+	tbody {
+		td {
+			&:nth-child(1) {
+				white-space: nowrap;
+			}
+		}
+	}
+	.tdEquiv {
+		background: #fcf8e3;
+	}
+	.btn__addEquiv,
+	.btn__remEquiv {
+		border: 0;
+		padding: 4px 6px;
+		font-size: 14px;
+	}
+	.field.form-control {
+	    padding: 0 4px;
+	    font-size: 14px;
+	    border: 1px solid #a9a9a9;
+	    height: 28px;
+	}
+	tfoot {
+    	background: #f5f5f5;
+	}
+}

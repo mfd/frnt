@@ -1,0 +1,13 @@
+@mixin placeholder($prefix) {
+    [placeholder]::-#{$prefix}-placeholder {
+
+    }
+    [placeholder]:focus::-#{$prefix}-placeholder {
+				color:transparent;
+    }
+}
+
+// usage
+@each $browser in webkit-input, moz, ms-input {
+    @include placeholder($browser);
+}

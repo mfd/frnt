@@ -1,0 +1,270 @@
+.promo-header {
+	padding-top: 30px;
+	overflow: visible;
+
+	@media screen and (max-width: $tablet-w) {
+		overflow: hidden;
+		margin: 0;
+	}
+
+	.title{
+
+		@media screen and (max-width: $tablet-w) {
+			font-size: 4.3rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			font-size: 4rem;
+		}
+
+		/* iPhone 5 */
+		@media screen and (max-width: 320px) {
+			font-size: 3.6rem;
+		}
+	}
+
+	&__row {
+		// overflow: hidden;
+		flex-direction: column;
+		height: 550px;
+    
+		@media screen and (max-width: $tablet-h) {
+			height: 510px;
+		}
+		@media screen and (max-width: $tablet-w) {
+			height: 450px;
+			
+		    position: relative;
+		    z-index: 1;
+		    transition-property: transform;
+			
+			flex-direction: row;
+			flex-wrap: nowrap;
+			margin: 0;
+
+			// overflow: visible;
+		}
+	}
+
+	&__col {
+		&-big {
+		    flex: 0 0 100%;
+    		width: 70%;
+
+    		@media screen and (max-width: $tablet-h) {
+    			width: 65%;
+    		}
+		}
+		&-small {
+    		width: 30%;
+    		z-index: 0;
+
+    		&:not(:last-of-type) {
+			    flex: 0 0 calc(50% + #{$gutter} / 2);
+    			@media screen and (max-width: $tablet-w) {
+		    		flex: 0 0 100%;
+    			}
+    		}
+
+    		@media screen and (max-width: $tablet-h) {
+    			width: 35%;
+    		}
+
+
+    		.link {
+    			display: none;
+    			
+    			@media screen and (max-width: $tablet-w) {
+    				display: block;
+    			}
+    		}
+
+
+			// Fix for IE11
+    		.ie &:last-of-type .block-info {
+    			margin-top: 15px;
+    		}
+		}
+	
+		&-big,
+		&-small {
+			@media screen and (max-width: $tablet-w) {
+			    width: 100%;
+			    height: 100%;
+			    padding: 0;
+			    margin-right: 15px;
+			    position: relative;
+			    background-color: $purple;
+    		}
+		}
+	}
+
+	&__cover {
+		display: block;
+		height: 100%;
+		padding: 130px 0 110px;
+		background-color: $purple;
+
+		@media (max-width: $tablet-w){
+			background-color: $purple;
+		}
+
+		&__content {
+			@include vertical-align;
+		}
+
+		.category {
+			color: rgba(#fff, 0.5);
+			margin-bottom: 40px;
+
+			@media screen and (max-width: $mobile) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.desktop &:hover {
+			.link {
+				path {
+					transition-delay: 0.1s;
+					stroke-dasharray: 380;
+				}
+
+				i {
+					@include autoAlpha(1);
+					transform: translate(50%, -50%);
+				}
+			}
+		}
+
+		.safari & {
+			height: 550px;
+
+			@media screen and (max-width: $tablet-h) {
+				height: 510px;
+			}
+			@media screen and (max-width: $tablet-w) {
+				height: 100%;
+			}
+		}
+	}
+	
+	&:not(.promo-header--full) {
+
+		.promo-header__cover {
+			padding: 50px 50px 50px calc((100vw - #{$container-xl}) / 2);
+			
+			@media screen and (max-width: $xlarge - 1) {
+    			@include smoothResponsive('padding-left', 105, 135, 1441, 1919);
+			}
+			@media screen and (max-width: $large) {
+				padding-left: calc((100vw - #{$container}) / 2);
+			}
+			@media screen and (max-width: $desktop) {
+				padding: 50px 25px;
+			}
+
+			&__content {
+				width: 50%;
+
+				@media screen and (max-width: $desktop) {
+					width: 70%;
+				}
+				@media screen and (max-width: $tablet-h) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&--full {
+		.container,
+		.row {
+			height: 100%;
+		}
+	}
+
+	
+	.swiper-pagination {
+		display: none;
+		position: absolute;
+		bottom: 20px !important;
+
+		@media screen and (max-width: $tablet-w) {
+			display: block;
+		}
+	}
+
+	.block-info {
+
+		@media screen and (max-width: $tablet-w) {
+			height: 100%;
+			overflow: hidden;
+
+
+			@include filterImg;
+		}
+
+		&__inner {
+			@media screen and (max-width: $tablet-w) {
+				justify-content: center;
+
+				background: none;
+
+				padding: 25px;
+			}
+		}
+
+		img {
+			position: absolute;
+			min-width: 100%;
+			max-width: none;
+			height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) !important;
+			z-index: -1;
+
+			display: none;
+
+			@media screen and (max-width: $tablet-w) {
+				display: block;
+			}
+		}
+		
+		.category {
+			@media screen and (max-width: $tablet-w) {
+				color: rgba(255, 255, 255, 0.5);
+			}
+		}
+		.small-title {
+			@media screen and (max-width: $tablet-w) {
+				font-size: 5rem;
+				font-weight: 600;
+				line-height: 1;
+				color: #fff !important;
+				margin: 15px 0 30px;
+			}
+			@media screen and (max-width: $mobile) {
+				font-size: 4.2rem;
+			}
+		}
+	}
+
+	.block-thumb {
+		@media screen and (max-width: $tablet-w) {
+			height: 100%;
+
+			&__content {
+				padding-bottom: 45px;
+			}
+		}
+	}
+
+
+
+	// Fix for anim-childs on tablet/mobile
+	.swiper-slide-duplicate .anim--childs > * {
+		opacity: 1;
+		transform: none;
+	}
+}

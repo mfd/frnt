@@ -1,0 +1,491 @@
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.84615385;
+  border: none;
+  border-radius: none;
+  opacity: 0.55;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 25, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs > li > a:hover {
+  border-color: #e5e6e6 #e5e6e6 #ddd;
+}
+/* line 29, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs > li > a::after {
+  content: '';
+  background: #00ccff;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+/* line 45, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+  color: #00ccff;
+  background-color: transparent;
+  cursor: default;
+  opacity: 1;
+  outline:0;
+}
+/* line 53, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs > li.active > a::after {
+  transform: scale(1);
+}
+/* line 68, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.card-head.nav-tabs,
+.card-head > .nav-tabs {
+  padding: 0 0;
+}
+@media (min-width: 769px) {
+  /* line 71, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .card-head.nav-tabs,
+  .card-head > .nav-tabs {
+    padding: 0 24px;
+  }
+}
+/* line 76, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.card-head.nav-tabs > li > a,
+.card-head > .nav-tabs > li > a {
+  line-height: 48px;
+  padding: 0 10px;
+}
+@media (min-width: 769px) {
+  /* line 79, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .card-head.nav-tabs > li > a,
+  .card-head > .nav-tabs > li > a {
+    padding: 10px 15px;
+  }
+}
+/* line 91, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.card-head.card-head-xs.nav-tabs > li > a,
+.card-head.card-head-xs > .nav-tabs > li > a {
+  line-height: 28px;
+}
+/* line 101, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.card-head.card-head-sm.nav-tabs > li > a,
+.card-head.card-head-sm > .nav-tabs > li > a {
+  line-height: 40px;
+}
+/* line 111, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.card-head.card-head-lg.nav-tabs > li > a,
+.card-head.card-head-lg > .nav-tabs > li > a {
+  line-height: 78px;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs.nav-justified {
+  padding: 0;
+}
+/* line 126, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: none;
+}
+/* line 138, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs.tabs-center > li {
+  float: none;
+  display: inline-block;
+}
+/* line 144, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs.tabs-center {
+  text-align: center;
+}
+/* line 152, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-text-contrast {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+/* line 157, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-text-contrast > li > a:hover,
+.tabs-text-contrast > li > a:focus {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+/* line 164, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-text-contrast > li.active > a,
+.tabs-text-contrast > li.active > a:hover,
+.tabs-text-contrast > li.active > a:focus {
+  color: inherit !important;
+}
+/* line 176, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.card-underline .card-head .nav-tabs {
+  border-bottom: none;
+}
+/* line 185, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.nav-tabs a small {
+  color: inherit;
+  text-transform: initial;
+}
+/* line 194, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border: none;
+}
+/* line 200, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+/* line 205, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+/* line 211, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #dddddd;
+}
+/* line 215, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs > li {
+  margin-bottom: 0;
+}
+/* line 218, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs > li > a {
+  border-bottom: none;
+}
+/* line 220, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs > li > a::after {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+}
+/* line 227, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs > li > a:hover::after,
+.tabs-below > .nav-tabs > li > a:focus::after {
+  top: 0;
+  left: 0;
+  transform: scale(1);
+}
+/* line 231, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-bottom: none;
+  line-height: 50px;
+}
+/* line 235, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+.tabs-below > .nav-tabs > .active > a::after,
+.tabs-below > .nav-tabs > .active > a:hover::after,
+.tabs-below > .nav-tabs > .active > a:focus::after {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+}
+@media (min-width: 769px) {
+  /* line 242, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .tab-content,
+  .tabs-right > .tab-content {
+    overflow: auto;
+  }
+  /* line 247, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs,
+  .tabs-right > .nav-tabs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 252, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs > li,
+  .tabs-right > .nav-tabs > li {
+    float: none;
+  }
+  /* line 257, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs > li > a,
+  .tabs-right > .nav-tabs > li > a {
+    min-width: 74px;
+    margin-right: 0;
+  }
+  /* line 264, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs {
+    float: left;
+  }
+  /* line 270, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs > li > a::after {
+    left: initial;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    transform: scale(0);
+  }
+  /* line 273, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs > li > a:hover,
+  .tabs-left > .nav-tabs > li > a:focus {
+    border-color: transparent;
+    border-right-color: #ddd;
+  }
+  /* line 279, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs .active > a,
+  .tabs-left > .nav-tabs .active > a:hover,
+  .tabs-left > .nav-tabs .active > a:focus {
+    border-bottom: none;
+  }
+  /* line 282, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-left > .nav-tabs .active > a::after,
+  .tabs-left > .nav-tabs .active > a:hover::after,
+  .tabs-left > .nav-tabs .active > a:focus::after {
+    left: initial;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    transform: scale(1);
+  }
+  /* line 287, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-right > .nav-tabs {
+    float: right;
+    border-left: 1px solid #ddd;
+  }
+  /* line 294, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-right > .nav-tabs > li > a::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    transform: scale(0);
+  }
+  /* line 296, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-right > .nav-tabs > li > a:hover,
+  .tabs-right > .nav-tabs > li > a:focus {
+    border-color: transparent;
+    border-left-color: #ddd;
+  }
+  /* line 305, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/tabbar.less */
+  .tabs-right > .nav-tabs .active > a::after,
+  .tabs-right > .nav-tabs .active > a:hover::after,
+  .tabs-right > .nav-tabs .active > a:focus::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    transform: scale(1);
+  }
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default-dark > li.active > a,
+.nav-tabs.tabs-default-dark > li.active > a:hover,
+.nav-tabs.tabs-default-dark > li.active > a:focus {
+  border-color: #00344d;
+  color: #00344d;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default-dark > li.active > a::after,
+.nav-tabs.tabs-default-dark > li.active > a:hover::after,
+.nav-tabs.tabs-default-dark > li.active > a:focus::after {
+  transform: scale(1);
+  background: #00344d;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default > li.active > a,
+.nav-tabs.tabs-default > li.active > a:hover,
+.nav-tabs.tabs-default > li.active > a:focus {
+  border-color: #e5e6e6;
+  color: #e5e6e6;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default > li.active > a::after,
+.nav-tabs.tabs-default > li.active > a:hover::after,
+.nav-tabs.tabs-default > li.active > a:focus::after {
+  transform: scale(1);
+  background: #e5e6e6;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default-light > li.active > a,
+.nav-tabs.tabs-default-light > li.active > a:hover,
+.nav-tabs.tabs-default-light > li.active > a:focus {
+  border-color: #f2f2f3;
+  color: #f2f2f3;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default-light > li.active > a::after,
+.nav-tabs.tabs-default-light > li.active > a:hover::after,
+.nav-tabs.tabs-default-light > li.active > a:focus::after {
+  transform: scale(1);
+  background: #f2f2f3;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default-bright > li.active > a,
+.nav-tabs.tabs-default-bright > li.active > a:hover,
+.nav-tabs.tabs-default-bright > li.active > a:focus {
+  border-color: #fff;
+  color: #fff;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-default-bright > li.active > a::after,
+.nav-tabs.tabs-default-bright > li.active > a:hover::after,
+.nav-tabs.tabs-default-bright > li.active > a:focus::after {
+  transform: scale(1);
+  background: #fff;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary-dark > li.active > a,
+.nav-tabs.tabs-primary-dark > li.active > a:hover,
+.nav-tabs.tabs-primary-dark > li.active > a:focus {
+  border-color: #0092c2;
+  color: #0092c2;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary-dark > li.active > a::after,
+.nav-tabs.tabs-primary-dark > li.active > a:hover::after,
+.nav-tabs.tabs-primary-dark > li.active > a:focus::after {
+  transform: scale(1);
+  background: #0092c2;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary > li.active > a,
+.nav-tabs.tabs-primary > li.active > a:hover,
+.nav-tabs.tabs-primary > li.active > a:focus {
+  border-color: #00ccff;
+  color: #00ccff;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary > li.active > a::after,
+.nav-tabs.tabs-primary > li.active > a:hover::after,
+.nav-tabs.tabs-primary > li.active > a:focus::after {
+  transform: scale(1);
+  background: #00ccff;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary-light > li.active > a,
+.nav-tabs.tabs-primary-light > li.active > a:hover,
+.nav-tabs.tabs-primary-light > li.active > a:focus {
+  border-color: #94eaff;
+  color: #94eaff;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary-light > li.active > a::after,
+.nav-tabs.tabs-primary-light > li.active > a:hover::after,
+.nav-tabs.tabs-primary-light > li.active > a:focus::after {
+  transform: scale(1);
+  background: #94eaff;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary-bright > li.active > a,
+.nav-tabs.tabs-primary-bright > li.active > a:hover,
+.nav-tabs.tabs-primary-bright > li.active > a:focus {
+  border-color: #d6f7ff;
+  color: #d6f7ff;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-primary-bright > li.active > a::after,
+.nav-tabs.tabs-primary-bright > li.active > a:hover::after,
+.nav-tabs.tabs-primary-bright > li.active > a:focus::after {
+  transform: scale(1);
+  background: #d6f7ff;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent-dark > li.active > a,
+.nav-tabs.tabs-accent-dark > li.active > a:hover,
+.nav-tabs.tabs-accent-dark > li.active > a:focus {
+  border-color: #732373;
+  color: #732373;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent-dark > li.active > a::after,
+.nav-tabs.tabs-accent-dark > li.active > a:hover::after,
+.nav-tabs.tabs-accent-dark > li.active > a:focus::after {
+  transform: scale(1);
+  background: #732373;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent > li.active > a,
+.nav-tabs.tabs-accent > li.active > a:hover,
+.nav-tabs.tabs-accent > li.active > a:focus {
+  border-color: #ae359f;
+  color: #ae359f;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent > li.active > a::after,
+.nav-tabs.tabs-accent > li.active > a:hover::after,
+.nav-tabs.tabs-accent > li.active > a:focus::after {
+  transform: scale(1);
+  background: #ae359f;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent-light > li.active > a,
+.nav-tabs.tabs-accent-light > li.active > a:hover,
+.nav-tabs.tabs-accent-light > li.active > a:focus {
+  border-color: #ce78c3;
+  color: #ce78c3;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent-light > li.active > a::after,
+.nav-tabs.tabs-accent-light > li.active > a:hover::after,
+.nav-tabs.tabs-accent-light > li.active > a:focus::after {
+  transform: scale(1);
+  background: #ce78c3;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent-bright > li.active > a,
+.nav-tabs.tabs-accent-bright > li.active > a:hover,
+.nav-tabs.tabs-accent-bright > li.active > a:focus {
+  border-color: #ecc7e8;
+  color: #ecc7e8;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-accent-bright > li.active > a::after,
+.nav-tabs.tabs-accent-bright > li.active > a:hover::after,
+.nav-tabs.tabs-accent-bright > li.active > a:focus::after {
+  transform: scale(1);
+  background: #ecc7e8;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-success > li.active > a,
+.nav-tabs.tabs-success > li.active > a:hover,
+.nav-tabs.tabs-success > li.active > a:focus {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-success > li.active > a::after,
+.nav-tabs.tabs-success > li.active > a:hover::after,
+.nav-tabs.tabs-success > li.active > a:focus::after {
+  transform: scale(1);
+  background: #4CAF50;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-warning > li.active > a,
+.nav-tabs.tabs-warning > li.active > a:hover,
+.nav-tabs.tabs-warning > li.active > a:focus {
+  border-color: #FB8C00;
+  color: #FB8C00;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-warning > li.active > a::after,
+.nav-tabs.tabs-warning > li.active > a:hover::after,
+.nav-tabs.tabs-warning > li.active > a:focus::after {
+  transform: scale(1);
+  background: #FB8C00;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-danger > li.active > a,
+.nav-tabs.tabs-danger > li.active > a:hover,
+.nav-tabs.tabs-danger > li.active > a:focus {
+  border-color: #F44336;
+  color: #F44336;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-danger > li.active > a::after,
+.nav-tabs.tabs-danger > li.active > a:hover::after,
+.nav-tabs.tabs-danger > li.active > a:focus::after {
+  transform: scale(1);
+  background: #F44336;
+}
+/* line 12, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-info > li.active > a,
+.nav-tabs.tabs-info > li.active > a:hover,
+.nav-tabs.tabs-info > li.active > a:focus {
+  border-color: #2196F3;
+  color: #2196F3;
+}
+/* line 13, /Users/kkashaev/work/plussell/assets/css/less/mixins/tab.less */
+.nav-tabs.tabs-info > li.active > a::after,
+.nav-tabs.tabs-info > li.active > a:hover::after,
+.nav-tabs.tabs-info > li.active > a:focus::after {
+  transform: scale(1);
+  background: #2196F3;
+}

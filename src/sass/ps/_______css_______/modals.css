@@ -1,0 +1,501 @@
+/*!
+ * Bootstrap Modal fix
+ *
+ * Copyright Jordan Schroter
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Boostrap 3 patch for for bootstrap-modal. Include BEFORE bootstrap-modal.css!
+ */
+/* line 51, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0;
+}
+/* line 57, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal {
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  z-index: 1050;
+  padding: 0;
+  width: 500px;
+  margin-left: -250px;
+  background-clip: padding-box;
+}
+/* line 74, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header,
+.modal-body,
+.modal-footer {
+  background-color: #ffffff;
+  border-top: 0;
+}
+/* line 78, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header {
+  background-color: #00ccff;
+  color: #fff;
+  border: 0;
+  padding: 0;
+}
+/* line 86, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal.container {
+  max-width: none;
+}
+/* line 90, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+}
+/*!
+ * Bootstrap Modal fix END
+ */
+/*!
+ * Bootstrap Modal
+ *
+ * Copyright Jordan Schroter
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+/* line 113, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-open {
+  overflow: hidden;
+}
+/* add a scroll bar to stop page from jerking around */
+/* line 119, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-open.page-overflow .page-container,
+.modal-open.page-overflow .page-container .navbar-fixed-top,
+.modal-open.page-overflow .page-container .navbar-fixed-bottom,
+.modal-open.page-overflow .modal-scrollable {
+  overflow-y: scroll;
+}
+@media (max-width: 979px) {
+  /* line 127, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-open.page-overflow .page-container .navbar-fixed-top,
+  .modal-open.page-overflow .page-container .navbar-fixed-bottom {
+    overflow-y: visible;
+  }
+}
+/* line 134, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-scrollable {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+/* line 143, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal {
+  outline: none;
+  position: absolute;
+  margin-top: 0;
+  top: 50%;
+  overflow: visible;
+  /* allow content to popup out (i.e tooltips) */
+}
+/* line 151, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal.fade {
+  top: -100%;
+}
+/* line 155, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal.fade.in {
+  top: 50%;
+}
+/* line 159, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-body {
+  max-height: none;
+  overflow: visible;
+  padding: 7.5px;
+}
+@media (min-width: 769px) {
+  /* line 163, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-body {
+    padding: 15px;
+  }
+}
+/* line 168, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal.modal-absolute {
+  position: absolute;
+  z-index: 950;
+}
+/* line 173, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal .loading-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: green;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  border-radius: 0;
+  z-index: 999;
+}
+/* line 183, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal .loading-mask.in {
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+/* line 186, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-backdrop.modal-absolute {
+  position: absolute;
+  z-index: 940;
+}
+/* line 192, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-backdrop {
+  background-color: #000;
+}
+/* line 195, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+/* line 196, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+/* line 199, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-content {
+  box-shadow: none;
+  border: 0;
+}
+/* line 205, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal.container {
+  width: 940px;
+  margin-left: -470px;
+}
+/* Modal Overflow */
+/* line 212, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-overflow.modal {
+  top: 1%;
+}
+/* line 214, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-overflow.modal.fade {
+  top: -100%;
+}
+/* line 216, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-overflow.modal.fade.in {
+  top: 1%;
+}
+/* line 222, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-overflow .modal-body {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 233, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header {
+  position: relative;
+}
+/* line 235, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header.modal-header {
+  height: 40px;
+  line-height: 40px;
+}
+@media (min-width: 769px) {
+  /* line 238, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-header.modal-header {
+    height: 50px;
+    line-height: 53px;
+  }
+}
+/* line 251, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header .btn {
+  position: absolute;
+  right: 0px;
+  top: -5px;
+}
+@media (min-width: 769px) {
+  /* line 255, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-header .btn {
+    right: 10px;
+  }
+}
+@media (min-width: 769px) {
+  /* line 257, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-header .btn {
+    top: 0;
+    font-size: 2.3em;
+  }
+}
+/* line 261, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header h1,
+.modal-header h2,
+.modal-header h3,
+.modal-header header {
+  line-height: 40px;
+  padding: 0 7.5px;
+}
+@media (min-width: 769px) {
+  /* line 264, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-header h1,
+  .modal-header h2,
+  .modal-header h3,
+  .modal-header header {
+    padding: 0 15px;
+    line-height: 50px;
+  }
+}
+@media (min-width: 769px) {
+  /* line 270, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-header .nav-tabs {
+    font-size: 1.2em;
+  }
+}
+/* line 273, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.modal-header .nav-tabs > li > a {
+  padding: 10px;
+}
+/* Responsive */
+@media (min-width: 992px) {
+  /* line 284, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal.container {
+    width: 962px;
+    margin-left: -481px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 293, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal.container {
+    width: 1170px;
+    margin-left: -585px;
+  }
+}
+@media (min-width: 1500px) {
+  /* line 301, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal.container {
+    width: 1470px;
+    margin-left: -735px;
+  }
+}
+@media (max-width: 979px) {
+  /* line 309, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal,
+  .modal.container,
+  .modal.modal-overflow {
+    top: 1%;
+    right: 1%;
+    left: 1%;
+    bottom: auto;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* line 322, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal.fade.in,
+  .modal.container.fade.in,
+  .modal.modal-overflow.fade.in {
+    top: 1%;
+    bottom: auto;
+  }
+  /* line 329, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-body,
+  .modal-overflow .modal-body {
+    position: static;
+    margin: 0;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  /* line 338, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-footer,
+  .modal-overflow .modal-footer {
+    position: static;
+  }
+}
+/* line 344, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+}
+/*
+Animate.css - http://daneden.me/animate
+Licensed under the ☺ license (http://licence.visualidiot.com/)
+
+Copyright (c) 2012 Dan Eden*/
+/* line 357, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes shake {
+  /* line 369, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  /* line 370, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+  }
+  /* line 371, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+  }
+}
+@-moz-keyframes shake {
+  /* line 375, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  0%,
+  100% {
+    -moz-transform: translateX(0);
+  }
+  /* line 376, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -moz-transform: translateX(-10px);
+  }
+  /* line 377, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  20%,
+  40%,
+  60%,
+  80% {
+    -moz-transform: translateX(10px);
+  }
+}
+@-o-keyframes shake {
+  /* line 381, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  0%,
+  100% {
+    -o-transform: translateX(0);
+  }
+  /* line 382, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -o-transform: translateX(-10px);
+  }
+  /* line 383, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  20%,
+  40%,
+  60%,
+  80% {
+    -o-transform: translateX(10px);
+  }
+}
+@keyframes shake {
+  /* line 387, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  /* line 388, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  /* line 389, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+/* line 392, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.shake {
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
+}
+/* line 406, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.loading-spinner {
+  width: 400px;
+  height: 20vh;
+  margin: 0;
+  margin-top: -20vh;
+  margin-left: -200px;
+  text-align: center;
+}
+/* line 414, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.ps_loader {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20vh;
+  opacity: 0.8;
+}
+/* line 421, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.ps_loader span {
+  display: inline-block;
+  font-style: italic;
+  letter-spacing: -0.1em;
+  animation: pulse 0.4s alternate infinite ease-in-out;
+}
+/* line 426, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.ps_loader span.p {
+  font-size: 80%;
+}
+/* line 429, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+.ps_loader span:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+@keyframes pulse {
+  /* line 436, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+@media (min-width: 769px) {
+  /* line 452, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-dialog {
+    margin: 0;
+    width: auto;
+  }
+  /* line 458, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-dialog.zayavka {
+    width: 100%;
+  }
+  /* line 461, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-dialog.container {
+    padding: 0 20px;
+  }
+  /* line 464, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-dialog .card {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 474, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/modals.less */
+  .modal-dialog.zayavka {
+    width: 100%;
+  }
+}

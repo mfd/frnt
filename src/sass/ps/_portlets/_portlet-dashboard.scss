@@ -1,0 +1,340 @@
+.b-dashboard {
+  padding: 2em;
+  padding-top: 0;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 0;
+  }
+  &-tabs {
+    &__tab {
+
+    }
+    &__content {
+      border: 1px solid #D8D8D8;
+      border-top: 0;
+      background: #fff;
+      padding-top: 1em;
+    }
+  }
+  &__head {
+    margin: 0 !important;
+    margin-bottom: 1em!important;
+    padding-top: 2em;
+    h2, h3 {
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: .25em;
+    }
+    p {
+      font-weight: normal;
+      color: #7F8FA4;
+      //font-size: 100%;
+    }
+
+  }
+  &__userProfile {
+    &-img {
+      float: left;
+      position: relative;
+      margin-right: 10px;
+    }
+
+    &-info {
+      position: relative;
+      white-space: nowrap;
+      margin: 5px;
+      min-width: 150px;
+      min-height: 40px;
+      overflow: hidden;
+      //max-width: 200px;
+
+      font-size: 80%;
+    }
+    &-name {
+      margin: 0;
+      margin-bottom: .25em;
+    }
+    &-adr {
+      display: block;
+    }
+  }
+  &-tabs {
+    &__content {
+      background: #fff;
+      padding: .5em 2em;
+      border: 1px solid #ccc;
+      border-top: 0;
+    }
+  }
+  &__bTitle {
+    font-size: 12px;
+    color: #BFC7D2;
+    letter-spacing: 0.67px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: .25em;
+    margin-left: 15px;
+  }
+  &__row {
+    //padding: 1em;
+  }
+  &__wgt-zaya {
+    &-item {
+      min-width: 100px;
+      margin-bottom: 1.5em;
+      padding-left: 30px;
+      padding-right: .5em;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 3%;
+        width: 2px;
+        background: #f5f5f5;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &__count, &__title {
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        background: #02ceff;
+      }
+    }
+    &__title {
+      text-transform: uppercase;
+      font-size: 85%;
+      color: #717988;
+      &:after {
+        border-radius: 50%;
+        left: -20px;
+        top: 50%;
+        margin-top: -8px;
+        width: 16px;
+        height: 16px;
+        transform: scale(.5);
+      }
+    }
+    &__count {
+      font-family: 'Roboto Condensed', sans-serif;
+      letter-spacing: -1px;
+      font-weight: 700;
+      font-size: 28px;
+      color: #232425;
+      padding-bottom: .25em;
+    }
+  }
+  &__wgt-LP {
+    &-item {
+      border: 2px solid #E6EAEE;
+      border-radius: 5px;
+      font-size: 90%;
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-bottom: 10px;
+
+      //padding: .5em 1em;
+      //margin: 0 .5em 0 0;
+    }
+    &__row {
+      @include clearfix();
+      height: 40px;
+      &--bottom {
+        @include clearfix();
+        height: 40px;
+        background: #FAFBFC;
+        margin-right: 1px;
+        border-top: 1px solid #E6EAEE;
+      }
+    }
+    dd.b-dashboard__wgt-LP__row {
+
+    }
+
+    &__title, &__count {
+      padding: 10px 15px;
+      line-height: 20px;
+      @media (min-width: 991px ) and (max-width: 1142px) {
+        //padding: 5px;
+      }
+    }
+    &__title {
+      float: left;
+      letter-spacing: -1px;
+      font-weight: 400;
+      color: #354052;
+      letter-spacing: 1.57px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    &__count {
+      float: right;
+      font-family: 'Roboto Condensed', sans-serif;
+      letter-spacing: -1px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    &__count {
+      @media (min-width: 991px ) and (max-width: 1142px) {
+        font-size: 100%;
+      }
+    }
+  }
+  &__runChart {
+
+  }
+  &__pieChart {
+    border: 2px solid #E6EAEE;
+    border-radius: 5px;
+    font-size: 90%;
+    &-item {
+      padding: 1em;
+      &:last-child {
+        background: #FAFBFC;
+        border-top: 1px solid #E6EAEE;
+      }
+    }
+  }
+}
+
+
+
+canvas.chartjs-render-monitor {
+  position:relative;
+  z-index:100;
+}
+
+
+
+
+.b-dashboard__pieChart {
+  &-item {
+
+  }
+  &-container {
+    width: 100%;
+    //width: 350px;
+    //height: 150px;
+    //top:15%;
+    margin:0 auto;
+    margin-bottom: 1.5em;
+    position: relative;
+    // position: relative;
+    // height:40vh;
+    // width:80vw
+
+  }
+  &-title {
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100px;
+    font-size: 90%;
+    @media (min-width: 991px) and (max-width: 1400px) {
+      width: 50px;
+      font-size: 85%;
+    }
+  }
+  &-legend {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 230px;
+    &__item {
+      @include clearfix();
+      list-style: none;
+      position: relative;
+      margin-bottom: .5em;
+      cursor: pointer;
+      &.is-active {
+        opacity: .25;
+      }
+      &-ico {
+        border-radius: 50%;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: 5px solid red;
+        transform: scale(.5);
+      }
+      &-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: #354052;
+        float: left;
+      }
+      &-prc {
+        display: block;
+        font-size: 12px;
+        color: #7F8FA4;
+      }
+      &-count {
+        float: right;
+        font-weight: bolder;
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+// COLORIZE
+
+$color-green:  #48b04b;
+$color-orange: #ff9900;
+$color-blue:   #00ccff;
+$color-purple: #6e4db0;
+$color-green2: #3ABB9E;
+$color-blue2:  #1765C0;
+$color-red:    #FF7171;
+$color-gray:   #60738C;
+
+$st_colors2: $color-orange $color-green $color-blue $color-purple $color-green2 $color-blue2 $color-red $color-gray;
+
+$st_supplier_num: '0' '1' '2' '3' '4' '5' '6' '7';
+
+@mixin statuses_decorate($role, $status, $color) {
+  .b-dashboard__wgt-zaya-item.status__#{$role}_#{$status} .b-dashboard__wgt-zaya {
+    &__count, &__title {
+      &:after {
+        background: $color;
+      }
+    }
+  }
+}
+
+
+@mixin make_statuses_num($role, $role_statuses) {
+  @each $status in $role_statuses {
+    $i: index($role_statuses, $status);
+    $color: nth($st_colors2, $i);
+    @include statuses_decorate($role, $status, $color);
+    //@include badge($role, $status, $color);
+  }
+}
+
+@include make_statuses_num('supplier', $st_supplier_num);
+

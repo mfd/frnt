@@ -1,0 +1,1583 @@
+/* !!forms classes  */
+/* !!Forms */
+/* line 10, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend {
+  display: table;
+  width: 100%;
+  margin: 13px 0 20px 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+/* line 19, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend span {
+  display: table-cell;
+  padding: 0 10px 0 0;
+  position: relative;
+  bottom: -7px;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+/* line 27, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend:before,
+legend:after {
+  content: '';
+  display: table-cell;
+  border-bottom: 1px solid rgba(12, 12, 12, 0.25);
+}
+/* line 33, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend:before {
+  width: 0%;
+}
+/* line 36, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend:after {
+  width: 100%;
+}
+/* line 41, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend.text-center span {
+  padding: 0 10px;
+}
+/* line 44, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend.text-center:before,
+legend.text-center:after {
+  width: 50%;
+}
+/* line 49, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend.text-right span {
+  padding: 0 0 0 10px;
+}
+/* line 52, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend.text-right:before {
+  width: 100%;
+}
+/* line 55, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+legend.text-right:after {
+  width: 0%;
+}
+/* line 65, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+label,
+.control-label {
+  font-weight: 400;
+}
+/* line 72, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group > label,
+.control-group > label,
+.form-group .control-label,
+.control-group .control-label {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+/* line 84, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form .form-group > label,
+.form-inline .form-group > label,
+.form .control-group > label,
+.form-inline .control-group > label,
+.form .form-group > .control-label,
+.form-inline .form-group > .control-label,
+.form .control-group > .control-label,
+.form-inline .control-group > .control-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 97, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control-static {
+  font-size: 16px;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.has-feedback label ~ .form-control-feedback,
+.has-feedback .control-label ~ .form-control-feedback,
+.form-control-feedback {
+  top: auto;
+  bottom: 0;
+}
+/* line 116, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control,
+.input-block-level,
+input[type=text].field,
+input[type=email].field,
+input[type=password].field,
+.aui-field-select,
+textarea {
+  padding: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom-color: rgba(12, 12, 12, 0.12);
+  background: transparent;
+  color: #0c0c0c;
+  font-size: 16px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 136, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control:focus,
+.input-block-level:focus,
+input[type=text].field:focus,
+input[type=email].field:focus,
+input[type=password].field:focus,
+.aui-field-select:focus,
+textarea:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 141, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control.placeholder,
+.input-block-level.placeholder,
+input[type=text].field.placeholder,
+input[type=email].field.placeholder,
+input[type=password].field.placeholder,
+.aui-field-select.placeholder,
+textarea.placeholder {
+  color: #969b9c;
+}
+/* line 143, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control.placeholder option,
+.input-block-level.placeholder option,
+input[type=text].field.placeholder option,
+input[type=email].field.placeholder option,
+input[type=password].field.placeholder option,
+.aui-field-select.placeholder option,
+textarea.placeholder option {
+  color: #0c0c0c;
+}
+/* line 149, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control[disabled],
+.input-block-level[disabled],
+input[type=text].field[disabled],
+input[type=email].field[disabled],
+input[type=password].field[disabled],
+.aui-field-select[disabled],
+textarea[disabled],
+.form-control[readonly],
+.input-block-level[readonly],
+input[type=text].field[readonly],
+input[type=email].field[readonly],
+input[type=password].field[readonly],
+.aui-field-select[readonly],
+textarea[readonly],
+fieldset[disabled] .form-control,
+fieldset[disabled] .input-block-level,
+fieldset[disabled] input[type=text].field,
+fieldset[disabled] input[type=email].field,
+fieldset[disabled] input[type=password].field,
+fieldset[disabled] .aui-field-select,
+fieldset[disabled] textarea {
+  background-color: transparent;
+  border-bottom-color: rgba(12, 12, 12, 0.2);
+  border-bottom-style: dashed;
+}
+/* line 103, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/vendor-prefixes.less */
+.form-control[disabled]::-moz-placeholder,
+.input-block-level[disabled]::-moz-placeholder,
+input[type=text].field[disabled]::-moz-placeholder,
+input[type=email].field[disabled]::-moz-placeholder,
+input[type=password].field[disabled]::-moz-placeholder,
+.aui-field-select[disabled]::-moz-placeholder,
+textarea[disabled]::-moz-placeholder,
+.form-control[readonly]::-moz-placeholder,
+.input-block-level[readonly]::-moz-placeholder,
+input[type=text].field[readonly]::-moz-placeholder,
+input[type=email].field[readonly]::-moz-placeholder,
+input[type=password].field[readonly]::-moz-placeholder,
+.aui-field-select[readonly]::-moz-placeholder,
+textarea[readonly]::-moz-placeholder,
+fieldset[disabled] .form-control::-moz-placeholder,
+fieldset[disabled] .input-block-level::-moz-placeholder,
+fieldset[disabled] input[type=text].field::-moz-placeholder,
+fieldset[disabled] input[type=email].field::-moz-placeholder,
+fieldset[disabled] input[type=password].field::-moz-placeholder,
+fieldset[disabled] .aui-field-select::-moz-placeholder,
+fieldset[disabled] textarea::-moz-placeholder {
+  color: #b0b4b5;
+  opacity: 1;
+}
+/* line 107, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/vendor-prefixes.less */
+.form-control[disabled]:-ms-input-placeholder,
+.input-block-level[disabled]:-ms-input-placeholder,
+input[type=text].field[disabled]:-ms-input-placeholder,
+input[type=email].field[disabled]:-ms-input-placeholder,
+input[type=password].field[disabled]:-ms-input-placeholder,
+.aui-field-select[disabled]:-ms-input-placeholder,
+textarea[disabled]:-ms-input-placeholder,
+.form-control[readonly]:-ms-input-placeholder,
+.input-block-level[readonly]:-ms-input-placeholder,
+input[type=text].field[readonly]:-ms-input-placeholder,
+input[type=email].field[readonly]:-ms-input-placeholder,
+input[type=password].field[readonly]:-ms-input-placeholder,
+.aui-field-select[readonly]:-ms-input-placeholder,
+textarea[readonly]:-ms-input-placeholder,
+fieldset[disabled] .form-control:-ms-input-placeholder,
+fieldset[disabled] .input-block-level:-ms-input-placeholder,
+fieldset[disabled] input[type=text].field:-ms-input-placeholder,
+fieldset[disabled] input[type=email].field:-ms-input-placeholder,
+fieldset[disabled] input[type=password].field:-ms-input-placeholder,
+fieldset[disabled] .aui-field-select:-ms-input-placeholder,
+fieldset[disabled] textarea:-ms-input-placeholder {
+  color: #b0b4b5;
+}
+/* line 108, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/vendor-prefixes.less */
+.form-control[disabled]::-webkit-input-placeholder,
+.input-block-level[disabled]::-webkit-input-placeholder,
+input[type=text].field[disabled]::-webkit-input-placeholder,
+input[type=email].field[disabled]::-webkit-input-placeholder,
+input[type=password].field[disabled]::-webkit-input-placeholder,
+.aui-field-select[disabled]::-webkit-input-placeholder,
+textarea[disabled]::-webkit-input-placeholder,
+.form-control[readonly]::-webkit-input-placeholder,
+.input-block-level[readonly]::-webkit-input-placeholder,
+input[type=text].field[readonly]::-webkit-input-placeholder,
+input[type=email].field[readonly]::-webkit-input-placeholder,
+input[type=password].field[readonly]::-webkit-input-placeholder,
+.aui-field-select[readonly]::-webkit-input-placeholder,
+textarea[readonly]::-webkit-input-placeholder,
+fieldset[disabled] .form-control::-webkit-input-placeholder,
+fieldset[disabled] .input-block-level::-webkit-input-placeholder,
+fieldset[disabled] input[type=text].field::-webkit-input-placeholder,
+fieldset[disabled] input[type=email].field::-webkit-input-placeholder,
+fieldset[disabled] input[type=password].field::-webkit-input-placeholder,
+fieldset[disabled] .aui-field-select::-webkit-input-placeholder,
+fieldset[disabled] textarea::-webkit-input-placeholder {
+  color: #b0b4b5;
+}
+/* line 159, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-control[disabled] ~ label:after,
+.input-block-level[disabled] ~ label:after,
+input[type=text].field[disabled] ~ label:after,
+input[type=email].field[disabled] ~ label:after,
+input[type=password].field[disabled] ~ label:after,
+.aui-field-select[disabled] ~ label:after,
+textarea[disabled] ~ label:after,
+.form-control[readonly] ~ label:after,
+.input-block-level[readonly] ~ label:after,
+input[type=text].field[readonly] ~ label:after,
+input[type=email].field[readonly] ~ label:after,
+input[type=password].field[readonly] ~ label:after,
+.aui-field-select[readonly] ~ label:after,
+textarea[readonly] ~ label:after,
+fieldset[disabled] .form-control ~ label:after,
+fieldset[disabled] .input-block-level ~ label:after,
+fieldset[disabled] input[type=text].field ~ label:after,
+fieldset[disabled] input[type=email].field ~ label:after,
+fieldset[disabled] input[type=password].field ~ label:after,
+fieldset[disabled] .aui-field-select ~ label:after,
+fieldset[disabled] textarea ~ label:after,
+.form-control[disabled] ~ .control-label:after,
+.input-block-level[disabled] ~ .control-label:after,
+input[type=text].field[disabled] ~ .control-label:after,
+input[type=email].field[disabled] ~ .control-label:after,
+input[type=password].field[disabled] ~ .control-label:after,
+.aui-field-select[disabled] ~ .control-label:after,
+textarea[disabled] ~ .control-label:after,
+.form-control[readonly] ~ .control-label:after,
+.input-block-level[readonly] ~ .control-label:after,
+input[type=text].field[readonly] ~ .control-label:after,
+input[type=email].field[readonly] ~ .control-label:after,
+input[type=password].field[readonly] ~ .control-label:after,
+.aui-field-select[readonly] ~ .control-label:after,
+textarea[readonly] ~ .control-label:after,
+fieldset[disabled] .form-control ~ .control-label:after,
+fieldset[disabled] .input-block-level ~ .control-label:after,
+fieldset[disabled] input[type=text].field ~ .control-label:after,
+fieldset[disabled] input[type=email].field ~ .control-label:after,
+fieldset[disabled] input[type=password].field ~ .control-label:after,
+fieldset[disabled] .aui-field-select ~ .control-label:after,
+fieldset[disabled] textarea ~ .control-label:after,
+.form-control[disabled] ~ .form-control-line:after,
+.input-block-level[disabled] ~ .form-control-line:after,
+input[type=text].field[disabled] ~ .form-control-line:after,
+input[type=email].field[disabled] ~ .form-control-line:after,
+input[type=password].field[disabled] ~ .form-control-line:after,
+.aui-field-select[disabled] ~ .form-control-line:after,
+textarea[disabled] ~ .form-control-line:after,
+.form-control[readonly] ~ .form-control-line:after,
+.input-block-level[readonly] ~ .form-control-line:after,
+input[type=text].field[readonly] ~ .form-control-line:after,
+input[type=email].field[readonly] ~ .form-control-line:after,
+input[type=password].field[readonly] ~ .form-control-line:after,
+.aui-field-select[readonly] ~ .form-control-line:after,
+textarea[readonly] ~ .form-control-line:after,
+fieldset[disabled] .form-control ~ .form-control-line:after,
+fieldset[disabled] .input-block-level ~ .form-control-line:after,
+fieldset[disabled] input[type=text].field ~ .form-control-line:after,
+fieldset[disabled] input[type=email].field ~ .form-control-line:after,
+fieldset[disabled] input[type=password].field ~ .form-control-line:after,
+fieldset[disabled] .aui-field-select ~ .form-control-line:after,
+fieldset[disabled] textarea ~ .form-control-line:after {
+  display: none;
+}
+/* line 169, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.form-control {
+  padding: 4px 0 4px 0;
+}
+/* line 172, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.autosize {
+  min-height: 38px;
+}
+/* line 182, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form .form-group,
+.form-inline .form-group,
+.form .control-group,
+.form-inline .control-group {
+  padding-top: 16px;
+}
+/* line 187, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group,
+.control-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+/* line 194, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control:not(.static) ~ label,
+.control-group .form-control:not(.static) ~ label,
+.form-group .form-control:not(.static) ~ .control-label,
+.control-group .form-control:not(.static) ~ .control-label,
+.form-group .form-control:not(.static) ~ .form-control-line,
+.control-group .form-control:not(.static) ~ .form-control-line {
+  transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+}
+/* line 210, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control ~ label,
+.control-group .form-control ~ label,
+.form-group .input-block-level ~ label,
+.control-group .input-block-level ~ label,
+.form-group input[type=text].field ~ label,
+.control-group input[type=text].field ~ label,
+.form-group input[type=email].field ~ label,
+.control-group input[type=email].field ~ label,
+.form-group input[type=password].field ~ label,
+.control-group input[type=password].field ~ label,
+.form-group .aui-field-select ~ label,
+.control-group .aui-field-select ~ label,
+.form-group textarea ~ label,
+.control-group textarea ~ label,
+.form-group .form-control ~ .control-label,
+.control-group .form-control ~ .control-label,
+.form-group .input-block-level ~ .control-label,
+.control-group .input-block-level ~ .control-label,
+.form-group input[type=text].field ~ .control-label,
+.control-group input[type=text].field ~ .control-label,
+.form-group input[type=email].field ~ .control-label,
+.control-group input[type=email].field ~ .control-label,
+.form-group input[type=password].field ~ .control-label,
+.control-group input[type=password].field ~ .control-label,
+.form-group .aui-field-select ~ .control-label,
+.control-group .aui-field-select ~ .control-label,
+.form-group textarea ~ .control-label,
+.control-group textarea ~ .control-label,
+.form-group .form-control ~ .form-control-line,
+.control-group .form-control ~ .form-control-line,
+.form-group .input-block-level ~ .form-control-line,
+.control-group .input-block-level ~ .form-control-line,
+.form-group input[type=text].field ~ .form-control-line,
+.control-group input[type=text].field ~ .form-control-line,
+.form-group input[type=email].field ~ .form-control-line,
+.control-group input[type=email].field ~ .form-control-line,
+.form-group input[type=password].field ~ .form-control-line,
+.control-group input[type=password].field ~ .form-control-line,
+.form-group .aui-field-select ~ .form-control-line,
+.control-group .aui-field-select ~ .form-control-line,
+.form-group textarea ~ .form-control-line,
+.control-group textarea ~ .form-control-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+/* line 219, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control ~ label:after,
+.control-group .form-control ~ label:after,
+.form-group .input-block-level ~ label:after,
+.control-group .input-block-level ~ label:after,
+.form-group input[type=text].field ~ label:after,
+.control-group input[type=text].field ~ label:after,
+.form-group input[type=email].field ~ label:after,
+.control-group input[type=email].field ~ label:after,
+.form-group input[type=password].field ~ label:after,
+.control-group input[type=password].field ~ label:after,
+.form-group .aui-field-select ~ label:after,
+.control-group .aui-field-select ~ label:after,
+.form-group textarea ~ label:after,
+.control-group textarea ~ label:after,
+.form-group .form-control ~ .control-label:after,
+.control-group .form-control ~ .control-label:after,
+.form-group .input-block-level ~ .control-label:after,
+.control-group .input-block-level ~ .control-label:after,
+.form-group input[type=text].field ~ .control-label:after,
+.control-group input[type=text].field ~ .control-label:after,
+.form-group input[type=email].field ~ .control-label:after,
+.control-group input[type=email].field ~ .control-label:after,
+.form-group input[type=password].field ~ .control-label:after,
+.control-group input[type=password].field ~ .control-label:after,
+.form-group .aui-field-select ~ .control-label:after,
+.control-group .aui-field-select ~ .control-label:after,
+.form-group textarea ~ .control-label:after,
+.control-group textarea ~ .control-label:after,
+.form-group .form-control ~ .form-control-line:after,
+.control-group .form-control ~ .form-control-line:after,
+.form-group .input-block-level ~ .form-control-line:after,
+.control-group .input-block-level ~ .form-control-line:after,
+.form-group input[type=text].field ~ .form-control-line:after,
+.control-group input[type=text].field ~ .form-control-line:after,
+.form-group input[type=email].field ~ .form-control-line:after,
+.control-group input[type=email].field ~ .form-control-line:after,
+.form-group input[type=password].field ~ .form-control-line:after,
+.control-group input[type=password].field ~ .form-control-line:after,
+.form-group .aui-field-select ~ .form-control-line:after,
+.control-group .aui-field-select ~ .form-control-line:after,
+.form-group textarea ~ .form-control-line:after,
+.control-group textarea ~ .form-control-line:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  height: 2px;
+  width: 10px;
+  visibility: hidden;
+  background-color: #00ccff;
+  transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+}
+/* line 235, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control ~ label,
+.control-group .form-control ~ label,
+.form-group .input-block-level ~ label,
+.control-group .input-block-level ~ label,
+.form-group input[type=text].field ~ label,
+.control-group input[type=text].field ~ label,
+.form-group input[type=email].field ~ label,
+.control-group input[type=email].field ~ label,
+.form-group input[type=password].field ~ label,
+.control-group input[type=password].field ~ label,
+.form-group .aui-field-select ~ label,
+.control-group .aui-field-select ~ label,
+.form-group textarea ~ label,
+.control-group textarea ~ label,
+.form-group .form-control ~ .control-label,
+.control-group .form-control ~ .control-label,
+.form-group .input-block-level ~ .control-label,
+.control-group .input-block-level ~ .control-label,
+.form-group input[type=text].field ~ .control-label,
+.control-group input[type=text].field ~ .control-label,
+.form-group input[type=email].field ~ .control-label,
+.control-group input[type=email].field ~ .control-label,
+.form-group input[type=password].field ~ .control-label,
+.control-group input[type=password].field ~ .control-label,
+.form-group .aui-field-select ~ .control-label,
+.control-group .aui-field-select ~ .control-label,
+.form-group textarea ~ .control-label,
+.control-group textarea ~ .control-label {
+  top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: 0.5;
+}
+/* line 244, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control:focus,
+.control-group .form-control:focus,
+.form-group .input-block-level:focus,
+.control-group .input-block-level:focus,
+.form-group input[type=text].field:focus,
+.control-group input[type=text].field:focus,
+.form-group input[type=email].field:focus,
+.control-group input[type=email].field:focus,
+.form-group input[type=password].field:focus,
+.control-group input[type=password].field:focus,
+.form-group .aui-field-select:focus,
+.control-group .aui-field-select:focus,
+.form-group textarea:focus,
+.control-group textarea:focus {
+  border-color: rgba(12, 12, 12, 0.12);
+}
+/* line 247, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control:focus ~ label,
+.control-group .form-control:focus ~ label,
+.form-group .input-block-level:focus ~ label,
+.control-group .input-block-level:focus ~ label,
+.form-group input[type=text].field:focus ~ label,
+.control-group input[type=text].field:focus ~ label,
+.form-group input[type=email].field:focus ~ label,
+.control-group input[type=email].field:focus ~ label,
+.form-group input[type=password].field:focus ~ label,
+.control-group input[type=password].field:focus ~ label,
+.form-group .aui-field-select:focus ~ label,
+.control-group .aui-field-select:focus ~ label,
+.form-group textarea:focus ~ label,
+.control-group textarea:focus ~ label,
+.form-group .form-control:focus ~ .control-label,
+.control-group .form-control:focus ~ .control-label,
+.form-group .input-block-level:focus ~ .control-label,
+.control-group .input-block-level:focus ~ .control-label,
+.form-group input[type=text].field:focus ~ .control-label,
+.control-group input[type=text].field:focus ~ .control-label,
+.form-group input[type=email].field:focus ~ .control-label,
+.control-group input[type=email].field:focus ~ .control-label,
+.form-group input[type=password].field:focus ~ .control-label,
+.control-group input[type=password].field:focus ~ .control-label,
+.form-group .aui-field-select:focus ~ .control-label,
+.control-group .aui-field-select:focus ~ .control-label,
+.form-group textarea:focus ~ .control-label,
+.control-group textarea:focus ~ .control-label {
+  color: #00ccff;
+  opacity: 1;
+}
+/* line 254, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .labelfocus,
+.control-group .labelfocus {
+  color: #00ccff;
+  opacity: 1;
+}
+/* line 267, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group .form-control:focus ~ label:after,
+.control-group .form-control:focus ~ label:after,
+.form-group .input-block-level:focus ~ label:after,
+.control-group .input-block-level:focus ~ label:after,
+.form-group input[type=text].field:focus ~ label:after,
+.control-group input[type=text].field:focus ~ label:after,
+.form-group input[type=email].field:focus ~ label:after,
+.control-group input[type=email].field:focus ~ label:after,
+.form-group input[type=password].field:focus ~ label:after,
+.control-group input[type=password].field:focus ~ label:after,
+.form-group .aui-field-select:focus ~ label:after,
+.control-group .aui-field-select:focus ~ label:after,
+.form-group textarea:focus ~ label:after,
+.control-group textarea:focus ~ label:after,
+.form-group .form-control:focus ~ .control-label:after,
+.control-group .form-control:focus ~ .control-label:after,
+.form-group .input-block-level:focus ~ .control-label:after,
+.control-group .input-block-level:focus ~ .control-label:after,
+.form-group input[type=text].field:focus ~ .control-label:after,
+.control-group input[type=text].field:focus ~ .control-label:after,
+.form-group input[type=email].field:focus ~ .control-label:after,
+.control-group input[type=email].field:focus ~ .control-label:after,
+.form-group input[type=password].field:focus ~ .control-label:after,
+.control-group input[type=password].field:focus ~ .control-label:after,
+.form-group .aui-field-select:focus ~ .control-label:after,
+.control-group .aui-field-select:focus ~ .control-label:after,
+.form-group textarea:focus ~ .control-label:after,
+.control-group textarea:focus ~ .control-label:after,
+.form-group .form-control:focus ~ .form-control-line:after,
+.control-group .form-control:focus ~ .form-control-line:after,
+.form-group .input-block-level:focus ~ .form-control-line:after,
+.control-group .input-block-level:focus ~ .form-control-line:after,
+.form-group input[type=text].field:focus ~ .form-control-line:after,
+.control-group input[type=text].field:focus ~ .form-control-line:after,
+.form-group input[type=email].field:focus ~ .form-control-line:after,
+.control-group input[type=email].field:focus ~ .form-control-line:after,
+.form-group input[type=password].field:focus ~ .form-control-line:after,
+.control-group input[type=password].field:focus ~ .form-control-line:after,
+.form-group .aui-field-select:focus ~ .form-control-line:after,
+.control-group .aui-field-select:focus ~ .form-control-line:after,
+.form-group textarea:focus ~ .form-control-line:after,
+.control-group textarea:focus ~ .form-control-line:after {
+  visibility: visible;
+  width: 100%;
+  left: 0;
+}
+/* line 275, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group label.labelfocus:after,
+.control-group label.labelfocus:after,
+.form-group label.control-label.labelfocus:after,
+.control-group label.control-label.labelfocus:after {
+  visibility: visible;
+  width: 100%;
+  left: 0;
+}
+/* line 298, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.floating-label .form-control ~ label,
+.floating-label .input-block-level ~ label,
+.floating-label input[type=text].field ~ label,
+.floating-label input[type=email].field:focus ~ label,
+.floating-label input[type=password].field ~ label,
+.floating-label .aui-field-select ~ label,
+.floating-label textarea ~ label,
+.floating-label .form-control ~ .control-label,
+.floating-label .input-block-level ~ .control-label,
+.floating-label input[type=text].field ~ .control-label,
+.floating-label input[type=email].field:focus ~ .control-label,
+.floating-label input[type=password].field ~ .control-label,
+.floating-label .aui-field-select ~ .control-label,
+.floating-label textarea ~ .control-label {
+  top: 19px;
+  font-size: 16px;
+}
+/* line 306, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.floating-label .form-control:focus ~ label,
+.floating-label .form-control.dirty ~ label,
+.floating-label .form-control:focus ~ .control-label,
+.floating-label .form-control.dirty ~ .control-label {
+  top: 0px;
+  font-size: 12px !important;
+}
+/* line 314, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.floating-label label.labelfocus:after,
+.floating-label label.control-label.labelfocus:after {
+  top: 0px;
+  font-size: 12px !important;
+}
+/* line 327, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.input-sm {
+  height: 30px;
+  padding: 0 0;
+  font-size: 1em;
+  line-height: 1.5;
+  border-radius: 0px;
+}
+/* line 76, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/forms.less */
+select.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+/* line 81, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/forms.less */
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+/* line 65, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+select.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+/* line 70, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+/* line 77, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.floating-label .input-sm ~ label {
+  font-size: 1em;
+}
+/* line 331, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.input-lg {
+  height: 45px;
+  padding: 0 0;
+  font-size: 1.6em;
+  line-height: 1.3333333;
+  border-radius: 2px;
+}
+/* line 76, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/forms.less */
+select.input-lg {
+  height: 45px;
+  line-height: 45px;
+}
+/* line 81, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/forms.less */
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+/* line 65, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+select.input-lg {
+  height: 45px;
+  line-height: 45px;
+}
+/* line 70, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+/* line 77, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.floating-label .input-lg ~ label {
+  font-size: 1.6em;
+}
+/* line 340, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-tiny,
+.control-group.control-width-tiny {
+  max-width: 40px;
+}
+/* line 341, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-mini,
+.control-group.control-width-mini {
+  max-width: 72px;
+}
+/* line 342, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-small,
+.control-group.control-width-small {
+  max-width: 136px;
+}
+/* line 343, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-medium,
+.control-group.control-width-medium {
+  max-width: 200px;
+}
+/* line 344, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-normal,
+.control-group.control-width-normal {
+  max-width: 300px;
+}
+/* line 345, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-large,
+.control-group.control-width-large {
+  max-width: 500px;
+}
+/* line 346, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-xlarge,
+.control-group.control-width-xlarge {
+  max-width: 800px;
+}
+/* line 347, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-group.control-width-xxlarge,
+.control-group.control-width-xxlarge {
+  max-width: 1200px;
+}
+/* line 351, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-2-rows {
+  height: 64px;
+}
+/* line 352, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-3-rows {
+  height: 96px;
+}
+/* line 353, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-4-rows {
+  height: 128px;
+}
+/* line 354, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-5-rows {
+  height: 160px;
+}
+/* line 355, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-6-rows {
+  height: 192px;
+}
+/* line 356, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-7-rows {
+  height: 224px;
+}
+/* line 357, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-8-rows {
+  height: 256px;
+}
+/* line 358, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-9-rows {
+  height: 288px;
+}
+/* line 359, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-10-rows {
+  height: 320px;
+}
+/* line 360, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-11-rows {
+  height: 352px;
+}
+/* line 361, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.control-12-rows {
+  height: 384px;
+}
+/* line 364, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+textarea.no-resize {
+  resize: none;
+}
+/* line 373, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-horizontal .form-group,
+.form-horizontal .control-group {
+  padding-top: 0;
+  margin-bottom: 11px;
+}
+/* line 377, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-horizontal .form-control ~ .form-control-line {
+  left: 12px;
+  right: 12px;
+  width: auto;
+}
+/* line 383, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-horizontal .input-group .form-control ~ .form-control-line {
+  left: 0;
+  right: 0;
+}
+@media (min-width: 769px) {
+  /* line 398, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form-inline .form-group,
+  .form-inline .control-group {
+    margin-right: 12px;
+  }
+  /* line 402, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form-inline .radio,
+  .form-inline .checkbox,
+  .form-inline .btn {
+    margin-top: 16px;
+    margin-right: 12px;
+  }
+}
+/* line 415, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.help-block {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  margin: 0;
+  color: inherit;
+  opacity: .7;
+  font-size: 9.6px;
+}
+/* line 424, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-horizontal .help-block {
+  bottom: -20px;
+  right: 10px;
+}
+/* line 430, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+span.help-block {
+  right: auto;
+}
+/* line 432, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-horizontal span.help-block {
+  right: auto;
+}
+/* line 440, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.pwd .btn {
+  opacity: 0.5;
+  bottom: 5px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: initial;
+  cursor: pointer;
+}
+/* line 452, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form a:not(.btn-lbls) {
+  //text-decoration: underline;
+  //color: #6f7576 !important;
+}
+/* line 462, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-inverse .form-group .form-control {
+  color: #f2f2f3;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+/* line 103, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/vendor-prefixes.less */
+.form-inverse .form-group .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+/* line 107, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/vendor-prefixes.less */
+.form-inverse .form-group .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 108, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/vendor-prefixes.less */
+.form-inverse .form-group .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 469, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-inverse .form-group .form-control ~ label:after,
+.form-inverse .form-group .form-control ~ .form-control-line:after {
+  background-color: #a6dfed;
+}
+/* line 473, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-inverse .form-group .form-control:focus {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+/* line 476, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-inverse .form-group .form-control:focus ~ label {
+  color: #a6dfed;
+}
+/* line 482, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-inverse .form-group .form-control[disabled],
+.form-inverse .form-group .form-control[readonly],
+fieldset[disabled] .form-inverse .form-group .form-control {
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+/* line 490, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.form-inverse select:focus {
+  background: #fff;
+  color: #313435 !important;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .help-block {
+  color: #FB8C00;
+  opacity: 1;
+}
+/* line 92, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .form-control {
+  border-bottom-color: #FB8C00;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 96, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .form-control:focus,
+.has-warning .form-control.dirty,
+.has-warning input.field:focus,
+.has-warning input[type=text].field:focus,
+.has-warning input[type=password].field:focus,
+.has-warning textarea {
+  border-bottom-color: #FB8C00;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .form-control:focus ~ label,
+.has-warning .form-control.dirty ~ label,
+.has-warning input.field:focus ~ label,
+.has-warning input[type=text].field:focus ~ label,
+.has-warning input[type=password].field:focus ~ label,
+.has-warning textarea ~ label {
+  color: inherit;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .form-control ~ label,
+.has-warning .form-control ~ .form-control-line {
+  color: inherit;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 114, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .form-control ~ label:after,
+.has-warning .form-control ~ .form-control-line:after {
+  background-color: #FB8C00;
+}
+/* line 118, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning label,
+.has-warning .control-label,
+.has-warning .form-control-feedback {
+  color: #FB8C00;
+  opacity: 1;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-horizontal .has-warning label,
+.form-horizontal .has-warning .control-label,
+.form-horizontal .has-warning .form-control-feedback {
+  opacity: 1;
+}
+/* line 127, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-warning .form-control,
+.has-warning .input-block-level,
+.has-warning input[type=text].field,
+.has-warning input[type=password].field,
+.has-warning .aui-field-select,
+.has-warning textarea,
+.has-warning .aui .control-group.error textarea {
+  border-bottom-color: #FB8C00;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .help-block {
+  color: #e6942e;
+  opacity: 1;
+}
+/* line 92, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .form-control {
+  border-bottom-color: #e6942e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 96, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .form-control:focus,
+.form-inverse .has-warning .form-control.dirty,
+.form-inverse .has-warning input.field:focus,
+.form-inverse .has-warning input[type=text].field:focus,
+.form-inverse .has-warning input[type=password].field:focus,
+.form-inverse .has-warning textarea {
+  border-bottom-color: #e6942e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .form-control:focus ~ label,
+.form-inverse .has-warning .form-control.dirty ~ label,
+.form-inverse .has-warning input.field:focus ~ label,
+.form-inverse .has-warning input[type=text].field:focus ~ label,
+.form-inverse .has-warning input[type=password].field:focus ~ label,
+.form-inverse .has-warning textarea ~ label {
+  color: inherit;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .form-control ~ label,
+.form-inverse .has-warning .form-control ~ .form-control-line {
+  color: inherit;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 114, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .form-control ~ label:after,
+.form-inverse .has-warning .form-control ~ .form-control-line:after {
+  background-color: #e6942e;
+}
+/* line 118, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning label,
+.form-inverse .has-warning .control-label,
+.form-inverse .has-warning .form-control-feedback {
+  color: #e6942e;
+  opacity: 1;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-horizontal .form-inverse .has-warning label,
+.form-horizontal .form-inverse .has-warning .control-label,
+.form-horizontal .form-inverse .has-warning .form-control-feedback {
+  opacity: 1;
+}
+/* line 127, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-warning .form-control,
+.form-inverse .has-warning .input-block-level,
+.form-inverse .has-warning input[type=text].field,
+.form-inverse .has-warning input[type=password].field,
+.form-inverse .has-warning .aui-field-select,
+.form-inverse .has-warning textarea,
+.form-inverse .has-warning .aui .control-group.error textarea {
+  border-bottom-color: #e6942e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .help-block,
+.control-group.error .help-block {
+  color: #F44336;
+  opacity: 1;
+}
+/* line 92, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .form-control,
+.control-group.error .form-control {
+  border-bottom-color: #F44336;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 96, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .form-control:focus,
+.control-group.error .form-control:focus,
+.has-error .form-control.dirty,
+.control-group.error .form-control.dirty,
+.has-error input.field:focus,
+.control-group.error input.field:focus,
+.has-error input[type=text].field:focus,
+.control-group.error input[type=text].field:focus,
+.has-error input[type=password].field:focus,
+.control-group.error input[type=password].field:focus,
+.has-error textarea,
+.control-group.error textarea {
+  border-bottom-color: #F44336;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .form-control:focus ~ label,
+.control-group.error .form-control:focus ~ label,
+.has-error .form-control.dirty ~ label,
+.control-group.error .form-control.dirty ~ label,
+.has-error input.field:focus ~ label,
+.control-group.error input.field:focus ~ label,
+.has-error input[type=text].field:focus ~ label,
+.control-group.error input[type=text].field:focus ~ label,
+.has-error input[type=password].field:focus ~ label,
+.control-group.error input[type=password].field:focus ~ label,
+.has-error textarea ~ label,
+.control-group.error textarea ~ label {
+  color: inherit;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .form-control ~ label,
+.control-group.error .form-control ~ label,
+.has-error .form-control ~ .form-control-line,
+.control-group.error .form-control ~ .form-control-line {
+  color: inherit;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 114, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .form-control ~ label:after,
+.control-group.error .form-control ~ label:after,
+.has-error .form-control ~ .form-control-line:after,
+.control-group.error .form-control ~ .form-control-line:after {
+  background-color: #F44336;
+}
+/* line 118, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error label,
+.control-group.error label,
+.has-error .control-label,
+.control-group.error .control-label,
+.has-error .form-control-feedback,
+.control-group.error .form-control-feedback {
+  color: #F44336;
+  opacity: 1;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-horizontal .has-error label,
+.form-horizontal .control-group.error label,
+.form-horizontal .has-error .control-label,
+.form-horizontal .control-group.error .control-label,
+.form-horizontal .has-error .form-control-feedback,
+.form-horizontal .control-group.error .form-control-feedback {
+  opacity: 1;
+}
+/* line 127, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-error .form-control,
+.control-group.error .form-control,
+.has-error .input-block-level,
+.control-group.error .input-block-level,
+.has-error input[type=text].field,
+.control-group.error input[type=text].field,
+.has-error input[type=password].field,
+.control-group.error input[type=password].field,
+.has-error .aui-field-select,
+.control-group.error .aui-field-select,
+.has-error textarea,
+.control-group.error textarea,
+.has-error .aui .control-group.error textarea,
+.control-group.error .aui .control-group.error textarea {
+  border-bottom-color: #F44336;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .help-block,
+.form-inverse .control-group.error .help-block {
+  color: #e65045;
+  opacity: 1;
+}
+/* line 92, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .form-control,
+.form-inverse .control-group.error .form-control {
+  border-bottom-color: #e65045;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 96, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .form-control:focus,
+.form-inverse .control-group.error .form-control:focus,
+.form-inverse .has-error .form-control.dirty,
+.form-inverse .control-group.error .form-control.dirty,
+.form-inverse .has-error input.field:focus,
+.form-inverse .control-group.error input.field:focus,
+.form-inverse .has-error input[type=text].field:focus,
+.form-inverse .control-group.error input[type=text].field:focus,
+.form-inverse .has-error input[type=password].field:focus,
+.form-inverse .control-group.error input[type=password].field:focus,
+.form-inverse .has-error textarea,
+.form-inverse .control-group.error textarea {
+  border-bottom-color: #e65045;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .form-control:focus ~ label,
+.form-inverse .control-group.error .form-control:focus ~ label,
+.form-inverse .has-error .form-control.dirty ~ label,
+.form-inverse .control-group.error .form-control.dirty ~ label,
+.form-inverse .has-error input.field:focus ~ label,
+.form-inverse .control-group.error input.field:focus ~ label,
+.form-inverse .has-error input[type=text].field:focus ~ label,
+.form-inverse .control-group.error input[type=text].field:focus ~ label,
+.form-inverse .has-error input[type=password].field:focus ~ label,
+.form-inverse .control-group.error input[type=password].field:focus ~ label,
+.form-inverse .has-error textarea ~ label,
+.form-inverse .control-group.error textarea ~ label {
+  color: inherit;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .form-control ~ label,
+.form-inverse .control-group.error .form-control ~ label,
+.form-inverse .has-error .form-control ~ .form-control-line,
+.form-inverse .control-group.error .form-control ~ .form-control-line {
+  color: inherit;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 114, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .form-control ~ label:after,
+.form-inverse .control-group.error .form-control ~ label:after,
+.form-inverse .has-error .form-control ~ .form-control-line:after,
+.form-inverse .control-group.error .form-control ~ .form-control-line:after {
+  background-color: #e65045;
+}
+/* line 118, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error label,
+.form-inverse .control-group.error label,
+.form-inverse .has-error .control-label,
+.form-inverse .control-group.error .control-label,
+.form-inverse .has-error .form-control-feedback,
+.form-inverse .control-group.error .form-control-feedback {
+  color: #e65045;
+  opacity: 1;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-horizontal .form-inverse .has-error label,
+.form-horizontal .form-inverse .control-group.error label,
+.form-horizontal .form-inverse .has-error .control-label,
+.form-horizontal .form-inverse .control-group.error .control-label,
+.form-horizontal .form-inverse .has-error .form-control-feedback,
+.form-horizontal .form-inverse .control-group.error .form-control-feedback {
+  opacity: 1;
+}
+/* line 127, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-error .form-control,
+.form-inverse .control-group.error .form-control,
+.form-inverse .has-error .input-block-level,
+.form-inverse .control-group.error .input-block-level,
+.form-inverse .has-error input[type=text].field,
+.form-inverse .control-group.error input[type=text].field,
+.form-inverse .has-error input[type=password].field,
+.form-inverse .control-group.error input[type=password].field,
+.form-inverse .has-error .aui-field-select,
+.form-inverse .control-group.error .aui-field-select,
+.form-inverse .has-error textarea,
+.form-inverse .control-group.error textarea,
+.form-inverse .has-error .aui .control-group.error textarea,
+.form-inverse .control-group.error .aui .control-group.error textarea {
+  border-bottom-color: #e65045;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 515, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+#terms1-error {
+  color: #F44336;
+  opacity: 1;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .help-block,
+.control-group.success .help-block {
+  color: #4CAF50;
+  opacity: 1;
+}
+/* line 92, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .form-control,
+.control-group.success .form-control {
+  border-bottom-color: #4CAF50;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 96, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .form-control:focus,
+.control-group.success .form-control:focus,
+.has-success .form-control.dirty,
+.control-group.success .form-control.dirty,
+.has-success input.field:focus,
+.control-group.success input.field:focus,
+.has-success input[type=text].field:focus,
+.control-group.success input[type=text].field:focus,
+.has-success input[type=password].field:focus,
+.control-group.success input[type=password].field:focus,
+.has-success textarea,
+.control-group.success textarea {
+  border-bottom-color: #4CAF50;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .form-control:focus ~ label,
+.control-group.success .form-control:focus ~ label,
+.has-success .form-control.dirty ~ label,
+.control-group.success .form-control.dirty ~ label,
+.has-success input.field:focus ~ label,
+.control-group.success input.field:focus ~ label,
+.has-success input[type=text].field:focus ~ label,
+.control-group.success input[type=text].field:focus ~ label,
+.has-success input[type=password].field:focus ~ label,
+.control-group.success input[type=password].field:focus ~ label,
+.has-success textarea ~ label,
+.control-group.success textarea ~ label {
+  color: inherit;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .form-control ~ label,
+.control-group.success .form-control ~ label,
+.has-success .form-control ~ .form-control-line,
+.control-group.success .form-control ~ .form-control-line {
+  color: inherit;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 114, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .form-control ~ label:after,
+.control-group.success .form-control ~ label:after,
+.has-success .form-control ~ .form-control-line:after,
+.control-group.success .form-control ~ .form-control-line:after {
+  background-color: #4CAF50;
+}
+/* line 118, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success label,
+.control-group.success label,
+.has-success .control-label,
+.control-group.success .control-label,
+.has-success .form-control-feedback,
+.control-group.success .form-control-feedback {
+  color: #4CAF50;
+  opacity: 1;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-horizontal .has-success label,
+.form-horizontal .control-group.success label,
+.form-horizontal .has-success .control-label,
+.form-horizontal .control-group.success .control-label,
+.form-horizontal .has-success .form-control-feedback,
+.form-horizontal .control-group.success .form-control-feedback {
+  opacity: 1;
+}
+/* line 127, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.has-success .form-control,
+.control-group.success .form-control,
+.has-success .input-block-level,
+.control-group.success .input-block-level,
+.has-success input[type=text].field,
+.control-group.success input[type=text].field,
+.has-success input[type=password].field,
+.control-group.success input[type=password].field,
+.has-success .aui-field-select,
+.control-group.success .aui-field-select,
+.has-success textarea,
+.control-group.success textarea,
+.has-success .aui .control-group.error textarea,
+.control-group.success .aui .control-group.error textarea {
+  border-bottom-color: #4CAF50;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .help-block,
+.form-inverse .control-group.success .help-block {
+  color: #45e64b;
+  opacity: 1;
+}
+/* line 92, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .form-control,
+.form-inverse .control-group.success .form-control {
+  border-bottom-color: #45e64b;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 96, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .form-control:focus,
+.form-inverse .control-group.success .form-control:focus,
+.form-inverse .has-success .form-control.dirty,
+.form-inverse .control-group.success .form-control.dirty,
+.form-inverse .has-success input.field:focus,
+.form-inverse .control-group.success input.field:focus,
+.form-inverse .has-success input[type=text].field:focus,
+.form-inverse .control-group.success input[type=text].field:focus,
+.form-inverse .has-success input[type=password].field:focus,
+.form-inverse .control-group.success input[type=password].field:focus,
+.form-inverse .has-success textarea,
+.form-inverse .control-group.success textarea {
+  border-bottom-color: #45e64b;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 105, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .form-control:focus ~ label,
+.form-inverse .control-group.success .form-control:focus ~ label,
+.form-inverse .has-success .form-control.dirty ~ label,
+.form-inverse .control-group.success .form-control.dirty ~ label,
+.form-inverse .has-success input.field:focus ~ label,
+.form-inverse .control-group.success input.field:focus ~ label,
+.form-inverse .has-success input[type=text].field:focus ~ label,
+.form-inverse .control-group.success input[type=text].field:focus ~ label,
+.form-inverse .has-success input[type=password].field:focus ~ label,
+.form-inverse .control-group.success input[type=password].field:focus ~ label,
+.form-inverse .has-success textarea ~ label,
+.form-inverse .control-group.success textarea ~ label {
+  color: inherit;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .form-control ~ label,
+.form-inverse .control-group.success .form-control ~ label,
+.form-inverse .has-success .form-control ~ .form-control-line,
+.form-inverse .control-group.success .form-control ~ .form-control-line {
+  color: inherit;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 114, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .form-control ~ label:after,
+.form-inverse .control-group.success .form-control ~ label:after,
+.form-inverse .has-success .form-control ~ .form-control-line:after,
+.form-inverse .control-group.success .form-control ~ .form-control-line:after {
+  background-color: #45e64b;
+}
+/* line 118, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success label,
+.form-inverse .control-group.success label,
+.form-inverse .has-success .control-label,
+.form-inverse .control-group.success .control-label,
+.form-inverse .has-success .form-control-feedback,
+.form-inverse .control-group.success .form-control-feedback {
+  color: #45e64b;
+  opacity: 1;
+}
+/* line 123, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-horizontal .form-inverse .has-success label,
+.form-horizontal .form-inverse .control-group.success label,
+.form-horizontal .form-inverse .has-success .control-label,
+.form-horizontal .form-inverse .control-group.success .control-label,
+.form-horizontal .form-inverse .has-success .form-control-feedback,
+.form-horizontal .form-inverse .control-group.success .form-control-feedback {
+  opacity: 1;
+}
+/* line 127, /Users/kkashaev/work/plussell/assets/css/less/mixins/forms.less */
+.form-inverse .has-success .form-control,
+.form-inverse .control-group.success .form-control,
+.form-inverse .has-success .input-block-level,
+.form-inverse .control-group.success .input-block-level,
+.form-inverse .has-success input[type=text].field,
+.form-inverse .control-group.success input[type=text].field,
+.form-inverse .has-success input[type=password].field,
+.form-inverse .control-group.success input[type=password].field,
+.form-inverse .has-success .aui-field-select,
+.form-inverse .control-group.success .aui-field-select,
+.form-inverse .has-success textarea,
+.form-inverse .control-group.success textarea,
+.form-inverse .has-success .aui .control-group.error textarea,
+.form-inverse .control-group.success .aui .control-group.error textarea {
+  border-bottom-color: #45e64b;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 540, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.editable-click {
+  border: 0!important;
+}
+/* line 545, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.editable-click i {
+  margin: 0 1em;
+}
+/* line 548, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.editable-click:hover span {
+  background: rgba(242, 251, 0, 0.2);
+}
+/* line 551, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.editable-click span {
+  padding: 5px;
+  margin: -5px;
+}
+/* line 561, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+form.editableform.form .form-group,
+form.editableform.form-inline .form-group {
+  padding-top: 0;
+}
+/* line 564, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+form.editableform.form input,
+form.editableform.form-inline input,
+form.editableform.form textarea,
+form.editableform.form-inline textarea {
+  background: #fff;
+  padding: 4px;
+}
+/* line 568, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+form.editableform.form .btn,
+form.editableform.form-inline .btn {
+  margin: 0 5px;
+}
+/* line 570, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+form.editableform.form .btn i,
+form.editableform.form-inline .btn i {
+  margin: 0;
+}
+/* line 578, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.dropzone {
+  padding: 0;
+}
+/* line 581, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.dropzone .dz-message {
+  background: #f5f5f5;
+  margin: 0 0 1em 0;
+  padding: 1em;
+  text-align: center;
+}
+/* line 586, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.dropzone .dz-message h3 {
+  margin: 0;
+}
+/* line 589, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+.dropzone .dz-message i {
+  display: block;
+  font-size: 3em;
+}
+@media (max-width: 768px) {
+  /* line 610, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  #logregModal .card-head {
+    line-height: 36px;
+    min-height: 40px;
+  }
+  /* line 614, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  #logregModal .card-head.nav-tabs,
+  #logregModal .card-head > .nav-tabs {
+    padding: 0 12px;
+  }
+  /* line 619, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  #logregModal .card-head.nav-tabs > li > a,
+  #logregModal .card-head > .nav-tabs > li > a {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  /* line 627, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  #logregModal .nav > li > a {
+    padding: 5px 10px;
+  }
+  /* line 630, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  #logregModal h3 {
+    font-size: 110%;
+  }
+  /* line 634, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form .form-group,
+  .form-inline .form-group {
+    padding-top: 10px;
+  }
+  /* line 639, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form-control {
+    height: 30px;
+    margin-top: 0;
+  }
+  /* line 644, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form-control ~ label {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  /* line 649, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .floating-label .form-control ~ label {
+    font-size: 13px;
+    line-height: 12px;
+  }
+  /* line 654, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .modal .card-body {
+    padding: 8px 16px;
+  }
+  /* line 658, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form-group {
+    position: relative;
+    margin-bottom: 19px;
+  }
+  /* line 665, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/forms.less */
+  .form-group .form-control ~ label {
+    font-size: 12px;
+  }
+}
+/* !!Forms end */

@@ -1,0 +1,540 @@
+/* Colors */
+.color-white{ color: #fff !important; }
+.color-white-light { color: rgba(#fff, 0.5) !important; }
+.color-black{ color: #000 !important; }
+.color-grey{ color: $grey-darker !important; }
+.color-greydark{ color: $grey-dark !important; }
+.color-purple{ color: $purple !important; }
+.color-purplelight{ color: $purple-light !important; }
+
+/* General */
+.block{ 
+	padding: 90px 0; 
+	position: relative;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 6rem;
+	line-height: 1;
+	margin-bottom: 30px;
+	
+	@media screen and (max-width: $tablet-w) {
+		font-size: 5rem;
+	}
+	@media screen and (max-width: $mobile) {
+		font-size: 4.2rem;
+		margin-bottom: 10px;
+	}
+
+	&.title--block-intro{
+		font-size: 4rem;
+		line-height: 1.2;
+		max-width: 820px;
+		margin-left: auto !important;
+		margin-right: auto !important;
+
+		@media screen and (max-width: $tablet-w) {
+			font-size: 3.5rem;
+		}
+		@media screen and (max-width: $mobile) {
+			font-size: 3rem;
+		}
+	}
+
+	&.title--hero{ 
+		font-size: 4.5rem; 
+		line-height: 1.1; 
+	}
+
+	&.long{
+		font-size: 4.8rem;
+
+		@media screen and (max-width: $tablet) {
+			font-size: 4rem;
+		}
+		@media screen and (max-width: $tablet-w) {
+			font-size: 3.6rem;
+		}
+		@media screen and (max-width: $mobile) {
+			font-size: 3rem;
+		}
+	}
+}
+
+.subtitle{
+	font-weight: 400;
+	font-size: 2.5rem;
+	line-height: 1.4;
+	margin-bottom: 57px;
+
+	@media screen and (max-width: $mobile) {
+		font-size: 2.2rem;
+	}
+
+	&.subtitle--underline{
+		font-size: 2rem;
+		text-align: center;
+		padding-bottom: 13px;
+		color: $purple;
+		border-bottom: 1px solid #d3ccdd;
+		margin-bottom: 65px;
+
+		@media screen and (max-width: $tablet-w) {
+			margin-bottom: 45px;
+		}
+
+		@media screen and (max-width: $mobile) {
+			font-size: 1.8rem;
+			margin-bottom: 30px;
+		}
+	}
+
+	&--medium { font-weight: 600; }
+
+	&.subtitle--bold { 
+		font-weight: 700;
+		font-size: 2.3rem; 
+		line-height: 1.55;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.section-subtitle{
+	font-weight: 700;
+	font-size: 1.8rem;
+	margin-bottom: 17px;
+
+	&.section-subtitle--medium{ 
+		font-weight: 400; 
+
+		@media (max-width: $tablet-w){
+			font-size: 2.1rem;
+		}
+	}
+
+	&.section-subtitle--smaller{ 
+		font-size: 1.6rem; 
+
+		@media (max-width: $tablet-w){
+			font-size: 2rem;
+		}
+	}
+}
+
+.small-title{
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.4;
+	margin-bottom: 18px;
+
+	@media screen and (max-width: $tablet-w){
+		margin-bottom: 10px;
+	}
+
+	@media screen and (max-width: $mobile) {
+		font-size: 2rem;
+	}
+
+	&.small-title--medium{ font-weight: 400; }
+
+	&.small-title--spaced{ 
+		line-height: 1.5; 
+		margin-bottom: 56px;
+
+		@media (max-width: $tablet-w){
+			margin-bottom: 35px;
+		}
+	}
+}
+
+
+// ----------------
+// BLOCKQUOTES
+// ----------------
+blockquote {
+	section:not(.expert-single) & {
+		@extend .citation;
+		max-width: 85%;
+		margin-top: 7px;
+
+		@media screen and (max-width: $tablet-w) {
+			max-width: 75%;
+		}
+		@media screen and (max-width: $mobile) {
+			max-width: 90%;
+		}
+
+		p {
+			font-weight: 700;
+			font-size: 2.3rem;
+			line-height: 1.55;
+		}
+	}
+
+	section:not(.expert-single) .section--text & {
+		max-width: 70%;
+
+		@media screen and (max-width: $tablet-h) {
+			max-width: 80%;
+		}
+		@media screen and (max-width: $tablet-w) {
+			max-width: 75%;
+		}
+		@media screen and (max-width: $mobile) {
+			max-width: 90%;
+		}
+	}
+
+	.expert-single & {
+		font-weight: 700;
+		font-size: 2.3rem;
+		line-height: 1.5;
+		margin: 65px 0 35px;
+		padding: 0 0 0 58px;
+		position: relative;
+		max-width: 480px;
+
+		@media screen and (max-width: $tablet-w) {
+			line-height: 1.4;
+			margin: 30px 0;
+
+			br{ display: none; }
+		}
+
+		&:before{
+			content: "“";
+			position: absolute;
+			top: 0; left: 0;
+			color: $purple-light;
+			font-size: 6.5rem;
+			line-height: 1;
+
+			@media screen and (max-width: $tablet-w) {
+				font-size: 5.5rem;
+			}
+		}
+
+		p {
+			font-weight: 700;
+			font-size: 2.3rem;
+			line-height: 1.5;
+		}
+	}
+}
+
+.citation {
+	position: relative;
+	padding-left: 25px;
+
+	@media (max-width: $tablet-w){
+		margin: 35px 0 45px;
+
+		&:last-child{
+			margin-bottom: 10px;
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 4px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: $purple-light;
+	}
+
+	&.subtitle--bold{ 
+		padding-left: 30px; 
+
+		&:before{
+			height: 90%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+// ----------------
+
+
+.title-icon{
+	margin-bottom: 36px;
+	line-height: 1;
+
+	@media (max-width: $tablet-w){
+		margin-bottom: 20px;
+	}
+
+	.icon, p, h2{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.icon{
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		margin-right: 10px;
+		text-align: center;
+		border: 1px solid $purple;
+
+		@media screen and (max-width: $tablet-w) {
+			margin-right: 5px;
+		}
+
+		span{
+			display: block;
+			font-size: 2.3rem;
+			color: $purple;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+
+			&.icon-savoir {
+				top: calc(50% - 1px);
+				left: 1px;
+			}
+
+			&.icon-search{ font-size: 1.85rem; }
+			&.icon-sheet{ font-size: 2rem; }
+		}
+	}
+
+	p, h2{
+		color: $purple;
+		font-size: 2rem;
+		font-weight: 400;
+		margin: 0;
+
+		@media screen and (max-width: $tablet-w) {
+			font-size: 2.1rem;
+			width: calc(100% - 50px);
+		}
+
+		// iPhone 5
+		@media screen and (max-width: 320px) {
+			font-size: 1.95rem;
+		}
+
+		small{ font-size: 75%; }
+	}
+}
+
+.category{
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.6rem;
+	letter-spacing: 0.18rem;
+	color: $grey-darker;
+	display: block;
+	margin-bottom: 25px;
+}
+
+.date {
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: $grey-darker;
+	display: block;
+	margin-bottom: 5px !important;
+
+	&--margin {
+		margin-bottom: 30px !important;
+
+		@media (max-width: $tablet-w){
+
+			+ .section{ padding-top: 0; }
+		}
+	}
+
+	.block-thumb &,
+	.block-info & {
+		text-transform: lowercase;
+	}
+}
+
+.small-info{
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-bottom: 2px;
+
+	@media (max-width: $mobile){
+		font-size: 1.8rem;
+	}
+
+	&.small-info--smaller{ 
+		font-size: 1.4rem; 
+
+		@media (max-width: $mobile){
+			font-size: 1.6rem;
+		}
+	}
+
+	&--bigger { font-size: 1.8rem; line-height: 1.2; }
+}
+
+.wrap-notes{
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.note, .gfield_html{
+	font-size: 1.4rem;
+	line-height: 1.75;
+	font-weight: 100;
+	max-width: 760px;
+	margin: 0 auto 23px;
+	color: #000;
+
+	&:last-child{ margin-bottom: 0; }
+
+	a{
+		color: #000;
+		text-decoration: underline;
+	}
+
+	&.note--smaller{ font-size: 1.2rem; }
+}
+
+
+/* Specific styles regarding custom content / wysiwyg */
+.row--margin-bottom{
+	margin-bottom: 70px;
+
+	&-large{
+		margin-bottom: 90px;
+	}
+}
+
+.col--content{
+
+	img{ 
+		display: block;
+		margin-bottom: 30px;
+	} 
+
+	a {
+		color: $purple;
+	}
+	
+	h1 {
+		@extend .title;
+		color: $purple;
+	}
+	h2 {
+		@extend .title;
+		@extend .title--hero;
+
+		@media (max-width: $mobile) {
+			font-size: 3.5rem; 
+		}
+	}
+	h3 {
+		@extend .subtitle;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	h4 {
+		@extend .section-subtitle;
+		font-size: 2rem;
+		color: $purple-light;
+	}
+	h5 {
+		@extend .small-title;
+		margin-bottom: 25px;
+	}
+
+	p,
+	li {
+		a {
+			font-weight: 400;
+			color: #000;
+			text-decoration: underline;
+
+			.desktop &:hover {
+				color: $purple-light;
+			}
+		}
+	}
+
+	p {
+		&.note a {
+			color: #000;
+			font-weight: 100;
+			background: none;
+		}
+	}
+
+	ul li{ 
+		padding-bottom: 1px;
+	}
+
+	p,
+	ul,
+	ol,
+	h3,
+	h4 {
+		& + h2 {
+			margin-top: 50px;
+
+			@media screen and (max-width: $tablet-w) {
+				margin-top: 25px;
+			}
+		}
+	}
+
+	legend,
+	pre {
+		@extend .note;
+	}
+
+	pre {
+		max-width: none;
+	}
+
+	hr {
+		margin: 45px 0;
+	}
+
+	blockquote + * {
+		margin-top: 15px;
+	}
+
+	.generique & {
+		ul {
+			width: calc(10 * 100% / 12);
+			margin: 50px auto 35px;
+
+			@media screen and (max-width: $tablet-w) {
+				width: 100%;
+			}
+		}
+	}
+
+	.section--history & {
+		h4 {
+			font-size: 2.3rem;
+		}
+		hr {
+			margin: 25px 0 30px;
+			@media screen and (max-width: $mobile) {
+				margin: 15px 0 20px;
+			}
+		}
+		img {
+			@media screen and (max-width: $mobile) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.gform_wrapper {
+		ul {
+			width: auto;
+			margin: 10px 0;
+		}
+	}
+}

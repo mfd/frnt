@@ -1,0 +1,129 @@
+html {
+	@include smooth;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background-color: #fff;
+	font-family: $font;
+	height: auto;
+}
+
+a {
+	transition: color 0.35s ease;
+	
+	img {
+		display: block;
+	}
+}
+
+pre {
+	font-family: $font;
+}
+
+p, ul, ol {
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 1.55;
+	color: #000;
+	margin-bottom: 22px;
+
+	@media screen and (max-width: $tablet-w) {
+		font-size: 2rem;
+		line-height: 1.4;
+	}
+
+	&:last-child{ margin-bottom: 0; }
+
+	+ .small-title{ 
+		margin-top: 56px; 
+
+		@media screen and (max-width: $tablet-w){
+			margin-top: 40px;
+		}
+	}
+
+	&.small-text{ 
+		font-size: 1.6rem; 
+
+		@media screen and (max-width: $tablet-w) {
+			font-size: 1.7rem;
+		}
+	}
+}
+
+ul{
+	margin-top: 7px;
+
+	li{
+		position: relative;
+		padding: 0 0 16px 15px;
+		line-height: 1.55;
+
+		&:before{
+			content: "•";
+			color: $purple-light;
+			font-size: 1.7rem;
+			line-height: 5px;
+			position: absolute;
+			left: 0;
+			top: 10px;
+
+			@media screen and (max-width: $tablet-w) {
+				top: 13px;
+			}
+		}
+
+		ul{
+			margin-bottom: 2px;
+
+			li{
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+ol {
+	padding-left: 18px;
+
+	li {
+		padding: 0 0 10px 5px;
+	}
+}
+
+hr{
+	border-color: #d3ccdd;
+	margin: 80px 0 45px;
+
+	@media (max-width: $tablet-w){
+		margin: 50px 0 40px;
+	}
+
+	&.hr--narrow{ margin-top: 24px; }
+}
+
+img {
+	height: auto;
+	
+	&.alignright { float: right; margin-left: 1em; }
+	&.alignleft { float: left; margin-right: 1em; }
+	&.aligncenter { display: block; margin-left: auto; margin-right: auto}
+	a &.alignright { float: right; margin-left: 1em; }
+	a &.alignleft { float: left; margin-right: 1em; }
+	a &.aligncenter { display: block; margin-left: auto; margin-right: auto }
+}
+
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+// empty ALT
+// img[alt=""],
+// img:not([alt]) {
+// 	border: 5px dashed #c00;
+// }

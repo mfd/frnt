@@ -1,0 +1,14 @@
+$border-color: #f0f0f0;
+
+.list-forward {
+  //@extend .list-results;
+  > div.contact {
+    .item-actions {
+      top: 45%;
+      @include opacity(1);
+      .btn {
+
+      }
+    } // /.item-actions
+  }
+} // /.list-forward

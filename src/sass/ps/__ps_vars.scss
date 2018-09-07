@@ -1,0 +1,209 @@
+$header-gutter-width:             24px;
+$gutter-size:                     4px;
+$headerbar-height:                74px;
+$lf-panel-height:                 49px; //  .liferayAdmin &
+
+// COLORS
+// --------------------
+@import "_ps_vars_colors";
+
+
+// Typography
+// -------------------------
+$font-family-sans-serif:          "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base:                $font-family-sans-serif;
+$display4-size:                   112px;
+$display3-size:                   56px;
+$display2-size:                   45px;
+$display1-size:                   34px;
+$headline-size:                   24px;
+$title-size:                      20px;
+$subhead-size:                    15px;
+$font-size-base:                  13px;
+$button-size:                     14px;
+$caption-size:                    12px;
+
+$weight-light:                    300;
+$weight-normal:                   400;
+$weight-medium:                   500;
+$weight-bold:                     700;
+$weight-ultra-bold:               900;
+
+$headings-font-weight:            $weight-normal;
+$blockquote-border-color:         $brand-primary-bright;
+
+$font-size-h1:                    $display1-size;
+$font-size-h2:                    $headline-size;
+$font-size-h3:                    $title-size;
+$font-size-h4:                    $subhead-size;
+$font-size-h5:                    $font-size-base;
+$font-size-h6:                    $caption-size;
+
+$line-height-base:                1.846153846; // 24/13
+$line-height-computed:            round(($font-size-base * $line-height-base)); // ~24px
+
+
+$dimensions-steps:                40px;
+
+
+// Z-index
+// -------------------------
+$zindex-navbar:                   1000; // Bootstrap index
+$zindex-dropdown:                 1000; // Bootstrap index
+$zindex-section-action:           1001;
+$zindex-menubar:                  1004;
+$zindex-header:                   1005;
+$zindex-menubar-first:            1006;
+$zindex-header-mobile:            1011;
+$zindex-header-offcanvas:         1012;
+$zindex-menubar-mobile:           1013;
+$zindex-navbar-fixed:             1030; // Bootstrap index
+$zindex-offcanvas-backdrop:       1061;
+$zindex-offcanvas:                1062;
+$zindex-modal-background:         1040; // Bootstrap index
+
+
+// Shadow heights
+// -------------------------
+
+$z-height-0:                      none;
+$z-height-1:                      0 1px 3px 0 rgba(0,0,0,.33);
+$z-height-2:                      0 3px 8px 0 rgba(0,0,0,.38);
+$z-height-3:                      0 8px 14px 0 rgba(0,0,0,.38);
+$z-height-4:                      0 14px 19px 0 rgba(0,0,0,.38);
+$z-height-5:                      0 20px 24px 0 rgba(0,0,0,.38);
+
+$z-height-panel:                  0 14px 19px 0 rgba(0,0,0,0.1);
+
+$z-height-1-inverse:              0 -1px 3px 0 rgba(0,0,0,.33);
+$z-height-2-inverse:              0 -3px 8px 0 rgba(0,0,0,.18);
+$z-height-3-inverse:              0 -8px 14px 0 rgba(0,0,0,.18);
+$z-height-4-inverse:              0 -14px 19px 0 rgba(0,0,0,.18);
+$z-height-5-inverse:              0 -20px 24px 0 rgba(0,0,0,.18);
+
+$z-height-panel-inverse:          0 -14px 19px 0 rgba(0,0,0,.1);
+
+$z-height2-0:                     0px 2px 0px 0px rgba(79,149,185,1);
+$z-height2-1:                     0px 5px 0px 0px rgba(79,149,185,1);
+$z-height2-2:                     0px 5px 0px 0px rgba(0,0,0,.6);
+
+
+
+
+// Buttons colors
+// -------------------------
+
+$btn-default-color:               $gray-light;
+$btn-default-bg:                  $gray-lighter;
+$btn-default-border:              $gray-lighter;
+
+$btn-primary-color:               $white;
+$btn-primary-bg:                  $brand-primary;
+$btn-primary-border:              $brand-primary;
+
+$btn-success-color:               $white;
+$btn-success-bg:                  $brand-success;
+$btn-success-border:              $brand-success;
+
+//$btn-info-color:                $brand-info;
+$btn-info-color:                  $white;
+$btn-info-bg:                     $brand-info;
+$btn-info-border:                 $brand-info;
+
+$btn-warning-color:               $white;
+$btn-warning-bg:                  $brand-warning;
+$btn-warning-border:              $brand-warning;
+
+$btn-danger-color:                $white;
+$btn-danger-bg:                   $brand-danger;
+$btn-danger-border:               $brand-danger;
+
+
+
+
+$headerbar-bg:                    lighten($brand-inverse, 0%);
+$headerbar-link-hover:            rgba(0, 0, 0, 0.15);
+$nav-disabled-link-color:         #969b9c;
+$nav-disabled-link-hover-color:   #969b96;
+$nav-link-hover-bg:               #e5e6e6;
+
+
+
+// Menubar
+// -------------------------
+$menubar-bg:                      lighten($brand-inverse, 5%); //#004567;
+//$menubar-color:                 fade($white, 85%); //цвет иконок в menubar gui
+$menubar-color:                   transparentize($white, .15); // opacify($color, .5)
+$menubar-folder-color:            transparentize($menubar-color, .15); // fade($menubar-color, 85%);
+$menubar-font-size:               90%;
+$menubar-gap:                     ($gutter-size * 3);
+
+$menubar-link-hover:              darken($menubar-bg, 5%); //fade($white, 7%);
+$menubar-link-hover-color:        $white;
+$menubar-link-active:             $brand-primary; //$brand-primary;
+$menubar-link-active-color:       $white;
+//$menubar-icon-width:            50px;
+$menubar-icon-width:              50px;
+$menubar-icon-width__mobile:      40px;
+
+$menubar-icon-bg:                 $white;
+$menubar-icon-bg-active:          $brand-primary;
+$menubar-icon-bg-hover:           transparentize($white, .93); //fade($white, 7%);
+$menubar-icon-color:              transparentize($white, .05); //fade($white, 95%);
+$menubar-icon-color-active:       $brand-primary;
+$menubar-icon-color-hover:        transparentize($white, .97);
+$menubar-icon-border:             $menubar-icon-bg;
+$menubar-width:                   240px;
+$menubar-width-collapsed:         $menubar-icon-width + ($menubar-gap);
+$menubar-collapse-speed:          .5s;
+$menubar-collapse-ease:           cubic-bezier(.15,.99,.18,1.01);//ease-out;
+
+
+// Menubar tree variables
+$menubar-tree-border-color:       transparentize($white, .6); //fade(contrast($menubar-bg, $black, $white, $color-threshold), 30%);
+$menubar-tree-width:              21px;
+$menubar-tree-indent:             50px;
+$menubar-tree-indent-level1:      25px;
+$menubar-tree-indent-level2:      $menubar-tree-indent-level1 + $menubar-tree-width;
+$menubar-tree-indent-level3:      $menubar-tree-indent-level2 + $menubar-tree-width;
+$menubar-tree-indent-level4:      $menubar-tree-indent-level3 + $menubar-tree-width;
+$menubar-tree-indent-level5:      $menubar-tree-indent-level4 + $menubar-tree-width;
+
+
+$menubar-folder-color:            transparentize($menubar-color, .15); //fade($menubar-color, 85%);
+
+
+
+
+
+
+// Tables
+// -------------------------
+// $table-cell-padding:           10px 8px;
+// $table-condensed-cell-padding: 5px;
+
+// $table-bg:                     transparent; // overall background-color
+// $table-bg-accent:              fade($gray-lightest, 35); // for striping
+// $table-bg-hover:               fade($gray-lighter, 25);
+// $table-bg-hover-color:         $text-color;
+// $table-bg-active:              $table-bg-hover;
+
+// $table-border-color:           fade($gray-light2, 20); // table and cell border
+
+// $table-theme-head:             darken(desaturate($brand-primary, 10%), 5%);
+// $table-theme-head-border:      lighten($table-theme-head, 30);
+
+// // DataTables
+// // -------------------------
+// $table-body-border:            1px solid $gray-lighter; // Border of rows / cells
+// $table-row-background:         transparent; // Row background colour
+// $table-row-selected:           $brand-primary; // Row colour, when selected (tr.selected)
+// $table-paging-button-active:   $btn-default-bg;
+// $table-paging-button-hover:    darken($btn-default-bg, 5%);
+
+
+$table-row-background:            transparent;
+$table-row-selected:              $brand-primary;
+
+
+$splitter-bg: $panel-default-heading-bg !default;

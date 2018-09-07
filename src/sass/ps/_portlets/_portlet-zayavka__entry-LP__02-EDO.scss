@@ -1,0 +1,257 @@
+// Лист поставки - Заголовки
+.b-zayaEntry-LP {
+  &__EDO-sdelkaDoc {
+    &-iframe {
+      border: 0!important;
+    }
+  }
+
+  &__eDoc-head {
+    margin: 1em 0!important;
+    margin-bottom: 0 !important;
+
+    &--actions {
+      text-align: left;
+      .btn {
+        font-size: 100%;
+        border-width: 1px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 0;
+        &:hover {
+          background: rgba(105, 111, 139, .1);
+        }
+        & > .fa {
+          margin-left: 5px;
+        }
+      }
+      .dropdown-toggle {
+        position: relative;
+        z-index: 2000;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: -10px;
+          bottom: -10px;
+          height: 10px;
+          background: #ffffff;
+          display: none;
+        }
+      }
+      .open .dropdown-toggle {
+        border-color: #fff;
+        &:after {
+          display: block;
+        }
+      }
+
+      .btn-dropdown {
+        position: relative;
+        &:after {
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: -5px;
+          z-index: 1001;
+          position: absolute;
+          background: #fff;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+          display:none;
+        }
+        &.open:after {
+           display:block;
+        }
+        &.open .dropdown-toggle:hover {
+           background: none;
+        }
+      }
+    }
+  }
+
+  // EDO list documents
+  &__eDoc-list {
+    margin: 0!important;
+    // layout
+    .eDoc-item {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      align-items: center;
+      align-content: center;
+      &__col {
+        &:nth-child(1) {
+          order: 0;
+          align-self: auto;
+          justify-content: center;
+        }
+        &:nth-child(2) {
+          order: 0;
+          flex: 0 1 auto;
+          align-self: auto;
+        }
+        &:nth-child(3) {
+          order: 0;
+          flex: 0 1 auto;
+          align-self: auto;
+        }
+      }
+    }
+    .eDoc-item {
+      height: 90px;
+      border-bottom: 1px solid #eee;
+
+      &__file {
+        width: 100%;
+      }
+      &__customer {
+        width: 200px;
+      }
+      &__supplier {
+        width: 200px;
+      }
+    }
+  }
+}
+
+
+// EDO design
+.eDoc-item {
+  &__col {
+    padding: 1em;
+  }
+
+  &__file {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    padding-left: 40px;
+    position: relative;
+    &:before {
+      content: '\f0f6';
+      color: #506d7b;
+      position: absolute;
+      left: 0px; top: 50%;
+      margin-top: -15px;
+      width: 30px;
+      height: 30px;
+      //background: green;
+      font: normal normal normal 30px/30px FontAwesome;
+      text-align: center;
+
+      .filetype--pdf & {
+        content: "";
+        color: #ff0000;
+      }
+      .filetype--doc & {
+        content: "";
+        color: #0054a6;
+      }
+      .filetype--xls & {
+        content: "";
+        color: #4caf50;
+      }
+      .filetype--img & {
+        content: "";
+        color: #FF9800;
+      }
+
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #3B4256;
+      letter-spacing: 0;
+      line-height: 26px;
+    }
+    &-props {
+      font-size: 12px;
+      font-weight: 500;
+      margin: 0;
+      li {
+        padding: 0;
+        margin-right: 5px;
+        color: #B0B4BB;
+        a {
+          color: #B0B4BB;
+        }
+      }
+      .ico {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__sign {
+    margin: 0;
+    &-label {
+      font-size: 10px;
+      color: #A0AAB7;
+      letter-spacing: 0.56px;
+      line-height: 20px!important;
+      text-transform: uppercase;
+    }
+    &-user {
+      color: #A0AAB7;
+      line-height: 10px !important;
+      margin: 5px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-transform: none;
+      font-weight: normal;
+      font-size: 11px;
+    }
+    &-action {
+      .btn {
+        padding: .5em .75em;
+        width: 180px;
+        text-align: left;
+        font-size: 75%;
+        position: relative;
+        border-radius: 0;
+        &.btn-success {
+          color: #34B88B;
+          background:rgba(52, 184, 139, 0.15)
+        }
+        &.btn-warning {
+          color: #bd8830;
+          background: rgba(244, 182, 78, .15);
+        }
+        &.btn-danger {
+          color:rgba(223, 88, 76, 1);
+          background: rgba(223, 88, 76, .15);
+        }
+        &.disabled {
+          opacity: 1!important;
+          border: 0!important;
+          cursor: default;
+        }
+        &-ico {
+          position: absolute;
+          right: -2px;
+          bottom: -2px;
+          top: -2px;
+          line-height: 35px;
+          width: 30px;
+          text-align: center;
+        }
+      }
+    }
+    &-dropdown {
+      width: 180px;
+      border-radius: 0;
+      font-size: 90%;
+      z-index: 2100;
+      li a{
+        padding: 7px 10px !important;
+        font-size: 90%;
+      }
+      .divider {
+        margin: 5px;
+      }
+    }
+  }
+} //.eDoc-item

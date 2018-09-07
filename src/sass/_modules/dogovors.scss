@@ -1,0 +1,65 @@
+.b-registerContract {
+  //color: red;
+  //transform: scale(.8)
+  margin-top: 1em;
+
+  &__addFiles, &__addContractors {
+    .btn {
+      transform: scale(.8);
+      transform-origin: left top;
+    }
+  }
+  &__addFiles {
+    & {
+
+    }
+  .lfr-upload-container {
+    .upload-list-info {
+
+    }
+     .upload-target {
+      text-align: left;
+
+    }
+    .upload-target {
+      border: 0;
+      padding: 0;
+    }
+    .upload-target .drop-file-text {
+      display:none;
+    }
+  }
+
+  }
+
+  &__addContractors {
+
+  }
+
+  .panel-heading {
+    margin-bottom: .5em;
+    color: #999;
+    font-size: 70%;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+  .panel-body {
+    padding: 0;
+    padding-bottom: 15px;
+  }
+  .date-input, .--inline-inputs {
+    span {
+      width: 50%;
+      float: left;
+      padding-bottom: 1em;
+      padding-right: 1em
+    }
+
+    .control-label {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+}

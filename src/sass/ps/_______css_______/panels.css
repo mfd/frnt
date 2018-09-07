@@ -1,0 +1,406 @@
+/* line 7, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel {
+  margin-bottom: 24px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/* line 16, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-body {
+  padding: 15px;
+}
+/* line 22, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+/* line 27, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-heading > .dropdown .dropdown-toggle {
+  color: inherit;
+}
+/* line 33, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: inherit;
+}
+/* line 39, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
+  color: inherit;
+}
+/* line 49, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+/* line 63, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .list-group,
+.panel > .panel-collapse > .list-group {
+  margin-bottom: 0;
+}
+/* line 67, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .list-group .list-group-item,
+.panel > .panel-collapse > .list-group .list-group-item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+/* line 74, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .list-group:first-child .list-group-item:first-child,
+.panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+/* line 81, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .list-group:last-child .list-group-item:last-child,
+.panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+/* line 90, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-heading + .list-group .list-group-item:first-child {
+  border-top-width: 0;
+}
+/* line 94, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.list-group + .panel-footer {
+  border-top-width: 0;
+}
+/* line 104, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table,
+.panel > .table-responsive > .table,
+.panel > .panel-collapse > .table {
+  margin-bottom: 0;
+}
+/* line 109, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table caption,
+.panel > .table-responsive > .table caption,
+.panel > .panel-collapse > .table caption {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 115, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:first-child,
+.panel > .table-responsive:first-child > .table:first-child {
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+/* line 121, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:first-child > thead:first-child > tr:first-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
+.panel > .table:first-child > tbody:first-child > tr:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+/* line 125, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+  border-top-left-radius: 1px;
+}
+/* line 129, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+  border-top-right-radius: 1px;
+}
+/* line 137, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:last-child,
+.panel > .table-responsive:last-child > .table:last-child {
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+/* line 143, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:last-child > tbody:last-child > tr:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
+.panel > .table:last-child > tfoot:last-child > tr:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+/* line 147, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+  border-bottom-left-radius: 1px;
+}
+/* line 151, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+  border-bottom-right-radius: 1px;
+}
+/* line 158, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .panel-body + .table,
+.panel > .panel-body + .table-responsive,
+.panel > .table + .panel-body,
+.panel > .table-responsive + .panel-body {
+  border-top: 1px solid rgba(189, 192, 193, 0.2);
+}
+/* line 164, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table > tbody:first-child > tr:first-child th,
+.panel > .table > tbody:first-child > tr:first-child td {
+  border-top: 0;
+}
+/* line 168, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table-bordered,
+.panel > .table-responsive > .table-bordered {
+  border: 0;
+}
+/* line 175, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table-bordered > thead > tr > th:first-child,
+.panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
+.panel > .table-bordered > tbody > tr > th:first-child,
+.panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+.panel > .table-bordered > tfoot > tr > th:first-child,
+.panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+.panel > .table-bordered > thead > tr > td:first-child,
+.panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
+.panel > .table-bordered > tbody > tr > td:first-child,
+.panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+.panel > .table-bordered > tfoot > tr > td:first-child,
+.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  border-left: 0;
+}
+/* line 179, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table-bordered > thead > tr > th:last-child,
+.panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
+.panel > .table-bordered > tbody > tr > th:last-child,
+.panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+.panel > .table-bordered > tfoot > tr > th:last-child,
+.panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+.panel > .table-bordered > thead > tr > td:last-child,
+.panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
+.panel > .table-bordered > tbody > tr > td:last-child,
+.panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+.panel > .table-bordered > tfoot > tr > td:last-child,
+.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  border-right: 0;
+}
+/* line 188, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table-bordered > thead > tr:first-child > td,
+.panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
+.panel > .table-bordered > tbody > tr:first-child > td,
+.panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+.panel > .table-bordered > thead > tr:first-child > th,
+.panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
+.panel > .table-bordered > tbody > tr:first-child > th,
+.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+  border-bottom: 0;
+}
+/* line 197, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table-bordered > tbody > tr:last-child > td,
+.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+.panel > .table-bordered > tfoot > tr:last-child > td,
+.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+.panel > .table-bordered > tbody > tr:last-child > th,
+.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+.panel > .table-bordered > tfoot > tr:last-child > th,
+.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+  border-bottom: 0;
+}
+/* line 204, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel > .table-responsive {
+  border: 0;
+  margin-bottom: 0;
+}
+/* line 216, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group {
+  margin-bottom: 24px;
+}
+/* line 220, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 2px;
+}
+/* line 224, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group .panel + .panel {
+  margin-top: 5px;
+}
+/* line 229, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+/* line 232, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-heading + .panel-collapse > .list-group {
+  border-top: 1px solid #ddd;
+}
+/* line 238, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group .panel-footer {
+  border-top: 0;
+}
+/* line 240, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-group .panel-footer + .panel-collapse .panel-body {
+  border-bottom: 1px solid #ddd;
+}
+/* line 248, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-default {
+  border-color: #ddd;
+}
+/* line 6, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-default > .panel-heading {
+  color: #313435;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+/* line 11, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ddd;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-default > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #313435;
+}
+/* line 20, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
+}
+/* line 251, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-primary {
+  border-color: #00ccff;
+}
+/* line 6, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #00ccff;
+  border-color: #00ccff;
+}
+/* line 11, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #00ccff;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-primary > .panel-heading .badge {
+  color: #00ccff;
+  background-color: #fff;
+}
+/* line 20, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #00ccff;
+}
+/* line 254, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-success {
+  border-color: #c5f7be;
+}
+/* line 6, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-success > .panel-heading {
+  color: #3c763d;
+  background-color: #d4fad6;
+  border-color: #c5f7be;
+}
+/* line 11, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-success > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #c5f7be;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-success > .panel-heading .badge {
+  color: #d4fad6;
+  background-color: #3c763d;
+}
+/* line 20, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-success > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #c5f7be;
+}
+/* line 257, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-info {
+  border-color: #b5e4f6;
+}
+/* line 6, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-info > .panel-heading {
+  color: #31708f;
+  background-color: #d4e9fa;
+  border-color: #b5e4f6;
+}
+/* line 11, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-info > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #b5e4f6;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-info > .panel-heading .badge {
+  color: #d4e9fa;
+  background-color: #31708f;
+}
+/* line 20, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-info > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #b5e4f6;
+}
+/* line 260, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-warning {
+  border-color: #f7d4be;
+}
+/* line 6, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-warning > .panel-heading {
+  color: #8a6d3b;
+  background-color: #fae9d4;
+  border-color: #f7d4be;
+}
+/* line 11, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-warning > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #f7d4be;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-warning > .panel-heading .badge {
+  color: #fae9d4;
+  background-color: #8a6d3b;
+}
+/* line 20, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-warning > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #f7d4be;
+}
+/* line 263, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/panels.less */
+.panel-danger {
+  border-color: #f7bec3;
+}
+/* line 6, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-danger > .panel-heading {
+  color: #a94442;
+  background-color: #fad7d4;
+  border-color: #f7bec3;
+}
+/* line 11, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-danger > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #f7bec3;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-danger > .panel-heading .badge {
+  color: #fad7d4;
+  background-color: #a94442;
+}
+/* line 20, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/panels.less */
+.panel-danger > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #f7bec3;
+}

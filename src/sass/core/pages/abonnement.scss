@@ -1,0 +1,163 @@
+.page-template-tpl-abonnements {
+	main {
+		padding-bottom: 0;
+	}
+
+	.col--content h2 {
+		font-size: 2.5rem;
+	}
+
+	.profil-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+
+		@media screen and (max-width: $tablet-w) {
+			position: static;
+			width: 240px;
+			margin: 15px auto 0;
+		}
+
+		a {
+			color: $purple;
+			font-size: 1.6rem;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+
+		&-container {
+			position: static;
+			transform: none !important;
+		}
+	}
+
+	.desabonnement {
+		width: 100vw;
+		margin: 55px 0 0 calc((100vw - 100%) / -2);
+		padding: 80px calc((100vw - 100%) / 2);
+
+		@media screen and (max-width: $tablet-w) {
+			padding-top: 30px;
+		}
+
+		textarea {
+			background-color: $grey-lighter;
+		}
+		.gfield_description {
+			color: #000;
+			padding-top: 0;
+			width: 60%;
+
+			@media screen and (max-width: $tablet-w) {
+				width: 100%;
+			}
+		}
+	}
+
+	.newsletter-unsubscribe {
+		width: calc(100% - 250px);
+
+		@media screen and (max-width: $tablet-w) {
+			width: 100%;
+		}
+	}
+
+
+	.gform {
+		&_fields:first-child {
+			position: relative;
+
+			.gfield {
+				width: 75%;
+
+				&.gf_left_half,
+				&.gf_right_half {
+					width: calc(75% / 2);
+				}
+
+				@media screen and (max-width: $tablet) {
+					width: 70%;
+
+					&.gf_left_half,
+					&.gf_right_half {
+						width: 70%;
+					}
+				}
+				@media screen and (max-width: $tablet-w) {
+					width: 100%;
+					
+					&.gf_left_half,
+					&.gf_right_half {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&_footer {
+			position: absolute;
+			padding: 0;
+			right: $gutter-xl/2;
+			
+			bottom: 65px;
+			
+			@media screen and (max-width: $xlarge) {
+				right: $gutter/2;
+			}
+			@media screen and (max-width: $tablet-h) {
+				bottom: 85px;
+			}
+			@media screen and (max-width: $tablet) {
+				bottom: 105px;
+			}
+			@media screen and (max-width: $tablet-w) {
+				bottom: -5px;
+				right: auto;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+					
+			&:not(.unsubscribe-selected) {
+				bottom: 55px;
+
+				@media screen and (max-width: $tablet-h) {
+					bottom: 70px;
+				}
+				@media screen and (max-width: $tablet-w) {
+					bottom: 0;
+				}
+			
+				input[type="submit"] {
+					pointer-events: none;
+					background-color: $grey-light;
+					color: $purple;
+					margin: 0;
+				}
+			}
+		}
+	}
+	
+
+	.validation_error {
+		width: 75%;
+
+		@media screen and (max-width: $tablet) {
+			width: 70%;
+		}
+		@media screen and (max-width: $tablet-w) {
+			width: 100%;
+		}
+	}
+	
+
+	// Fix for footer animation on confirmation form
+	&.form-confirmation {
+		footer .anim--childs > * {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

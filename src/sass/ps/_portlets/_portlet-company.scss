@@ -1,0 +1,38 @@
+$item__hover-bg: $list-group-hover-bg;
+
+#content .company-portlet{
+  padding: 1em 0;
+}
+
+
+//@import "portlet-company__eItem";
+
+.company-portlet {
+
+  //@import "../css/btns";
+    //@import "../elements/btns";
+  @import "../elements/panels";
+
+  @import "portlet-company__lf-ui";
+
+
+  //COMPANY HEAD
+  @import "portlet-company__head";
+
+  //COMPANY HEAD
+  @import "portlet-company__body";
+
+  @import "portlet-company__user-edit";
+    @media (max-width: $screen-xs-max) {
+      margin: -15px;
+    }
+
+
+}// /* //.company-portlet */
+
+  .company-portlet .btn-bottom-right  {
+    // top: 0px;
+    // position: absolute;
+    // right: 20px;
+  }
+

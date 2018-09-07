@@ -1,0 +1,261 @@
+//
+// Lists
+// --------------------------------------------------
+
+$list-item_ph: 70px;
+//$list-item_ph_mobile: floor($list-item_ph - $list-item_ph/1.5);
+$list-item_ph_mobile: 35px;
+//$list-item_bg_org: #fffaf3;
+$list-item_bg_org: transparent;
+$list-item_bg_user: $white;
+
+// extend elements/lists
+// extend elements/hbox
+//  .list-results.list-${names}
+//    .col-xs-12.col-md-6.col-lg-4.hbox-xs.${names}
+//    .hbox-column.photo
+//    .hbox-column.info
+//      .clearfix
+//        .col-lg-12
+
+
+// List
+// Списки - общий дизайн
+// -------------------------
+.list {
+  margin-bottom: $grid-gutter-width;
+  @include clearfix();
+  //margin-top: 1px;
+  //border-left: 1px solid $gray-lightest;
+
+  > div,
+  .list-item {
+    min-height: 100px;
+    padding: 20px;
+    //background: inherit;
+
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $screen-sm-max) {
+      min-height: inherit;
+      overflow: inherit;
+      padding: 10px;
+    }
+
+    .photo {
+      @extend .v-top;
+      position: relative;
+      margin: .5em;
+      width: $list-item_ph; //80px
+      @media (max-width: $screen-md-max) {
+        width: $list-item_ph_mobile;
+      }
+      .user-icon {
+        width: $list-item_ph;
+        height: $list-item_ph;
+        line-height: $list-item_ph;
+        margin: 0;
+        @media (max-width: $screen-md-max) {
+          width: $list-item_ph_mobile;
+          height: $list-item_ph_mobile;
+          line-height: $list-item_ph_mobile;
+        }
+      }
+    } // /.photo
+    .info {
+      //@extend .v-top;
+      @extend .v-top;
+      width: 100%;
+      .clearfix > [class^="col-"] {
+        white-space: nowrap;
+      }
+      span {
+        @extend .text-sm;
+      }
+      .clearfix{
+        margin: 0;
+        margin: 0 0 .25em 0;
+      }
+      h4, h5 {
+        margin: 0;
+      }
+      h4 {
+        //margin-bottom: .25em;
+        position: relative;
+        overflow: hidden;
+        font-size: 16px;
+        line-height: 16px;
+        @media (max-width: $screen-sm-max) {
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+      h5 {
+        font-size: 12px;
+        }
+      } // /.info
+
+    .info:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0px;
+      width: 90px;
+      background: $white;
+      box-shadow: -10px 0 20px 0 $white;
+    }
+    .info:after {
+      transform: scale(0.9);
+      transition: all 320ms ease-out;
+    }
+
+    &.list-item_user {
+      background: $list-item_bg_user;
+      .info:after {
+        background: $list-item_bg_user;
+        box-shadow: 0 0 20px 0 $list-item_bg_user;
+      } // /.info
+    }
+    &.list-item_organization {
+      background: $list-item_bg_org;
+      .photo .user-icon{
+        border-radius: 0;
+        background-size: contain;
+        border: 1px solid #ccc;
+        &:after {
+          content: '';
+          position: absolute;
+          left:0; right: 0; top: 0; bottom: 0px;
+          //background: #ccc;
+        }
+      } // /.photo
+      .info:after {
+        background: $list-item_bg_org;
+        box-shadow: 0 0 20px 10px $list-item_bg_org;
+      } // /.info
+    }
+
+
+
+    .item-actions {
+      position: absolute;
+      right: 10px;
+      top: 25%;
+      z-index: 99;
+      opacity: 0;
+      transform: 0, -10px;
+      //@include box-shadow(0 0px 20px 10px $white);
+      transition: all 320ms ease-out;
+
+      .btn {
+        //@extend .btn-xs, .btn-primary-bright;
+        @extend .btn-xs;
+        &:nth-child(2) {
+          @extend .btn-accent-bright;
+        }
+        margin-left:0;
+        transition: all .15s linear;
+        &:hover {
+          //color: $brand-primary;
+        }
+        &:active {
+          transform: scale(.8);
+        }
+
+        @media (max-width: $screen-md-max) {
+          font-size: 10px;
+        }
+
+      } // /.btn
+    } //.item-actions
+    & .item-actions {
+      opacity: 1;
+      transform: 0, -10px;
+    } //.item-actions
+
+    @media (max-width: $screen-sm-max) {
+      .item-actions {
+        //opacity: .5;
+        font-size: 80%;
+        }
+
+    }
+
+
+
+    > a {
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      text-indent: -1984px;
+      z-index: 20;
+      cursor: pointer;
+    }
+
+    ///  ==================================================== /////
+
+    // HOVER BG
+    &::before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0; top: 0;
+      display: block;
+      z-index: 10;
+      //background: $gray-lightest;
+      background: rgba($brand-primary, 0.1);
+
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 320ms ease-out;
+
+      //transition: opacity .3s linear;
+    }
+    &:hover{
+      &::before {
+        opacity: 1;
+        transform: none;
+      }
+      h4:after {
+        box-shadow: -5px 5px 30px 20px $gray-lightest;
+      }
+    }
+  }  // .list-results > div
+
+
+} //.list-results
+
+// Borders
+// ГРАНИЦЫ, ВНУТРЕННИЕ
+// -------------------------
+@import "lists__borders";
+
+// Contact-list
+// КОНТАКТЫ
+// -------------------------
+@import "lists-contacts";
+
+// Contractors list
+// ПОСТАВЩИКИ
+// ПОСТАВЩИКИ ПРИГЛАСИТЬ
+// -------------------------
+@import "lists-contractors";
+
+// Workers list
+// СОТРУДНИКИ КОМПАНИИ
+// -------------------------
+@import "lists-workers";
+
+// Forward list
+// ПЕРЕСЛАТЬ
+// -------------------------
+@import "lists-forward";
+
+// СПИСОК ДОКУМЕНТОВ
+// -------------------------
+
+@import "lists-docs"

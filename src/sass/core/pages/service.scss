@@ -1,0 +1,29 @@
+.service {
+	&__illustration {
+		@include flex(flex-end, flex-start);
+
+		@media screen and (max-width: $tablet-w) {
+			display: none;
+		}
+
+		img {
+			width: calc(100% + 80px);
+			max-width: none;
+			transform: translateY(-200px); // 135 - 65 
+
+			@media screen and (max-width: $tablet-h) {
+				width: calc(100% + 40px);
+			}
+		}
+	}
+
+	&__intro {
+		padding-bottom: 80px;
+		@include col("padding-right", 1);
+	}
+
+	&__ref {
+		position: relative;
+		padding-bottom: 30px;
+	}
+}

@@ -1,0 +1,95 @@
+.block--content{
+	padding: 46px 42px 50px;
+	box-shadow: 0px 0px 38px #ddd;
+	text-align: center;
+	background-color: #fff;
+
+	@media screen and (max-width: $tablet-h) {
+		padding: 44px 30px 50px;
+	}
+
+	.small-title{ margin-bottom: 14px; }
+
+	p{ 
+		line-height: 1.35; 
+		margin-bottom: 23px; 
+
+		&.small-text{ line-height: 1.25; }
+		+ .button{ margin-top: 34px; }
+	}
+
+	.button{ 
+		display: block; 
+		margin: 0 auto; 
+
+		+ .button{ margin-top: 20px; margin-bottom: 0; }
+
+		&:last-child{ margin-bottom: 0; }
+	} 
+
+	+ .block--content{ margin-top: 20px; }
+
+	&.block--content--narrow{
+		padding: 35px 12px 20px;
+
+		p{ margin-bottom: 18px; }
+	}
+
+	+ .button{ margin-top: 30px; }
+
+	&__inner {
+		height: 100%;
+		@include flex(center, center, column);
+
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+ 
+	&--sticky {
+		position: absolute;
+		text-align: center;
+		width: calc(100% - #{$gutter-xl});
+
+		@media screen and (max-width: $xlarge - 1) {
+			width: calc(100% - #{$gutter});
+		}
+		@media screen and (max-width: $tablet-w) {
+			position: relative;
+			width: 100%;
+			margin-top: 40px;
+		}
+
+		&.static {
+			position: relative;
+			width: 100%;
+		}
+
+		&.sticky {
+			position: fixed;
+			width: calc((4 * #{$container-xl - $gutter-xl} / 12) - #{$gutter-xl});
+			top: 100px; 
+			z-index: 9;
+			right: calc( (100vw - #{$container-xl}) / 2 + #{$gutter-xl} );
+
+			@media screen and (max-width: $xlarge - 1) {
+				@include smoothResponsive("width", 370, 510, 1441, 1919);
+				@include smoothResponsive("right", 136, 165, 1441, 1919);
+			}
+			@media screen and (max-width: $large) {
+				width: calc((4 * #{$container - $gutter} / 12) - #{$gutter});
+				right: calc( (100vw - #{$container}) / 2 + #{$gutter} );
+			}
+			@media screen and (max-width: $container) {
+				width: calc((4 * (100% - #{$gutter}) / 12) - #{$gutter});
+				right: 30px;
+			}
+			@media screen and (max-width: $tablet-h) {
+				width: calc((5 * (100% - #{$gutter}) / 12) - #{$gutter});
+			}
+			@media screen and (max-width: $tablet) {
+				top: 20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.expert-single{
+
+	.banner-header{
+		@media (max-width: $tablet-w){
+			height: auto;
+			padding: 0;
+		}
+
+		.container,
+		.row {
+			height: 100%;
+		}
+		.container {
+			top: auto;
+			transform: none;
+		}
+
+		&.bg{
+			@media (max-width: $tablet-w){
+				display: none;
+			}
+		}
+	}
+
+	.banner-header__content{
+		margin-top: 60px;
+		
+		@media (max-width: $tablet-w){
+			display: none;
+		}
+
+		// FIX for Safari
+		.desktop.safari & {
+			+ div {
+				height: 100%;
+				.expert {
+					top: 50px;
+				}
+			}
+		}
+	}
+}

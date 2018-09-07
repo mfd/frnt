@@ -1,0 +1,31 @@
+// LIST
+// ------------ _lists.scss
+.list-results {
+
+}
+
+
+
+
+
+// Раскрытое меню
+.expanded-menu-title,
+.menubar-visible {
+  .gui-controls {
+    // Show menu titles
+    li {
+      .title {
+        //left: 0;
+        @include opacity(1);
+      }
+    }
+  }
+}
+.gui-controls {
+  li:hover {
+    .title {
+      left: 0;
+      @include opacity(1);
+    }
+  }
+}

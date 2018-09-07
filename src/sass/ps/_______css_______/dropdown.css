@@ -1,0 +1,159 @@
+/* !!Dropd classes */
+/* line 5, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-menu {
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+/* line 10, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-menu > li > a {
+  padding: 5px 20px;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-menu .alert {
+  min-width: 250px;
+  margin: 10px;
+  padding: 10px;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/clearfix.less */
+.dropdown-menu .alert:before,
+.dropdown-menu .alert:after {
+  content: " ";
+  display: table;
+}
+/* line 19, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/clearfix.less */
+.dropdown-menu .alert:after {
+  clear: both;
+}
+/* line 22, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-menu img.pull-right {
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+/* line 26, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-menu img.pull-left {
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+/* line 35, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-header {
+  padding: 15px 20px 5px 20px;
+  font-size: 10px;
+  font-weight: 500;
+  opacity: .6;
+}
+/* line 42, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropdown-avatar {
+  max-width: 40px;
+}
+/* line 46, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+li.dropdown-progress {
+  min-width: 250px;
+}
+/* line 49, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+li.dropdown-progress > a {
+  padding: 15px 0px;
+}
+/* line 52, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+li.dropdown-progress .dropdown-label {
+  padding: 5px 20px;
+}
+/* line 55, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+li.dropdown-progress .progress {
+  margin-bottom: 0;
+  height: 5px;
+}
+/* line 14, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/clearfix.less */
+.dropdown-label:before,
+.dropdown-label:after {
+  content: " ";
+  display: table;
+}
+/* line 19, /Users/kkashaev/work/plussell/assets/css/less/bootstrap/mixins/clearfix.less */
+.dropdown-label:after {
+  clear: both;
+}
+/* line 70, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropup .dropdown-menu {
+  margin-bottom: 0;
+}
+/* line 79, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.open > .dropdown-menu.animation-zoom {
+  -webkit-animation: zoom-down 0.25s ease-out;
+  -moz-animation: zoom-down 0.25s ease-out;
+  -ms-animation: zoom-down 0.25s ease-out;
+  -o-animation: zoom-down 0.25s ease-out;
+  animation: zoom-down 0.25s ease-out;
+  -webkit-animation: zoom-down 0.25s ease-out ease;
+  -moz-animation: zoom-down 0.25s ease-out ease;
+  -ms-animation: zoom-down 0.25s ease-out ease;
+}
+/* line 80, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropup.open > .dropdown-menu.animation-zoom {
+  -webkit-animation: zoom-up 0.25s ease-out;
+  -moz-animation: zoom-up 0.25s ease-out;
+  -ms-animation: zoom-up 0.25s ease-out;
+  -o-animation: zoom-up 0.25s ease-out;
+  animation: zoom-up 0.25s ease-out;
+  -webkit-animation: zoom-up 0.25s ease-out ease;
+  -moz-animation: zoom-up 0.25s ease-out ease;
+  -ms-animation: zoom-up 0.25s ease-out ease;
+}
+/* line 82, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.open > .dropdown-menu.animation-slide {
+  -webkit-animation: slide-right 0.3s ease-out;
+  -moz-animation: slide-right 0.3s ease-out;
+  -ms-animation: slide-right 0.3s ease-out;
+  -o-animation: slide-right 0.3s ease-out;
+  animation: slide-right 0.3s ease-out;
+  -webkit-animation: slide-right 0.3s ease-out ease;
+  -moz-animation: slide-right 0.3s ease-out ease;
+  -ms-animation: slide-right 0.3s ease-out ease;
+}
+/* line 84, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.open > .dropdown-menu.animation-dock {
+  -webkit-animation: slide-up 0.3s ease-out;
+  -moz-animation: slide-up 0.3s ease-out;
+  -ms-animation: slide-up 0.3s ease-out;
+  -o-animation: slide-up 0.3s ease-out;
+  animation: slide-up 0.3s ease-out;
+  -webkit-animation: slide-up 0.3s ease-out ease;
+  -moz-animation: slide-up 0.3s ease-out ease;
+  -ms-animation: slide-up 0.3s ease-out ease;
+}
+/* line 85, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropup.open > .dropdown-menu.animation-dock {
+  -webkit-animation: slide-down 0.3s ease-out;
+  -moz-animation: slide-down 0.3s ease-out;
+  -ms-animation: slide-down 0.3s ease-out;
+  -o-animation: slide-down 0.3s ease-out;
+  animation: slide-down 0.3s ease-out;
+  -webkit-animation: slide-down 0.3s ease-out ease;
+  -moz-animation: slide-down 0.3s ease-out ease;
+  -ms-animation: slide-down 0.3s ease-out ease;
+}
+/* line 87, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.open > .dropdown-menu.animation-expand {
+  -webkit-animation: slide-down 0.3s ease-out;
+  -moz-animation: slide-down 0.3s ease-out;
+  -ms-animation: slide-down 0.3s ease-out;
+  -o-animation: slide-down 0.3s ease-out;
+  animation: slide-down 0.3s ease-out;
+  -webkit-animation: slide-down 0.3s ease-out ease;
+  -moz-animation: slide-down 0.3s ease-out ease;
+  -ms-animation: slide-down 0.3s ease-out ease;
+}
+/* line 88, /Users/kkashaev/work/plussell/assets/css/less/materialadmin/dropdowns.less */
+.dropup.open > .dropdown-menu.animation-expand {
+  -webkit-animation: slide-up 0.3s ease-out;
+  -moz-animation: slide-up 0.3s ease-out;
+  -ms-animation: slide-up 0.3s ease-out;
+  -o-animation: slide-up 0.3s ease-out;
+  animation: slide-up 0.3s ease-out;
+  -webkit-animation: slide-up 0.3s ease-out ease;
+  -moz-animation: slide-up 0.3s ease-out ease;
+  -ms-animation: slide-up 0.3s ease-out ease;
+}
+/* !!Dropd classes end */

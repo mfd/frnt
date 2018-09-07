@@ -1,0 +1,16 @@
+//  transition: all .2s ease-in-out;
+@mixin make_border($cols:4) {
+  & {
+    border: 1px solid #f0f0f0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  @for $i from 1 through $cols {
+    &:nth-child(#{$i}) {
+      border-top-color: transparent;
+    }
+  }
+  &:nth-of-type(#{$cols}n+1) {
+    border-left-color: transparent;
+  }
+}

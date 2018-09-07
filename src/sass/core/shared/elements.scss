@@ -1,0 +1,412 @@
+/**
+ * BORDER LINES ON HOVER
+ */
+.border-line {
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+
+		z-index: 1;
+		background-color: $purple-light;
+
+		transform-origin: 100% 100%;
+		transition: transform 0.5s $Power2EaseOut;
+	}
+
+	.desktop &:hover {
+		&:before {
+			transform-origin: 0 0;
+		}
+	}
+
+
+	&--left {		
+		&:before {
+			top: 0;
+			width: 4px;
+			height: 100%;
+
+			transform: scaleY(0);
+		}
+
+		.desktop &:hover {
+			&:before {
+				transform: scaleY(1);
+			}
+		}
+	}
+
+	&--bottom {
+		&:before {
+			bottom: 0;
+			width: 100%;
+			height: 4px;
+
+			transform: scaleX(0);
+		}
+
+		.desktop &:hover {
+			&:before {
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	&--top {
+		&:before {
+			top: -4px;
+			width: 100%;
+			height: 4px;
+
+			transform: scaleX(0);
+			transform-origin: 0 0;			
+		}
+
+		.desktop &:hover {
+			&:before {
+				transform: scaleX(1);
+				transform-origin: 100% 100%;
+			}
+		}
+	}
+
+
+	&--white {
+		&:before {
+			background-color: $purple-lighter;
+		}
+	}
+	&--light {
+		&:before {
+			background-color: $purple-light;
+		}
+	}
+}
+
+
+/**
+ * FILTER IMAGE PURPLE
+ */
+.filter-img {
+	@include filterImg;
+
+	&--grey {
+		@include filterImg($gradient-grey);
+	}
+}
+
+
+
+/**
+ * SLIDER
+ */
+.swiper {
+	&-pagination {
+		position: relative;
+		margin-top: 30px;
+
+		&-bullet {
+			width: 50px;
+			height: 2px;
+			margin: 0 12px !important;
+			padding: 5px 0;
+			border-radius: 0;
+			opacity: 1;
+			background: none;
+
+			@media screen and (max-width: $mobile) {
+				margin: 0 10px !important;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				height: 2px;
+				width: 100%;
+				background-color: rgba($purple, 0.5);
+				transform-origin: 0 100%;
+
+				transition: background 0.35s ease, transform 0.35s ease;
+			}
+			
+			.desktop &:hover,
+			&-active {
+				&:before {
+					background-color: $purple-light;
+					transform: scaleY(1.5);
+				}
+			}
+		}
+
+
+		&--light {
+			.swiper-pagination-bullet {
+				&:before {
+					background-color: rgba(#fff, 0.5);
+				}
+
+				.desktop &:hover,
+				&-active {
+					&:before {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * PROGRESS BAR
+ */
+.progress-bar {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	left: 0;
+	z-index: 14;
+
+	&__inner {
+		width: 100%;
+		height: 100%;
+		background-color: $green;
+
+		transform-origin: 0 0;
+		transform: scaleX(0);
+	}
+
+	&--sticky {
+		position: fixed;
+		top: 80px; // Header height
+
+		@media screen and (max-width: $tablet) {
+			top: 0;
+		}
+	}
+}
+
+
+/**
+ * LIGHTBOX
+ */
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba($grey-lighter, 0.85);
+	z-index: 999;
+
+	@include autoAlpha(0);
+	transition: visibility 0.4s ease, opacity 0.4s ease;
+
+	.row {
+		height: 100%;
+	}
+
+	&__inner {
+		position: relative;
+		margin: 0 auto;
+		background-color: #fff;
+		box-shadow: $box-shadow;
+		border-radius: 28px;
+	}
+
+	&__content {
+		padding: 45px 40px 40px;
+
+		@media screen and (max-width: $mobile) {
+			padding: 45px 25px 40px;
+		}
+	}
+	&__footer {
+		border-top: 1px solid $grey;
+		padding: 20px 40px;
+	}
+
+	&--visible {
+		@include autoAlpha(1);
+	}
+
+	&--copy {
+		.button--close {
+			position: absolute;
+			right: 22px;
+			top: 22px;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+		
+		input {
+			background-color: #fff !important;
+			text-overflow: ellipsis;
+
+			@media screen and (max-width: $mobile) {
+				padding: 17px 25px !important;
+			}
+		}
+	}
+
+	
+	// Fix for IE11
+	.ie & {
+		transform: none !important;
+	}
+}
+
+
+/**
+ * STICKY ELEMENTS
+ */
+.sticky--animated {
+	transition: transform 0.5s $Power2EaseOut;
+}
+
+
+/**
+ * VIDEO
+ */
+.video{
+	position: relative;
+
+	&__frame{ 
+		position: relative; 
+		padding-bottom: 56.25%;
+		overflow: hidden;
+		background-color: #000;
+
+		&:before{
+			content: "";
+			@include absoluteBox;
+			background: $purple;
+			opacity: 0.2;
+			z-index: 10;
+			pointer-events: none;
+			transition: all .35s $Power2EaseOut;
+		}
+
+		&.is-playing{
+
+			&:before{
+				transition: all .35s $Power2EaseOut .35s;
+				@include autoAlpha(0);
+			}
+
+			.video__play{
+				display: none !important;
+			}
+		}
+
+
+		> img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: 9;
+			transition: all .5s $Power2EaseOut;
+
+			&.hide{
+				@include autoAlpha(0);
+			}
+		}
+	}
+
+	&__frame,
+	&__frame > *{
+		width: 100%;
+	}
+
+	&__content{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		z-index: 11;
+
+		.desktop-hidden{
+			@media (min-width: $tablet-w){
+				display: none;
+			}
+		}
+
+		@media (max-width: $tablet-w){
+			position: static;
+			top: auto;
+			transform: none;
+		}
+
+		.title{
+			font-weight: 700;
+			margin-bottom: 25px;
+
+			@media (max-width: $tablet-w){
+				color: #000 !important;
+			}
+		}
+
+		p{
+			font-size: 2rem;
+			line-height: 1.4;
+
+			@media (max-width: $tablet-w){
+				color: #000 !important;
+			}
+		}
+	}
+ 
+	&__play{
+		width: 60px;
+		height: 60px;
+		color: #fff;
+		display: block;
+		margin: 38px auto 0;
+		font-size: 1.85rem;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			transform-origin: center;
+			transition: transform .45s $Power2EaseOut;
+
+			background: $purple-light;
+			background: linear-gradient(to right, $purple-light 0%,$purple 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7537cf', endColorstr='#4f2d7f',GradientType=1 );
+		}
+
+		i{
+			display: block;
+			position: relative;
+			left: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.desktop &:hover:before{
+			transform: scale(1.1);
+		}
+
+		&.mobile-show{
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			right: 0;
+			z-index: 9;
+		}
+	}
+}

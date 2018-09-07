@@ -1,0 +1,258 @@
+// ----------------
+// NAV BUTTONS
+// ----------------
+.nav-buttons{
+	display: block;
+	width: 100%;
+	margin: 25px 0;
+	text-align: center;
+}
+
+.nav-button{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 14px;
+
+	cursor: pointer;
+
+	.desktop &:hover{
+
+		&:before{
+			background: $purple-light;
+			transform: scale(1.12) translateZ(0); 
+		}
+
+		svg circle{
+			stroke-dashoffset: 0;
+			transition-timing-function: $Power0EaseNone;
+		}
+	}
+
+	i, &:after{
+		content: $icon-arrow;
+		font-family: "icons";
+		position: absolute; 
+		font-size: 10px; 
+		left: 0; right: 0;
+		transform-origin: center;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	svg circle{
+		stroke-width: 1.5px;
+	}
+
+	&--left{
+		transform: rotate(180deg); 
+
+		svg circle{ transform: rotate(90deg); }
+	}
+
+	&:before{
+		content: "";
+		position: absolute;
+		width: 100%; height: 100%;
+		top: 0; left: 0;
+		border-radius: 50%;
+		background: $purple;
+		transition: transform .5s $Power2EaseOut, background .5s $Power2EaseOut;
+	}
+}
+
+
+// ----------------
+// SWIPER
+// ----------------
+.swiper-wrapper{ height: auto; }
+
+.wrap-swiper-pastilles{
+	position: relative;
+	margin: 0 auto;
+	max-width: 1600px;
+
+	@media (max-width: 1299px){
+		width: 92%;
+	}
+
+	@media (max-width: $tablet-w){
+		display: none;
+	}
+
+	.nav-buttons {
+		margin: 0;
+	}
+	.nav-button{
+		position: absolute;
+		margin: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&--left{ 
+			left: -50px;
+			transform: translateY(-50%) rotate(180deg); 
+
+			@media (min-width: 1680px){
+				left: -60px;
+			}
+
+			@media (max-width: 1349px){
+				left: -40px;
+			}
+			@media (max-width: 600px){
+				left: -28px;
+			}
+		}
+
+		&--right{
+			right: -50px;
+
+			@media (min-width: 1680px){
+				right: -60px;
+			}
+
+			@media (max-width: 1349px){
+				right: -40px;
+			}
+			@media (max-width: 600px){ 
+				right: -28px;
+			}
+		}
+	}
+
+	.pastille.swiper-slide{ 
+		opacity: 1;
+		transform: scale(1);
+		transition: none;
+
+		&.shrink{
+			transform: scale(0.6);
+			opacity: 0;
+			transition: transform .35s, opacity .35s;
+
+			.small-title{
+				transition: none;
+			}
+		}
+
+		.small-title{ 
+			opacity: 1;
+			transition: opacity .2s .6s;
+		}
+
+		&.pre-shrink{
+			transition: transform .55s .3s, opacity .55s .3s;
+ 
+			&.shrink{
+				transition: none !important;	
+			}
+		}
+	}
+
+	&--services {
+		.pastille {
+			height: 215px; 
+			margin: 0;
+
+			width: calc(100% / 5);
+
+			@media screen and (max-width: $large) {
+				width: calc(100% / 4);
+			}
+			@media screen and (max-width: $tablet-h) {
+				width: calc(100% / 3);
+			}
+			@media screen and (max-width: $tablet-w) {
+				width: calc(100% / 2);
+			}
+		}
+	}
+}
+
+.swiper-pastilles {
+	padding: 30px 25px;
+	margin: 30px 0 45px;
+
+	@media screen and (max-width: $xlarge - 1) {
+		margin-top: 10px;
+	}
+
+	@media (max-width: $tablet-w) {
+		margin-bottom: 10px;
+	}
+
+	.pastille {
+		margin: 0; 
+		height: auto;
+
+		svg{
+			height: 100%;
+
+			.ie & {
+				height: 256px;
+			}
+		}
+	}
+
+	&--services{ 
+		padding: 0;
+		margin-top: -22px;
+
+		+ .nav-buttons .nav-button { 
+			&--left {
+				left: -80px;
+				
+				@media screen and (max-width: $large) {
+					left: calc((100vw - #{$container - $gutter})/-4);
+					transform: translate(-50%, -50%) rotate(180deg);
+				}
+				@media screen and (max-width: 1300px) {
+					left: calc((8vw + #{$gutter})/-4);
+				}
+				@media screen and (max-width: $tablet-w) {
+					left: -15px;
+					transform: translateY(-50%) rotate(180deg);
+				}
+				@media screen and (max-width: $mobile) {
+					left: -22px;
+				}
+			}
+			&--right{
+				right: -80px;
+				
+				@media screen and (max-width: $large) {
+					right: calc((100vw - #{$container - $gutter})/-4);
+					transform: translate(50%, -50%);
+				}
+				@media screen and (max-width: 1300px) {
+					right: calc((8vw + #{$gutter})/-4);
+				}
+				@media screen and (max-width: $tablet-w) {
+					right: -15px;
+					transform: translateY(-50%);
+				}
+				@media screen and (max-width: $mobile) {
+					right: -22px;
+				}
+			}
+		}
+
+		@media (max-width: $tablet-w){ 
+			width: 85%;
+			margin: 0 auto;
+		}
+	}
+}
+
+// When swiper is loaded
+.swiper-container-horizontal {
+	.pastille{
+		width: 100%;
+	}
+}
