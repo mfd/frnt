@@ -22,4 +22,4 @@ test-results
 *.iws
 buildalllocally-documents.bat
 /buildalllocally-document_library_web_hook.bat
-/modules/ildartest
+package-lock.json
